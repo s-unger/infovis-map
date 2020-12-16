@@ -42,7 +42,7 @@
           customElements.define('my-dropdown', MyDropDown);
     
           function update() {
-                 console.log('update');
+                 //console.log('update');
                  const mydropdown = document.getElementById('mydropdown');
                  //mydropdown.setAttribute('value', mydropdown.val);
                  //const xajax = document.getElementById('x-ajax');
@@ -117,7 +117,7 @@
     
     <div id="right">
     <div id="map"><div class="tempcenter">
-    
+        <input type="checkbox" id="myCheckbox"> Zeige Durschnittswert pro Bundesland für diesen Trend
         <script>
             var width = 500,
                 height = 460,
@@ -146,7 +146,7 @@
             getTrendValueAverage(); 
             getTrendValue();
             
-            
+            d3.select("#myCheckbox").on("change",update);
             d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2_bundeslaender/1_sehr_hoch.geo.json", function(collection) {
             
               var bounds = d3.geo.bounds(collection),
@@ -263,10 +263,25 @@
                 .attr("d", geoPath)
                 .on("click", clickPath);
 
-                adaptColor(11);
+                //adaptColor(12);
+                update();
             
               
             });
+
+
+            //d3.select("#myCheckbox").on("change",update);
+            //update();
+                
+            function update(){
+                if(d3.select("#myCheckbox").property("checked")){
+                    console.log("checked");
+                    colorBL();
+                } else {
+                    console.log("not checked");	
+                    adaptColor(12);
+                }	
+            }
             function colorBL() {
 
                 //console.log(trendListAverage);
@@ -399,6 +414,7 @@
             d['Value'] = +d['Value'];
             });
             trendListAverage= data;
+            console.log("average");	
             //console.log(trendListAverage);
             //console.log(trendListAverage[0]);
 
@@ -431,7 +447,7 @@
             console.log(trendList);
             console.log(trendList[0]);
             (1);
-
+            console.log("not average");	
             });
             
             };
