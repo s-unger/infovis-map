@@ -48,7 +48,8 @@ slider.append("line")
         .on("start.interrupt", function() { slider.interrupt(); })
         .on("start drag", function() {
           currentValue = d3.event.x;
-          update(x.invert(currentValue));
+          updateslider(x.invert(currentValue));
+          console.log("user is dragging...")
         })
     );
 
@@ -77,7 +78,7 @@ var label = slider.append("text")
 
 ////////// plot //////////
 
-function update(h) {
+function updateslider(h) {
   // update position and text of label according to slider scale
   handle.attr("cx", x(h));
   label
