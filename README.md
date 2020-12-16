@@ -7,3 +7,4 @@ Update:
 - embed corona icon 
 - extension of the German map: color the field depending on the corona cases (in branch sophiacard)
 
+Hosted on this site: https://s-unger.github.io/infovis-map/
