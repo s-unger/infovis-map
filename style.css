@@ -66,7 +66,6 @@ html {
 #graph {
   margin-left: auto;
   margin-right: auto;
-  height: 250px;
 }
 
 #graph img {
@@ -106,4 +105,73 @@ html {
 
 #dropdown {
   height: 50px;
+}
+
+
+
+.time-slider-container {
+  margin: 20px;
+  text-align: center;
+  .slider.slider-horizontal {
+    width: 100%;
+    .slider-tick-container {
+      display: none !important;
+    }
+    .slider-tick-label-container .slider-tick-label {
+      &:first-child {
+        padding-left: 50px;
+      }
+      &:last-child {
+        padding-right: 50px;
+      }
+    }
+  }
+  .slider-track-total {
+    background-color: #4A89DC;
+    opacity: 0.3;
+  }
+}
+
+.slider.slider-horizontal {
+  width: 90% !important;
+  height: 20px;
+}
+
+.map {
+  max-width:100%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+
+
+
+
+
+
+.background {
+  
+  fill:rgb(230, 225, 225);
+  stroke: black;
+  stroke-width: 3.5px;
+  pointer-events: all;
+}
+
+#states {
+  fill: rgb(219, 162, 38);
+  stroke: #fff;
+  stroke-width: 1.25px;
+  opacity: 0.85;
+}
+
+#states .active {
+  /*fill: lightblue;*/
+  fill: rgb(44, 47, 206);
+}
+
+.graticuleLine {
+  fill: rgb(182, 17, 39);
+  stroke:white;
+  stroke-width: 0.5px;
 }
