@@ -1,45 +1,104 @@
 <DOCTYPE html>
-<html>
-<head>
-<title>InfoVis Map</title>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-<link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">  
-</head>
-<body>
-<div id="newspaper">
-<div id="header">
-<h1>2020 News</h1>
-<p>Zeitungsmeldungen aus einem verrückten Jahr</p>
-</div><!--Header Ende-->
-<div id="content-wrapper">
-<div id="left">
-<div id="dropdown"><button>Dies ist ein Platzhalter für das Dropdownmenü</button></div>
-<div id="graph"><img src="img/graph-placeholder.png" /></div>
-<div id="articleview">
-<h2>Deutsche hamstern Klopapier</h2>
-<p>25.04.2020 - Süddeutsche Zeitung - Klopapier, Corona</p>
-<p>Lorem Ipsum Dolor Sit Quantum amat</p>
-<h2>Regierung beschließt Lockdown</h2>
-<p>23.04.2020 - Süddeutsche Zeitung - Corona</p>
-<p>Lorem Ipsum Dolor Sit Quantum amat</p>
-<h2>Noch eine interessante Schlagzeile</h2>
-<p>26.04.2020 - Neue Züricher Zeitung - Begriff</p>
-<p>Lorem Ipsum Dolor Sit Quantum amat</p>
+    <html>
+    <head>
+        <title>InfoVis Map</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.1/css/bootstrap-slider.min.css">
+        <!--link rel="stylesheet" href="slider.css"-->
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.1/bootstrap-slider.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <!--script src="slider.js"></script-->
+    <script src="dropdownclass.js"></script>
+    </head>
+    <body>
+    <div id="newspaper">
+    <div id="header">
+    <div><h1>2020 News</h1></div>
+    <h1>
+        
+    </h1>
+    <div><p>Zeitungsmeldungen aus einem verrückten Jahr</p></div>
+    </div><!--Header Ende-->
+
+    <div id="content-wrapper">
+    <div id="left">
+    <div id="dropdown">
+        <my-dropdown value="ws1920" id="mydropdown">
+        <select id="sel" onchange="update()">
+            <option value="nachrichten-auswaehlen">- Nachrichten auswählen -</option>
+            <option value="bill-gates">Bill Gates</option>
+            <option value="klopapier">Klopapier</option>
+            <option value="lockdown">Lockdown</option>
+            <option value="spacex">Space X</option>
+            <option value="corona">Corona</option>
+            <option value="zoom">Zoom</option>
+            <option value="querdenken">Querdenken</option>
+            <option value="maske">Maske</option>
+            <option value="alkohol">Alkohol</option>
+            <option value="drosten">Drosten</option>
+            <option value="homeworkout">Home Workout</option>
+            <option value="bananenbrot">Bananenbrot</option>
+        </select>
+    </my-dropdown>
+    </div>
+    
+    <div id="graph"><img src="img/graph-placeholder.png" /></div>
+
+    <div id="vis">
+        <button id="play-button">Play</button>
+        <div id="slider">
+        <script src="slider.js"></script>
+        </div>
+    </div>
+
+    <div id="articleview">
+    <h2>Deutsche hamstern Klopapier</h2>
+    <p>25.04.2020 - Süddeutsche Zeitung - Klopapier, Corona</p>
+    <p>Lorem Ipsum Dolor Sit Quantum amat</p>
+    <h2>Regierung beschließt Lockdown</h2>
+    <p>23.04.2020 - Süddeutsche Zeitung - Corona</p>
+    <p>Lorem Ipsum Dolor Sit Quantum amat</p>
+    <h2>Noch eine interessante Schlagzeile</h2>
+    <p>26.04.2020 - Neue Züricher Zeitung - Begriff</p>
+    <p>Lorem Ipsum Dolor Sit Quantum amat</p>
+    </div>
+
+    <h1 id="current-week"> Current week: </h1>
+    <h2 id="coronacount"> #Corona Cases: </h2>
+    
+    <div id = "coronavirus">
+      <img  id = "virusSVG" src="coronavirus.svg" width="200" height="200"/>
+      <button id="test-button" onClick="resizeVirus()">Resize</button>
+    </div>
+
+    </div><!--left Ende-->
+    
+    <div id="right">
+    <div id="map"><div class="tempcenter">
+        <input type="checkbox" id="myCheckbox"> Zeige Durschnittswert pro Bundesland für diesen Trend
+        <script src="map.js"></script>
+    
+    
+    
+    </div>
 </div>
-</div><!--left Ende-->
-<div id="right">
-<div id="map"><div id="tempcenter"><img src="img/map-placeholder.png" /></div></div>
-<div id="funnytexts">
-<p>Die Leute in Baden-Wüttenberg finden Klopapier am coolsten.</p>
-<p>Mecklenburg-Vorpommern will nichts davon wissen</p>
-</div>
-<div id="tagcloud">
-<h2>Meistgesucht in dieser Woche</h2>
-<img src="img/wordcloud-placeholder.jpg" />
-</div>
-</div><!--right Ende-->
-</div>
-</div><!--Newspaper Ende-->
-</body>
-</html>
+    <div id="funnytexts">
+    <p>Die Leute in Baden-Wüttenberg finden Klopapier am coolsten.</p>
+    <p>Mecklenburg-Vorpommern will nichts davon wissen</p>
+    </div>
+    <div id="tagcloud">
+    <h2>Meistgesucht in dieser Woche</h2>
+    <img src="img/wordcloud-placeholder.jpg" />
+    </div>
+    </div><!--right Ende-->
+    </div>
+    </div><!--Newspaper Ende-->
+    <!--"></script-->
+    </body>
+    </html>
