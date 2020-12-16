@@ -76,15 +76,11 @@ html {
   margin-left: auto;
   margin-right: auto;
   height: auto;
-}
-
-#map  #tempcenter {
   width: 100%;
-  text-align: center;
 }
 
-#map img {
-  width: 50%; height: auto; margin-left: auto; margin-right: auto; display: center;
+#map  .tempcenter {
+  text-align: center;
 }
 
 /*#articleview {
