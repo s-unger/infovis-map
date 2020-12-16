@@ -87,9 +87,9 @@ html {
   width: 50%; height: auto; margin-left: auto; margin-right: auto; display: center;
 }
 
-#articleview {
+/*#articleview {
 
-}
+}*/
 
 #funnytexts {
   text-align: center;
@@ -170,8 +170,9 @@ html {
   stroke-width: 0.5px;
 }
 #vis{
-padding-top: 10px;
+  padding-top: 10px;
 }
+
 #play-button {
   position: absolute;
   top: 140px;
