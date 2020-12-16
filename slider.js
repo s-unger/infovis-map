@@ -6,9 +6,9 @@ var startDate = new Date("2019-01-01"),
     endDate = new Date("2020-10-30"),
     currentDate = new Date("2019-01-01");
 
-var margin = {top:50, right:50, bottom:0, left:50},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+var margin = {top:0, right:20, bottom:0, left:20},
+    width = 460 - margin.left - margin.right,
+    height = 160 - margin.top - margin.bottom;
 
 var svg = d3.select("#vis")
     .append("svg")
