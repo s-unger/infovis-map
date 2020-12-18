@@ -1,3 +1,23 @@
+var germanyData = [];
+function importGermanData(){
+   d3.json("https://opendata.ecdc.europa.eu/covid19/subnationalcaseweekly/json/", function(data){
+     console.log("Importing...");
+     data.forEach(element => {
+      if(element.country == "Germany"){
+        console.log("Importing = "+element.region_name);
+        germanyData.push(element);
+      }
+      else{
+        console.log("Item not found...");
+      }
+     });
+     console.log("German data:" +germanyData);
+    
+  });
+}
+
+importGermanData();
+
 var formatDateIntoMonthOfYear = d3.timeFormat("%B %Y");
 var formatDate = d3.timeFormat("CW %W/%Y");
 var parseDate = d3.timeParse("%m/%d/%y");
@@ -49,7 +69,6 @@ slider.append("line")
         .on("start drag", function() {
           currentValue = d3.event.x;
           updateslider(x.invert(currentValue));
-          console.log("user is dragging...")
         })
     );
 
@@ -87,32 +106,59 @@ function updateslider(h) {
 
     currentDate = formatDate(h);
     document.getElementById("current-week").innerHTML = "Current week: "+currentDate;
+    
+    resizeVirus(currentDate, "Bayern");
+
   // filter data set and redraw plot
 /*  var newData = dataset.filter(function(d) {
     return d.date < h;
   });*/
 }
 
-function resizeVirus(){
-  var value = 37;
+function getCurrentWeek(){
+  return currentDate;
+}
+
+function resizeVirus(currentDate, region){
+  var value = getCasesOfWeek(currentDate, region);
+  console.log("Found cases: "+value);
   var newValue = 200*value/100;
   document.getElementById("virusSVG").height=newValue;
   document.getElementById("virusSVG").width=newValue;
-
-
-  console.log("resizing button");
-
-  testImport();
 }
 
-function testImport(){
-   d3.json("https://opendata.ecdc.europa.eu/covid19/subnationalcaseweekly/json/", function(data){
-     console.log("Importing...");
-    if(data.region_name === "Bayern" && data.year_week === "2020-W34"){
-      console.log("Import working! cases = "+data.rate_14_day_per_100k);
+function getCasesOfWeek(currentDate, region){
+  germanyData.forEach(element => {
+    if(currentDate != null){
+      var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
+    //console.log("CurrentDate: "+currentDate.toString());
+    //console.log("New Date Format: "+newDateFormat);
+    //console.log("Dateformat 1: "+element.year_week);
+    
+      if((element.region_name == region) && (element.year_week == newDateFormat)){
+        console.log("++++++++++++++found a bavarian match!!!!!!!!!! "+element.year_week);
+        return element.rate_14_day_per_100k;
+      }
+      else{
+        console.log("-------------couldnt find a match for "+region)
+      }
     }
     else{
-      console.log("Item not found...");
+      console.log("-------------currentdate is null")
     }
   });
 }
+
+function testButton(){
+  germanyData.forEach(element => {
+    if(element.region_name == "Bayern" && element.year_week == "2020-W34"){
+      var cases =  element.rate_14_day_per_100k;
+      console.log("found a bavarian match!!!!!!!!!! "+element.year_week);
+      var newValue = 200*cases/100;
+      document.getElementById("virusSVG").height=newValue;
+      document.getElementById("virusSVG").width=newValue;
+    }
+  });
+}
+
+
