@@ -109,10 +109,6 @@ function updateslider(h) {
     
     resizeVirus(currentDate, "Bayern");
 
-  // filter data set and redraw plot
-/*  var newData = dataset.filter(function(d) {
-    return d.date < h;
-  });*/
 }
 
 function getCurrentWeek(){
@@ -121,30 +117,45 @@ function getCurrentWeek(){
 
 function resizeVirus(currentDate, region){
   var value = getCasesOfWeek(currentDate, region);
-  console.log("Found cases: "+value);
-  var newValue = 200*value/100;
-  document.getElementById("virusSVG").height=newValue;
-  document.getElementById("virusSVG").width=newValue;
+  console.log("-----------Value cases of Week: "+value);
+  /*if((value != null) && (value >0)){
+    console.log("Found cases: "+value);
+    var newValue = 200*value/100;
+    document.getElementById("virusSVG").height=newValue;
+    document.getElementById("virusSVG").width=newValue;
+  }*/
 }
 
 function getCasesOfWeek(currentDate, region){
   germanyData.forEach(element => {
     if(currentDate != null){
       var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
-    //console.log("CurrentDate: "+currentDate.toString());
+      console.log("CurrentDate: "+currentDate.toString());
+      if(newDateFormat.includes("2019")){
+        document.getElementById("virusSVG").height=0;
+          document.getElementById("virusSVG").width=0;
+      }
     //console.log("New Date Format: "+newDateFormat);
     //console.log("Dateformat 1: "+element.year_week);
     
       if((element.region_name == region) && (element.year_week == newDateFormat)){
-        console.log("++++++++++++++found a bavarian match!!!!!!!!!! "+element.year_week);
+        console.log("++++++++++++++found a bavarian match!!!!!!!!!! ");
+        console.log("++++++++++++++found a bavarian match!!!!!!!!!! "+element.rate_14_day_per_100k);
+        console.log("++++++++++++++match type: "+typeof(element.rate_14_day_per_100k));
+        if((element.rate_14_day_per_100k != null) && (element.rate_14_day_per_100k >0)){
+          console.log("Found cases: "+element.rate_14_day_per_100k);
+          var newValue = 200*element.rate_14_day_per_100k/100;
+          document.getElementById("virusSVG").height=newValue;
+          document.getElementById("virusSVG").width=newValue;
+        }
         return element.rate_14_day_per_100k;
       }
       else{
-        console.log("-------------couldnt find a match for "+region)
+        //console.log("-------------couldnt find a match for "+region)
       }
     }
     else{
-      console.log("-------------currentdate is null")
+      //console.log("-------------currentdate is null")
     }
   });
 }
