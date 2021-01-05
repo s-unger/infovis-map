@@ -107,7 +107,24 @@ function updateslider(h) {
     currentDate = formatDate(h);
     document.getElementById("current-week").innerHTML = "Current week: "+currentDate;
     
-    resizeVirus(currentDate, "Bayern");
+    resizeVirus(currentDate, "Bayern", "virusSVGBayern");
+    resizeVirus(currentDate, "Baden-Wurttemberg", "virusSVGBadenWuerttemberg");
+    resizeVirus(currentDate, "Nordrhein-Westfalen", "virusSVGNrw");
+    resizeVirus(currentDate, "Hessen", "virusSVGHessen");
+    resizeVirus(currentDate, "Niedersachsen", "virusSVGNiedersachsen");
+    resizeVirus(currentDate, "Schleswig-Holstein", "virusSVGSchleswigHolst");
+    resizeVirus(currentDate, "Mecklenburg-Vorpommern", "virusSVGMecklVorp");
+    resizeVirus(currentDate, "Saarland", "virusSVGSaarland");
+    resizeVirus(currentDate, "Rheinland-Pfalz", "virusSVGRheinlandPfalz");
+    resizeVirus(currentDate, "Thuringen", "virusSVGThueringen");
+    resizeVirus(currentDate, "Hamburg", "virusSVGHamburg");
+    resizeVirus(currentDate, "Bremen", "virusSVGBremen");
+    resizeVirus(currentDate, "Berlin", "virusSVGBerlin");
+    resizeVirus(currentDate, "Brandenburg", "virusSVGBrandenburg");
+    resizeVirus(currentDate, "Sachsen-Anhalt", "virusSVGSachsenAnhalt");
+    resizeVirus(currentDate, "Sachsen", "virusSVGvirusSVGSachsen");
+    
+
 
 }
 
@@ -115,8 +132,8 @@ function getCurrentWeek(){
   return currentDate;
 }
 
-function resizeVirus(currentDate, region){
-  var value = getCasesOfWeek(currentDate, region);
+function resizeVirus(currentDate, region, id){
+  var value = getCasesOfWeek(currentDate, region, id);
   console.log("-----------Value cases of Week: "+value);
   /*if((value != null) && (value >0)){
     console.log("Found cases: "+value);
@@ -126,14 +143,14 @@ function resizeVirus(currentDate, region){
   }*/
 }
 
-function getCasesOfWeek(currentDate, region){
+function getCasesOfWeek(currentDate, region, id){
   germanyData.forEach(element => {
     if(currentDate != null){
       var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
       console.log("CurrentDate: "+currentDate.toString());
       if(newDateFormat.includes("2019")){
-        document.getElementById("virusSVG").height=0;
-          document.getElementById("virusSVG").width=0;
+        document.getElementById(id).height=0;
+          document.getElementById(id).width=0;
       }
     //console.log("New Date Format: "+newDateFormat);
     //console.log("Dateformat 1: "+element.year_week);
@@ -145,8 +162,8 @@ function getCasesOfWeek(currentDate, region){
         if((element.rate_14_day_per_100k != null) && (element.rate_14_day_per_100k >0)){
           console.log("Found cases: "+element.rate_14_day_per_100k);
           var newValue = 200*element.rate_14_day_per_100k/100;
-          document.getElementById("virusSVG").height=newValue;
-          document.getElementById("virusSVG").width=newValue;
+          document.getElementById(id).height=newValue;
+          document.getElementById(id).width=newValue;
         }
         return element.rate_14_day_per_100k;
       }
@@ -160,7 +177,7 @@ function getCasesOfWeek(currentDate, region){
   });
 }
 
-function testButton(){
+/*function testButton(){
   germanyData.forEach(element => {
     if(element.region_name == "Bayern" && element.year_week == "2020-W34"){
       var cases =  element.rate_14_day_per_100k;
@@ -170,6 +187,6 @@ function testButton(){
       document.getElementById("virusSVG").width=newValue;
     }
   });
-}
+}*/
 
 
