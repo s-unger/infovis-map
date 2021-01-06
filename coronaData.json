@@ -1,0 +1,5106 @@
+[
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 101.485762768854,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 134.946975631221,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 85.8482467146536,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 49.2794050119368,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 33.2263339383875,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 18.27538704659,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 13.1712873524113,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 10.3075712408103,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 7.03733391462856,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 4.20071921733284,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 3.28830493571861,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 4.01100931719522,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 4.67047706529264,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 4.34526009362816,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 4.22782063163821,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 6.01651397579284,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 7.91361297716896,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 8.65438496818249,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 8.46467506804488,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 13.1351521333375,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 24.4816109225204,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 30.7059024079878,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 31.0130517701153,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 30.6065305555347,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 31.3653701560852,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 33.117928281166,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 36.0358472213778,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 56.1721980502701,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 91.3769352329498,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 155.787963232053,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 214.534795641334,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 265.675164435573,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 299.506763293447,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 283.625334510498,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 290.192910577167,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 312.352833674194,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 358.633015503003,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 417.370814107515,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Baden-Wurttemberg",
+		"nuts_code" : "DE1",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 372.807055184713,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 118.477713182074,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 161.76073497324,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 105.836929609495,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 51.1443197419292,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 34.8481855657852,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 21.1291500369244,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 17.3437974244461,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 14.2619850954991,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 11.4631183153636,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 7.8077677117987,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 4.37418524108605,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 3.94594332937133,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 5.88832628607738,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 7.32599556111964,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 7.24187661417568,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 7.65482417190059,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 9.70426760653531,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 10.8819328637508,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 11.3637050144298,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 17.8179223981302,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 27.4151295267369,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 31.1545990772457,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 33.2958086358193,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 38.4500059303858,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 43.0153705963444,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 39.6659070725758,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 35.4446653713878,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 49.4237049180754,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 89.6325615572895,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 167.939653985124,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 230.937098069157,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 307.538870027127,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 370.337487509292,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 375.988751308528,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 374.352255431618,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 373.266356298341,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 394.777865185011,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 444.461574120913,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bayern",
+		"nuts_code" : "DE2",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 410.102807882802,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 47.0530006096313,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 65.4077862701814,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 45.0501615166266,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 24.3084306356463,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 21.4001985279956,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 14.8155220578431,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 10.5903546561619,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 10.9470246316285,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 10.8647161757516,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 11.2213861512182,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 14.4862882343355,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 24.500483699359,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 23.0738037974927,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 14.4588520823765,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 11.8249814943155,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 9.19111090625451,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 10.8921523277106,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 15.4191174009404,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 21.4001985279956,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 27.2989711991738,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 27.4635881109277,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 26.1466528168972,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 28.1769280618608,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 30.6187455862091,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 41.0170471786582,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 55.8874415404192,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 78.5497030585273,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 124.368076830005,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 178.060626213707,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 247.775888341446,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 290.356796181766,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 340.098539683376,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 431.543234162619,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 462.271724356663,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 441.88666345115,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 405.314272889844,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 402.268860022399,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 437.524315289674,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Berlin",
+		"nuts_code" : "DE3",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 401.528083919507,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 53.5447628245679,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 51.6338716605684,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 41.561882816988,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 28.2652651341585,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 23.0899348983267,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 13.6549097760794,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 8.59901023799751,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 5.37438139874845,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 3.50330046733232,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 2.50804465274928,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 3.54311069991564,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 4.14026418866547,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 3.1051981414991,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 2.50804465274928,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 0.995255814583046,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 0.836014884249758,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 2.62747535049924,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 3.62273116508229,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 4.41893581674872,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 5.57343256166506,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 7.00660093466464,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 5.85210418974831,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 5.61324279424838,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 6.29001674816485,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 6.25020651558153,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 8.95730233124741,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 14.6103553580791,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 29.4197618790748,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 47.254746076403,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 78.0280558633108,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 120.266712634215,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 152.592621491873,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 181.892952673197,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 202.116550825525,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 233.367583403433,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 273.655538777754,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 331.897909047154,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 426.76569329321,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Brandenburg",
+		"nuts_code" : "DE4",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 412.473819795797,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 57.5414430164015,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 32.3579107038797,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 33.2364060171072,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 42.460606805996,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 42.7534385770719,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 38.2145461253964,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 46.9994992576715,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 38.6537937820102,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 30.7473359629626,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 32.9435742460314,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 23.4265416860668,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 15.5200838670192,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 8.78495313227504,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 3.80681302398585,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 3.51398125291002,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 6.7351307347442,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 9.80986433104046,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 9.51703255996463,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 8.93136901781296,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 10.9811914153438,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 15.3736679814813,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 21.9623828306876,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 23.5729575716047,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 21.0838875174601,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 24.1586211137564,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 40.4107844084652,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 66.1799802631386,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 107.030012328218,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 149.783450905289,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 222.991393674248,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 318.600966930508,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 375.556746404758,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 347.884144038092,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 300.591813009344,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 266.037664022396,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 227.237454354848,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 240.41488405326,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 261.059523914107,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Bremen",
+		"nuts_code" : "DE5",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 222.991393674248,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 70.6069317540554,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 103.194746409773,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 65.7730725801239,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 31.0670499717844,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 24.9839912360504,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 23.6261656253955,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 20.5303232331023,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 6.08305873573401,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 3.041529367867,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 2.66133819688363,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 2.76996424573602,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 2.93290331901461,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 2.98721634344081,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 2.66133819688363,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 1.46645165950731,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 1.08626048852393,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 5.81149361360302,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 11.7859263004846,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 22.2683400147406,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 25.3098693826076,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 19.6613148422831,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 20.9648274285118,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 22.6485311857239,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 32.8050667534227,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 41.4951506616141,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 49.9679824721008,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 63.0031083343879,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 71.4759401448746,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 95.373670892401,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 162.939073278589,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 221.651452683308,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 286.990021068022,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 332.232770415044,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 298.830260392933,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 241.692958696574,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 224.964547173306,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 263.74404661361,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 306.597022885879,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hamburg",
+		"nuts_code" : "DE6",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 313.549090012432,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 37.5210926474139,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 53.9275933881802,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 43.1867616775424,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 27.3548076553243,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 20.1410544113298,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 13.5178075169543,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 11.5866921573894,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 13.2305341576802,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 11.3632573223984,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 6.32001390403059,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 4.88364710766,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 6.2082964865351,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 6.78284320508333,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 5.85718460297784,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 6.47961021473843,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 7.11799545756981,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 9.40022270069196,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 12.7038663323443,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 17.0768052457392,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 25.3438941404055,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 34.2972471711155,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 29.525317480951,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 21.5455019455588,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 22.2158064505318,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 23.8596484508226,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 29.7008734227296,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 39.659683210899,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 61.8276107682184,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 110.951355204093,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 205.384492249923,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 275.957980844932,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 320.08636075565,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 349.59571860553,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 353.553707111085,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 344.329040352172,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 319.224540677828,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 345.621770468905,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 394.825313060133,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Hessen",
+		"nuts_code" : "DE7",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 358.612910160524,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 16.7114479630981,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 17.2705670399304,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 7.95191575939242,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 3.29259011912343,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 3.41683880286393,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 2.60922235855064,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 2.54709801668039,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 1.92585459797785,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 0.55911907683228,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 1.05611381179431,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 1.55310854675633,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 1.05611381179431,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 1.05611381179431,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 0.683367760572787,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 0.0621243418702533,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 0.37274605122152,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 2.7955953841614,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 4.84569866587976,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 6.39880721263609,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 5.52906642645254,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 2.85771972603165,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 1.92585459797785,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 2.48497367481013,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 4.03808222156647,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 5.77756379393356,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 6.58518023824685,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 10.7475111435538,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 18.140307826114,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 30.1924301489431,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 53.1784366409368,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 70.0141332877755,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 90.5772904468293,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 96.1063568732819,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 90.7636634724401,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 95.1123674033578,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 98.6534548899623,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 144.128473138988,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 190.348983490456,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Mecklenburg-Vorpommern",
+		"nuts_code" : "DE8",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 177.240747355833,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 39.4615787036759,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 55.8224745090729,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 41.0400418518229,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 22.3490337801136,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 15.2459496134519,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 11.5628689344422,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 9.4457239182767,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 9.80902099205657,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 11.3624291695981,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 11.876056067011,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 10.6984724485521,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 8.78176719723073,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 7.62923854937733,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 5.27407131245954,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 3.3949485170464,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 4.42220231187225,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 5.72506078335869,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 7.14066662256992,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 10.2349554923502,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 11.161989404754,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 14.4316630687729,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 16.6114455114521,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 14.78243265725,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 15.9349613051034,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 21.0837577645354,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 25.080025576114,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 29.0512384170871,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 42.5683950587589,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 64.5791867356981,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 108.788682369118,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 153.474222444042,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 188.85184093902,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 216.976045443704,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 215.284834927832,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 192.973383603626,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 172.779077295587,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 184.89315558335,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 224.6929763902,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Niedersachsen",
+		"nuts_code" : "DE9",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 218.040881694438,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 56.5950901514784,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 79.213051098803,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 60.2309162209202,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 33.7150374476144,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 21.1457859744217,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 16.1939247019306,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 13.9856622425764,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 12.3127361370051,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 9.4799145982376,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 7.27165213888343,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 7.7400714484434,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 15.7979988569454,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 20.4598862711375,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 14.6548326848049,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 11.1026529206418,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 11.4930023452751,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 15.234780401403,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 20.6383317223984,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 25.7797912868544,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 29.594062807557,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 16.5731212858601,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 21.6811223282046,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 29.655403431428,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 21.7034280096122,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 29.6275213296684,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 37.1779944861471,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 46.9757650444432,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 69.8948526907706,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 113.0228876924,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 194.739751529208,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 274.661008012703,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 327.185311307291,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 351.799630740597,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 339.353060515146,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 315.017562099435,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 300.357152994278,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 325.306057648699,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 371.556888047395,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Nordrhein-Westfalen",
+		"nuts_code" : "DEA",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 339.921855391041,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 46.7826923133417,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 61.2752898274695,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 41.8865445045147,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 21.9102614445007,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 14.6394819483926,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 9.1313156634623,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 8.05416314552037,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 6.26706919529852,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 4.70030189647389,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 4.87166706978284,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 3.52522642235542,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 2.79080425103137,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 4.06380268132639,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 4.30861007176774,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 4.89614780882697,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 6.02226180485717,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 5.72849293632756,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 6.65876102000468,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 11.7262740021406,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 17.5282091556006,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 20.1721289723671,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 20.4169363628085,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 17.7240550679536,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 16.9161906794972,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 18.2871120659687,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 20.5393400580291,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 26.3902366895774,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 41.9110252435589,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 70.7738165765939,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 131.681895318401,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 185.759847866895,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 231.294022488986,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 285.739186123142,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 294.699136613295,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 267.1338244496,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 256.729510355842,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 320.477354826769,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 364.224435498638,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Rheinland-Pfalz",
+		"nuts_code" : "DEB",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 307.527043872422,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 98.7371139484851,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 150.932500360926,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 89.2470436916777,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 31.5999147912841,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 26.2491304975523,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 15.2446873274246,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 7.26898998393755,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 6.56228262438807,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 3.63449499196878,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 3.33162040930471,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 3.83641138041149,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 3.83641138041149,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 3.33162040930471,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 0.706707359549484,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 1.71628930176303,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 2.72587124397658,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 3.43257860352607,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 5.65365887639587,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 9.59102845102871,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 12.7207324718907,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 13.4274398314402,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 14.1341471909897,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 12.4178578892267,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 8.37953012037245,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 4.44216054573962,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 5.75461707061723,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 23.9270920304611,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 57.5461707061723,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 98.7371139484851,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 172.537553924296,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 278.745574245161,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 309.335907094231,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 310.143572648002,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 294.898885320578,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 253.808900272486,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 263.702803306179,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 331.546709822929,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 384.044970818034,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Saarland",
+		"nuts_code" : "DEC",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 327.407423859854,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 39.1864808112533,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 52.967959043997,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 33.5954184677203,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 13.5853006066548,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 12.5308458664271,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 10.7407250283661,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 8.55824893812729,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 7.35666097833292,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 4.21781896091087,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 2.20699829349988,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 1.10349914674994,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 2.42769812284986,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 2.47674252937208,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 0.711143894572182,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 0.662099488049963,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 0.93184372392217,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 1.15254355327216,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 1.39776558588325,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 3.62928608264424,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 4.63469641634974,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 4.11973014786643,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 6.69456149028295,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 8.5827711413884,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 10.9123804511938,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 15.3263770381936,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 18.0238193969156,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 21.1626614143377,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 37.764193022109,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 79.1331499236011,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 138.967325880709,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 210.474070590105,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 317.072088166149,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 406.921440914855,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 431.296510956398,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 513.838247133293,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 654.96352690098,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 730.001468879975,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 921.004910080759,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen",
+		"nuts_code" : "DED",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 971.447082188862,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 22.5510693418212,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 29.7058262815958,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 19.8793563073484,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 12.5434662804909,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 8.83023799529145,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 5.56984242779922,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 4.03021118759456,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 2.26416358853627,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 1.26793160958031,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 1.04151525072668,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 3.07926248040933,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 6.11324168904792,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 4.43776063353109,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 1.81133087082901,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 2.17359704499482,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 2.94341266509715,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 3.44152865457513,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 3.3962453828044,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 3.5773784698873,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 4.43776063353109,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 5.56984242779922,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 5.25285952540414,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 4.12077773113601,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 5.25285952540414,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 8.15098891873057,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 11.4566677579935,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 13.7661146183005,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 15.7132953044417,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 27.7586455954547,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 62.3097819565181,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 92.1967413251968,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 117.102540799096,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 134.038484441347,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 154.098973835778,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 187.699161489657,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 229.359771518724,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 292.394085823574,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 369.873763823285,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Sachsen-Anhalt",
+		"nuts_code" : "DEE",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 397.089010157491,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 29.6543115090489,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 42.9797646434993,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 28.4805669324393,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 13.2909312351383,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 11.0124858805432,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 9.56256610943718,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 6.4555951713529,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 3.93549652157343,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 3.59027752845295,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 1.55348546904214,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 0.552350388992761,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 0.759481784865047,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 1.27731027454576,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 1.96774826078671,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 2.41653295184333,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 3.21053663602043,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 5.17828489680714,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 7.9055149424589,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 10.2184821963661,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 10.6672668874227,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 9.87326320324561,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 8.25073393557937,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 7.14603315759385,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 7.73290544589866,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 11.3922267729757,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 16.708599267031,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 18.4346942326334,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 21.3690556741575,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 33.0374576416295,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 63.071510043111,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 90.1366791037563,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 103.427610338895,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 104.35970162032,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 98.1112378448393,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 93.9340880280815,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 100.389683199434,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 137.984031550254,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 175.923598894195,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Schleswig-Holstein",
+		"nuts_code" : "DEF",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 187.902697955475,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W13",
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W14",
+		"rate_14_day_per_100k" : 29.8159947180429,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W15",
+		"rate_14_day_per_100k" : 41.1544715826507,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W16",
+		"rate_14_day_per_100k" : 32.4756374393706,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W17",
+		"rate_14_day_per_100k" : 26.5497668146579,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W18",
+		"rate_14_day_per_100k" : 25.9898420312205,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W19",
+		"rate_14_day_per_100k" : 19.784009014789,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W20",
+		"rate_14_day_per_100k" : 14.9779879569511,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W21",
+		"rate_14_day_per_100k" : 14.1847611804148,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W22",
+		"rate_14_day_per_100k" : 12.6916284245816,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W23",
+		"rate_14_day_per_100k" : 9.79868371015494,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W24",
+		"rate_14_day_per_100k" : 7.74562617088438,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W25",
+		"rate_14_day_per_100k" : 5.73922903023361,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W26",
+		"rate_14_day_per_100k" : 3.03292591028605,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W27",
+		"rate_14_day_per_100k" : 2.42634072822884,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W28",
+		"rate_14_day_per_100k" : 2.2396991337497,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W29",
+		"rate_14_day_per_100k" : 2.00639714065077,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W30",
+		"rate_14_day_per_100k" : 2.51966152546841,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W31",
+		"rate_14_day_per_100k" : 2.98626551166627,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W32",
+		"rate_14_day_per_100k" : 4.57271906473897,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W33",
+		"rate_14_day_per_100k" : 5.55258743575446,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W34",
+		"rate_14_day_per_100k" : 5.50592703713468,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W35",
+		"rate_14_day_per_100k" : 6.29915381367103,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W36",
+		"rate_14_day_per_100k" : 6.01919142195232,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W37",
+		"rate_14_day_per_100k" : 8.86547573775923,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W38",
+		"rate_14_day_per_100k" : 12.3650056342431,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W39",
+		"rate_14_day_per_100k" : 11.2451560673683,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W40",
+		"rate_14_day_per_100k" : 12.8782700190608,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W41",
+		"rate_14_day_per_100k" : 22.396991337497,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W42",
+		"rate_14_day_per_100k" : 39.9879616171561,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W43",
+		"rate_14_day_per_100k" : 76.756355729547,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W44",
+		"rate_14_day_per_100k" : 107.645539615845,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W45",
+		"rate_14_day_per_100k" : 138.674704698002,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W46",
+		"rate_14_day_per_100k" : 177.962760335862,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W47",
+		"rate_14_day_per_100k" : 233.162011903068,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W48",
+		"rate_14_day_per_100k" : 287.847999085456,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W49",
+		"rate_14_day_per_100k" : 339.17443756722,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W50",
+		"rate_14_day_per_100k" : 445.513486021711,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W51",
+		"rate_14_day_per_100k" : 568.370315587606,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	},
+	{
+		"country" : "Germany",
+		"region_name" : "Thuringen",
+		"nuts_code" : "DEG",
+		"year_week" : "2020-W52",
+		"rate_14_day_per_100k" : 593.100326856092,
+		"source" : "Epidemic intelligence, subnational weekly data"
+	}
+]

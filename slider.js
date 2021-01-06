@@ -1,6 +1,7 @@
 var germanyData = [];
 function importGermanData(){
-   d3.json("https://opendata.ecdc.europa.eu/covid19/subnationalcaseweekly/json/", function(data){
+   //d3.json("https://opendata.ecdc.europa.eu/covid19/subnationalcaseweekly/json/", function(data){
+    d3.json("coronaData.json", function(data){
      console.log("Importing...");
      data.forEach(element => {
       if(element.country == "Germany"){
@@ -107,8 +108,8 @@ function updateslider(h) {
     currentDate = formatDate(h);
     document.getElementById("current-week").innerHTML = "Current week: "+currentDate;
     
-    resizeVirus(currentDate, "Bayern", "virusSVGBayern");
-    resizeVirus(currentDate, "Baden-Wurttemberg", "virusSVGBadenWuerttemberg");
+    resizeVirus(currentDate, "Bayern", "virusSVGBayern", "coronavirus.svg");
+    /*resizeVirus(currentDate, "Baden-Wurttemberg", "virusSVGBadenWuerttemberg");
     resizeVirus(currentDate, "Nordrhein-Westfalen", "virusSVGNrw");
     resizeVirus(currentDate, "Hessen", "virusSVGHessen");
     resizeVirus(currentDate, "Niedersachsen", "virusSVGNiedersachsen");
@@ -122,7 +123,7 @@ function updateslider(h) {
     resizeVirus(currentDate, "Berlin", "virusSVGBerlin");
     resizeVirus(currentDate, "Brandenburg", "virusSVGBrandenburg");
     resizeVirus(currentDate, "Sachsen-Anhalt", "virusSVGSachsenAnhalt");
-    resizeVirus(currentDate, "Sachsen", "virusSVGvirusSVGSachsen");
+    resizeVirus(currentDate, "Sachsen", "virusSVGSachsen");*/
     
 
 
@@ -134,7 +135,7 @@ function getCurrentWeek(){
 
 function resizeVirus(currentDate, region, id){
   var value = getCasesOfWeek(currentDate, region, id);
-  console.log("-----------Value cases of Week: "+value);
+  //console.log("-----------Value cases of Week: "+value);
   /*if((value != null) && (value >0)){
     console.log("Found cases: "+value);
     var newValue = 200*value/100;
@@ -147,7 +148,7 @@ function getCasesOfWeek(currentDate, region, id){
   germanyData.forEach(element => {
     if(currentDate != null){
       var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
-      console.log("CurrentDate: "+currentDate.toString());
+      //console.log("CurrentDate: "+currentDate.toString());
       if(newDateFormat.includes("2019")){
         document.getElementById(id).height=0;
           document.getElementById(id).width=0;
@@ -155,15 +156,39 @@ function getCasesOfWeek(currentDate, region, id){
     //console.log("New Date Format: "+newDateFormat);
     //console.log("Dateformat 1: "+element.year_week);
     
-      if((element.region_name == region) && (element.year_week == newDateFormat)){
-        console.log("++++++++++++++found a bavarian match!!!!!!!!!! ");
-        console.log("++++++++++++++found a bavarian match!!!!!!!!!! "+element.rate_14_day_per_100k);
-        console.log("++++++++++++++match type: "+typeof(element.rate_14_day_per_100k));
+      else if((element.region_name == region) && (element.year_week == newDateFormat)){
+        //console.log("++++++++++++++found a bavarian match!!!!!!!!!! ");
+        //console.log("++++++++++++++found a bavarian match!!!!!!!!!! "+element.rate_14_day_per_100k);
+        //console.log("++++++++++++++match type: "+typeof(element.rate_14_day_per_100k));
         if((element.rate_14_day_per_100k != null) && (element.rate_14_day_per_100k >0)){
           console.log("Found cases: "+element.rate_14_day_per_100k);
           var newValue = 200*element.rate_14_day_per_100k/100;
-          document.getElementById(id).height=newValue;
-          document.getElementById(id).width=newValue;
+          //document.getElementById(id).style.transform = "scale(1,2, newValue)";
+          
+          //document.getElementById(id).height=newValue;
+          //document.getElementById(id).width=newValue;
+
+          //document.getElementById(id).height=100;
+          //document.getElementById(id).width=100;
+          
+          var canvas = document.getElementById(id);
+          context = canvas.getContext('2d');
+
+          canvas.width = newValue;
+          canvas.height = newValue;
+
+          //context.translate(-newValue/2, -newValue/2);
+
+          base_image = new Image();
+          base_image.src = 'coronavirus.svg';
+          base_image.onload = function(){
+            context.drawImage(base_image, 0, 0, base_image.width, base_image.height,     // source rectangle
+              0, 0, canvas.width, canvas.height);
+          }
+          
+          //context.translate(-70, 0);
+        
+          
         }
         return element.rate_14_day_per_100k;
       }
@@ -175,6 +200,15 @@ function getCasesOfWeek(currentDate, region, id){
       //console.log("-------------currentdate is null")
     }
   });
+}
+
+function convertImageToCanvas(image) {
+	var canvas = document.createElement("canvas");
+	canvas.width = image.width;
+	canvas.height = image.height;
+	canvas.getContext("2d").drawImage(image, 0, 0);
+
+	return canvas;
 }
 
 /*function testButton(){
