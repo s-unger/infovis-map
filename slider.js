@@ -150,8 +150,8 @@ function getCasesOfWeek(currentDate, region, id){
       var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
       //console.log("CurrentDate: "+currentDate.toString());
       if(newDateFormat.includes("2019")){
-        document.getElementById(id).height=0;
-          document.getElementById(id).width=0;
+        //document.getElementById(id).height=0;
+          //document.getElementById(id).width=0;
       }
     //console.log("New Date Format: "+newDateFormat);
     //console.log("Dateformat 1: "+element.year_week);
@@ -174,8 +174,11 @@ function getCasesOfWeek(currentDate, region, id){
           var canvas = document.getElementById(id);
           context = canvas.getContext('2d');
 
-          canvas.width = newValue;
-          canvas.height = newValue;
+          //canvas.width = 50;
+          //canvas.height = 50;
+
+          //canvas.style.transform = 'scale(0.8)';
+
 
           //context.translate(-newValue/2, -newValue/2);
 
@@ -185,6 +188,41 @@ function getCasesOfWeek(currentDate, region, id){
             context.drawImage(base_image, 0, 0, base_image.width, base_image.height,     // source rectangle
               0, 0, canvas.width, canvas.height);
           }
+
+          canvas.style.transform = 'scale('+element.rate_14_day_per_100k/300+')';
+
+          /*const getDrawImageParams = (image, scale) => {
+            const {naturalWidth: imageWidth, naturalHeight: imageHeight} = image;
+            
+            return {
+              sx: 0,
+              sy: 0,
+              sWidth: imageWidth,
+              sHeight: imageHeight,
+              dx: 0,
+              dy: 0,
+              dWidth: imageWidth * scale,
+              dHeight: imageHeight * scale,
+            };
+          };
+          
+          // Get our canvas and image
+          
+          const canvas = document.getElementById(id);
+          const image = new Image();
+          image.src = 'coronavirus.svg';
+          const ctx = canvas.getContext("2d");
+          
+          // Get the params for this resize transformation, we try to get an image half the size
+          const scale = element.rate_14_day_per_100k/1000;
+          const {sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight} = getDrawImageParams(image, scale);
+          
+          // Set the canvas to the resulting "destination" size
+          canvas.width = dWidth;
+          canvas.height = dHeight;
+          
+          // Paste our resized image using the params
+          ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);*/
           
           //context.translate(-70, 0);
         

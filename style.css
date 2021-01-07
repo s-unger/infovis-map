@@ -73,9 +73,6 @@ html {
 }
 
 #map {
-  position: relative;
-  top: 0;
-  left: 0;
   margin-left: auto;
   margin-right: auto;
   height: auto;
@@ -86,13 +83,24 @@ html {
   position: relative;
   top: 0;
   left: 0;
+  min-width: 500px;
+  min-height: 620px;
   text-align: center;
+  z-index: 1;
 }
+
+/*#map  .iconContainer {
+  position: absolute;
+  min-width: 500px;
+  min-height: 620px;
+  top: 0;
+  left: 0;
+}*/
 
 #map .bayern{
   position: absolute;
-  top: 50px;
-  right: 50px;
+  bottom: 5%;
+  right: 28%;
 }
 
 
