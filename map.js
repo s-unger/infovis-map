@@ -5,6 +5,8 @@ var width = 500,
                 bayern=null;
                 trendListAverage=null;
                 trendList=null;
+                map_calendarweek=0;
+                map_year=0;
                 
             
             var svg = d3.select(".tempcenter")
@@ -301,8 +303,10 @@ var width = 500,
             
             };
             function getTrendValue(){
+            
+            var wordData= "allBLKlopapier.csv";
 
-            d3.csv("allBLKlopapier.csv", function(data) {
+            d3.csv(wordData, function(data) {
 
             data.forEach(function(d) {
             d['Baden'] = +d['Baden'];
@@ -354,6 +358,13 @@ var width = 500,
             
             });
             }
+
+            function updateMapTime(text_week) {
+                map_calendarweek = parseInt(text_week.slice(3, 5));
+                map_year = parseInt(text_week.slice(6, 10));
+                adaptColor(map_calendarweek);
+                
+              }
 
                         
             
