@@ -87,6 +87,7 @@ function updateslider(h) {
 
     currentDate = formatDate(h);
     document.getElementById("current-week").innerHTML = "Current week: "+currentDate;
+    updateArticleTime(currentDate);
   // filter data set and redraw plot
 /*  var newData = dataset.filter(function(d) {
     return d.date < h;
