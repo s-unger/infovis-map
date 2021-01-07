@@ -89,18 +89,115 @@ html {
   z-index: 1;
 }
 
-/*#map  .iconContainer {
-  position: absolute;
-  min-width: 500px;
-  min-height: 620px;
-  top: 0;
-  left: 0;
-}*/
-
-#map .bayern{
+#map #virusSVGBayern{
   position: absolute;
   bottom: 5%;
   right: 28%;
+  opacity: 0;
+}
+
+#map #virusSVGBaden{
+  position: absolute;
+  bottom: 5%;
+  right: 45%;
+  opacity: 0;
+}
+
+#map #virusSVGNrw{
+  position: absolute;
+  bottom: 40%;
+  right: 55%;
+  opacity: 0;
+}
+#map #virusSVGHessen{
+  position: absolute;
+  bottom: 30%;
+  right: 45%;
+  opacity: 0;
+}
+
+#map #virusSVGNiedersachsen{
+  position: absolute;
+  bottom: 50%;
+  right: 40%;
+  opacity: 0;
+}
+
+#map #virusSVGSchleswigHolst{
+  position: absolute;
+  top: 3%;
+  right: 38%;
+  opacity: 0;
+}
+
+#map #virusSVGMecklVorp{
+  position: absolute;
+  top: 4%;
+  right: 22%;
+  opacity: 0;
+}
+
+#map #virusSVGSaarland{
+  position: absolute;
+  bottom: 13%;
+  right: 58%;
+  opacity: 0;
+}
+
+#map #virusSVGRheinlandPfalz{
+  position: absolute;
+  bottom: 20%;
+  right: 58%;
+  opacity: 0;
+}
+
+#map #virusSVGSachsen{
+  position: absolute;
+  bottom: 30%;
+  right: 18%;
+  opacity: 0;
+}
+
+#map #virusSVGThueringen{
+  position: absolute;
+  bottom: 30%;
+  right: 32%;
+  opacity: 0;
+}
+
+#map #virusSVGHamburg{
+  position: absolute;
+  top: 9%;
+  right: 39%;
+  opacity: 0;
+}
+
+#map #virusSVGBremen{
+  position: absolute;
+  top: 13%;
+  right: 46%;
+  opacity: 0;
+}
+
+#map #virusSVGBerlin{
+  position: absolute;
+  bottom: 48%;
+  right: 18%;
+  opacity: 0;
+}
+
+#map #virusSVGBrandenburg{
+  position: absolute;
+  bottom: 42%;
+  right: 16%;
+  opacity: 0;
+}
+
+#map #virusSVGSachsenAnhalt{
+  position: absolute;
+  bottom: 42%;
+  right: 30%;
+  opacity: 0;
 }
 
 
