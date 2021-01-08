@@ -2,7 +2,7 @@ html {
     background-color: white;
 }
 
-#newspaper { 
+#newspaper {
   background-image: url("img/papertexture.jpg");
   background-repeat: repeat;
   background-size: 600px 600px;
@@ -203,7 +203,14 @@ html {
 
 /*#articleview {
 
-}*/
+#articleview {
+  height: 600px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  overflow-y: scroll;
+}
 
 #funnytexts {
   text-align: center;
@@ -259,7 +266,7 @@ html {
 
 
 .background {
-  
+
   fill:rgb(230, 225, 225);
   stroke: black;
   stroke-width: 3.5px;
@@ -285,6 +292,7 @@ html {
 }
 #vis{
   padding-top: 10px;
+  height: 120px;
 }
 
 #play-button {

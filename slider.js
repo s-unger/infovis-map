@@ -13,7 +13,7 @@ function importGermanData(){
       }
      });
      console.log("German data:" +germanyData);
-    
+
   });
 }
 
@@ -107,7 +107,7 @@ function updateslider(h) {
 
     currentDate = formatDate(h);
     document.getElementById("current-week").innerHTML = "Current week: "+currentDate;
-    
+
     resizeVirus(currentDate, "Bayern", "virusSVGBayern");
     resizeVirus(currentDate, "Baden-Wurttemberg", "virusSVGBaden");
     resizeVirus(currentDate, "Nordrhein-Westfalen", "virusSVGNrw");
@@ -124,8 +124,8 @@ function updateslider(h) {
     resizeVirus(currentDate, "Berlin", "virusSVGBerlin");
     resizeVirus(currentDate, "Brandenburg", "virusSVGBrandenburg");
     resizeVirus(currentDate, "Sachsen-Anhalt", "virusSVGSachsenAnhalt");
-    
-    
+
+    updateArticleTime(currentDate);
 
 
 }
@@ -148,13 +148,13 @@ function getCasesOfWeek(currentDate, region, id){
         img.style.transform = 'scale(0)';
       }
       else if((element.region_name == region) && (element.year_week == newDateFormat)){
-        
+
         if((element.rate_14_day_per_100k != null) && (element.rate_14_day_per_100k >0)){
           console.log("Found cases: "+element.rate_14_day_per_100k);
-    
+
           img.style.transform = 'scale('+element.rate_14_day_per_100k/300+')';
           img.style.opacity = 1;
-          
+
         }
         return element.rate_14_day_per_100k;
       }
@@ -176,5 +176,3 @@ function convertImageToCanvas(image) {
 
 	return canvas;
 }
-
-
