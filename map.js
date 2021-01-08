@@ -161,7 +161,7 @@ var width = 500,
                     colorBL();
                 } else {
                     console.log("not checked");	
-                    adaptColor(currentDate);
+                    adaptColor(map_calendarweek);
                 }	
             }
             function colorBL() {
@@ -338,35 +338,38 @@ var width = 500,
                 }
 
             
-            //var wordData= "allBLKlopapier.csv";
+                //var wordData= "allBLKlopapier.csv";
 
-            d3.csv(wordData, function(data) {
+                d3.csv(wordData, function(data) {
 
-            data.forEach(function(d) {
-            d['Baden'] = +d['Baden'];
-            d['Bayern'] = +d['Bayern'];
-            d['Berlin'] = +d['Berlin'];
-            d['Brandenburg'] = +d['Brandenburg'];
-            d['Bremen'] = +d['Bremen'];
-            d['Hamburg'] = +d['Hamburg'];
-            d['Mecklenburg'] = +d['Mecklenburg'];
-            d['Niedersachsen'] = +d['Niedersachsen'];
-            d['Nordrhein'] = +d['Nordrhein'];
-            d['Rheinland'] = +d['Rheinland'];
-            d['SachsenA'] = +d['SachsenA'];
-            d['Sachsen'] = +d['Sachsen'];
-            d['Saarland'] = +d['Saarland'];
-            d['Schleswig'] = +d['Schleswig'];
-            d['Thüringen'] = +d['Thüringen'];
-            d['Hessen'] = +d['Hessen'];
-            });
-            trendList= data;
-            //console.log(trendList);
-            //console.log(trendList[0]);
-            //(1);
-            //console.log("not average");	
-            
-            });
+                data.forEach(function(d) {
+                d['Baden'] = +d['Baden'];
+                d['Bayern'] = +d['Bayern'];
+                d['Berlin'] = +d['Berlin'];
+                d['Brandenburg'] = +d['Brandenburg'];
+                d['Bremen'] = +d['Bremen'];
+                d['Hamburg'] = +d['Hamburg'];
+                d['Mecklenburg'] = +d['Mecklenburg'];
+                d['Niedersachsen'] = +d['Niedersachsen'];
+                d['Nordrhein'] = +d['Nordrhein'];
+                d['Rheinland'] = +d['Rheinland'];
+                d['SachsenA'] = +d['SachsenA'];
+                d['Sachsen'] = +d['Sachsen'];
+                d['Saarland'] = +d['Saarland'];
+                d['Schleswig'] = +d['Schleswig'];
+                d['Thüringen'] = +d['Thüringen'];
+                d['Hessen'] = +d['Hessen'];
+                });
+                trendList= data;
+                
+                
+                //console.log(trendList);
+                //console.log(trendList[0]);
+                //(1);
+                //console.log("not average");	
+                
+                });
+                //update();
             
             };
             function adaptColor(week){
@@ -415,11 +418,24 @@ var width = 500,
                 console.log("update GOOGLETREND");
                 getTrendValue();
                 getTrendValueAverage();
-                console.log(trendList);
+                setTimeout(function() {  
+                    update();
+                }, 1000);
+                //console.log(trendList);
+                //trendList= await getTrendValueAverage();
+                //update();
                 //update();
                 //adaptColor(map_calendarweek);
-          
+                //executeAsynchronously(
+                //    [getTrendValue(), getTrendValueAverage(), update()], 10);
+
+            
             }
+            function executeAsynchronously(functions, timeout) {
+                for(var i = 0; i < functions.length; i++) {
+                  setTimeout(functions[i], timeout);
+                }
+              }
 
                         
             
