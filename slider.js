@@ -1,3 +1,24 @@
+var germanyData = [];
+function importGermanData(){
+   //d3.json("https://opendata.ecdc.europa.eu/covid19/subnationalcaseweekly/json/", function(data){
+    d3.json("coronaData.json", function(data){
+     console.log("Importing...");
+     data.forEach(element => {
+      if(element.country == "Germany"){
+        console.log("Importing = "+element.region_name);
+        germanyData.push(element);
+      }
+      else{
+        console.log("Item not found...");
+      }
+     });
+     console.log("German data:" +germanyData);
+
+  });
+}
+
+importGermanData();
+
 var formatDateIntoMonthOfYear = d3.timeFormat("%B %Y");
 var formatDate = d3.timeFormat("CW %W/%Y");
 var parseDate = d3.timeParse("%m/%d/%y");
@@ -49,7 +70,6 @@ slider.append("line")
         .on("start drag", function() {
           currentValue = d3.event.x;
           updateslider(x.invert(currentValue));
-          console.log("user is dragging...")
         })
     );
 
@@ -87,33 +107,72 @@ function updateslider(h) {
 
     currentDate = formatDate(h);
     document.getElementById("current-week").innerHTML = "Current week: "+currentDate;
+
+    resizeVirus(currentDate, "Bayern", "virusSVGBayern");
+    resizeVirus(currentDate, "Baden-Wurttemberg", "virusSVGBaden");
+    resizeVirus(currentDate, "Nordrhein-Westfalen", "virusSVGNrw");
+    resizeVirus(currentDate, "Hessen", "virusSVGHessen");
+    resizeVirus(currentDate, "Niedersachsen", "virusSVGNiedersachsen");
+    resizeVirus(currentDate, "Schleswig-Holstein", "virusSVGSchleswigHolst");
+    resizeVirus(currentDate, "Mecklenburg-Vorpommern", "virusSVGMecklVorp");
+    resizeVirus(currentDate, "Saarland", "virusSVGSaarland");
+    resizeVirus(currentDate, "Rheinland-Pfalz", "virusSVGRheinlandPfalz");
+    resizeVirus(currentDate, "Thuringen", "virusSVGThueringen");
+    resizeVirus(currentDate, "Sachsen", "virusSVGSachsen");
+    resizeVirus(currentDate, "Hamburg", "virusSVGHamburg");
+    resizeVirus(currentDate, "Bremen", "virusSVGBremen");
+    resizeVirus(currentDate, "Berlin", "virusSVGBerlin");
+    resizeVirus(currentDate, "Brandenburg", "virusSVGBrandenburg");
+    resizeVirus(currentDate, "Sachsen-Anhalt", "virusSVGSachsenAnhalt");
+
     updateArticleTime(currentDate);
-  // filter data set and redraw plot
-/*  var newData = dataset.filter(function(d) {
-    return d.date < h;
-  });*/
+
+
 }
 
-function resizeVirus(){
-  var value = 37;
-  var newValue = 200*value/100;
-  document.getElementById("virusSVG").height=newValue;
-  document.getElementById("virusSVG").width=newValue;
-
-
-  console.log("resizing button");
-
-  testImport();
+function getCurrentWeek(){
+  return currentDate;
 }
 
-function testImport(){
-   d3.json("https://opendata.ecdc.europa.eu/covid19/subnationalcaseweekly/json/", function(data){
-     console.log("Importing...");
-    if(data.region_name === "Bayern" && data.year_week === "2020-W34"){
-      console.log("Import working! cases = "+data.rate_14_day_per_100k);
+function resizeVirus(currentDate, region, id){
+  getCasesOfWeek(currentDate, region, id);
+}
+
+function getCasesOfWeek(currentDate, region, id){
+  germanyData.forEach(element => {
+    var img = document.getElementById(id);
+
+    if(currentDate != null){
+      var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
+      if(newDateFormat.includes("2019")){
+        img.style.transform = 'scale(0)';
+      }
+      else if((element.region_name == region) && (element.year_week == newDateFormat)){
+
+        if((element.rate_14_day_per_100k != null) && (element.rate_14_day_per_100k >0)){
+          console.log("Found cases: "+element.rate_14_day_per_100k);
+
+          img.style.transform = 'scale('+element.rate_14_day_per_100k/300+')';
+          img.style.opacity = 1;
+
+        }
+        return element.rate_14_day_per_100k;
+      }
+      else{
+        //console.log("-------------couldnt find a match for "+region)
+      }
     }
     else{
-      console.log("Item not found...");
+      //console.log("-------------currentdate is null")
     }
   });
+}
+
+function convertImageToCanvas(image) {
+	var canvas = document.createElement("canvas");
+	canvas.width = image.width;
+	canvas.height = image.height;
+	canvas.getContext("2d").drawImage(image, 0, 0);
+
+	return canvas;
 }
