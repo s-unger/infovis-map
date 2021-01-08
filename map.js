@@ -7,6 +7,7 @@ var width = 500,
                 trendList=null;
                 map_calendarweek=0;
                 map_year=0;
+                map_currentWord="corona";
                 
             
             var svg = d3.select(".tempcenter")
@@ -160,7 +161,7 @@ var width = 500,
                     colorBL();
                 } else {
                     console.log("not checked");	
-                    adaptColor(12);
+                    adaptColor(currentDate);
                 }	
             }
             function colorBL() {
@@ -258,11 +259,13 @@ var width = 500,
             if (value<50 && value>39){
                 console.log("4");
                 return "rgb(203, 178, 57)";
+                //return "rgb(255, 0, 255)";
                 
             }
             if (value<60&& value>49){
                 console.log("5");
                 return "rgb(236, 168, 25)";
+                //return "rgb(255, 0, 255)";
                 
             }
             if (value<70&& value>59){
@@ -288,23 +291,54 @@ var width = 500,
            
             }
             function getTrendValueAverage(){
+                var wordData= "klopapier.csv";
 
-            d3.csv("klopapier.csv", function(data) {
+                if (map_currentWord==="klopapier"){
+                    console.log("Klopapier ausgewählt");
+                    wordData= "klopapier.csv";
+                }
+                if (map_currentWord==="corona"){
+                    console.log("Average: Corona ausgewählt");
+                    wordData= "corona.csv";
+                }
+                if (map_currentWord==="bill gates"){
+                    console.log("Bill Gates ausgewählt");
+                    wordData= "billGates.csv";
+                }
+
+            d3.csv(wordData, function(data) {
 
             data.forEach(function(d) {
             d['Value'] = +d['Value'];
             });
             trendListAverage= data;
             console.log("average");	
-            //console.log(trendListAverage);
-            //console.log(trendListAverage[0]);
+            console.log(trendListAverage);
+            console.log(trendListAverage[0]);
 
             });
             
             };
+
             function getTrendValue(){
+                var wordData= "allBLKlopapier.csv";
+
+                if (map_currentWord==="klopapier"){
+                    console.log("Klopapier ausgewählt");
+                    var wordData= "allBLKlopapier.csv";
+                }
+                if (map_currentWord==="corona"){
+                    var wordData= "allBLcorona.csv";
+                    console.log("Bl Corona liste");
+
+                }
+                if (map_currentWord==="bill gates"){
+                    console.log("Bill Gates ausgewählt");
+                    var wordData= "billGates.csv";
+                }
+
             
-            var wordData= "allBLKlopapier.csv";
+            //var wordData= "allBLKlopapier.csv";
 
             d3.csv(wordData, function(data) {
 
@@ -316,7 +350,7 @@ var width = 500,
             d['Bremen'] = +d['Bremen'];
             d['Hamburg'] = +d['Hamburg'];
             d['Mecklenburg'] = +d['Mecklenburg'];
-            d['Niedersachen'] = +d['Niedersachen'];
+            d['Niedersachsen'] = +d['Niedersachsen'];
             d['Nordrhein'] = +d['Nordrhein'];
             d['Rheinland'] = +d['Rheinland'];
             d['SachsenA'] = +d['SachsenA'];
@@ -327,14 +361,24 @@ var width = 500,
             d['Hessen'] = +d['Hessen'];
             });
             trendList= data;
-            console.log(trendList);
-            console.log(trendList[0]);
-            (1);
-            console.log("not average");	
+            //console.log(trendList);
+            //console.log(trendList[0]);
+            //(1);
+            //console.log("not average");	
+            
             });
             
             };
             function adaptColor(week){
+                console.log(week);
+                console.log(currentDate);
+                console.log(trendList);
+                if (map_year==2019){
+                    //console.log("2019");
+                }else{
+                    //console.log("2020");
+                    week=week+52;
+                }
             trendList.forEach(function (d, i) {
                 if (i==week){
                 //colorBL2(d);
@@ -345,7 +389,7 @@ var width = 500,
                 g.select("#hamburg").style("fill", getcolor(d.Hamburg));
                 g.select("#hessen").style("fill", getcolor(d.Hessen));
                 g.select("#mecklenburg").style("fill", getcolor(d.Mecklenburg));
-                g.select("#niedersachsen").style("fill", getcolor(d.Niedersachen));
+                g.select("#niedersachsen").style("fill", getcolor(d.Niedersachsen));
                 g.select("#nrw").style("fill", getcolor(d.Nordrhein));
                 g.select("#rheinland").style("fill", getcolor(d.Rheinland));
                 g.select("#saarland").style("fill", getcolor(d.Saarland));
@@ -364,7 +408,18 @@ var width = 500,
                 map_year = parseInt(text_week.slice(6, 10));
                 adaptColor(map_calendarweek);
                 
-              }
+            }
+
+            function updateGoogleTrend(currentWord) {
+                map_currentWord= currentWord;
+                console.log("update GOOGLETREND");
+                getTrendValue();
+                getTrendValueAverage();
+                console.log(trendList);
+                //update();
+                //adaptColor(map_calendarweek);
+          
+            }
 
                         
             
