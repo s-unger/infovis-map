@@ -126,6 +126,11 @@ function updateslider(h) {
     resizeVirus(currentDate, "Sachsen-Anhalt", "virusSVGSachsenAnhalt");
 
     updateArticleTime(currentDate);
+    updateMapTime(currentDate);
+  // filter data set and redraw plot
+/*  var newData = dataset.filter(function(d) {
+    return d.date < h;
+  });*/
 
 
 }

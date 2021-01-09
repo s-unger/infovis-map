@@ -25,6 +25,7 @@ document.querySelector("#keyword2").onchange = function () {
 //WANT THE CURRENT KEYWORD? PUT YOUR FUNCTION IN HERE
 function notify_keyword_1_changed(keyword) {
   updateArticleKeyword(keyword);
+  updateGoogleTrend(keyword);
 }
 function notify_keyword_2_changed(keyword) {
 
