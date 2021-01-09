@@ -1,9 +1,12 @@
 var keyword_1 = "corona"; //Dont use this. For internal use only. External please go to notify_keyword
 var keyword_2 = "keines"
 
+selectItemByValue(document.getElementById("keyword1"), "corona")
+selectItemByValue(document.getElementById("keyword2"), "keines");
+
 document.querySelector("#keyword1").onchange = function () {
    let msg = document.querySelector("#keyword1").value;
-   if (keyword_2 = msg) {
+   if (keyword_2 == msg) {
      selectItemByValue(document.getElementById("keyword2"), "keines");
      notify_keyword_2_changed("keines");
    }
@@ -24,11 +27,17 @@ document.querySelector("#keyword2").onchange = function () {
 
 //WANT THE CURRENT KEYWORD? PUT YOUR FUNCTION IN HERE
 function notify_keyword_1_changed(keyword) {
+  keyword_1 = keyword
+  console.log(keyword_1)
   updateArticleKeyword(keyword);
   updateGoogleTrend(keyword);
+  replace_graph(keyword_1, keyword_2)
 }
 function notify_keyword_2_changed(keyword) {
+  keyword_2 = keyword
+  console.log(keyword_2)
   updateArticleKeyword2(keyword);
+  replace_graph(keyword_1, keyword_2)
 }
 
 function selectItemByValue(elmnt, value){

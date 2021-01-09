@@ -1,4 +1,4 @@
-replace_graph("alkohol", "maske");
+replace_graph("corona", "keines");
 function replace_graph(keyword1, keyword2) {
   document.getElementById("graph").innerHTML = "";
   // set the dimensions and margins of the graph
@@ -20,7 +20,11 @@ function replace_graph(keyword1, keyword2) {
   d3.csv("data/keywords/"+keyword1+".csv",
     function(d){
       if (d.date.slice(0,4) == "2019" || d.date.slice(0,4) == "2020" ) {
-        return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.value }
+        num = "0"
+        if (!isNaN(parseInt(d.value))){
+          num = d.value
+        }
+        return { date : d3.timeParse("%Y-%m-%d")(d.date), value : num }
       }
     },
     function(data) {
@@ -36,7 +40,7 @@ function replace_graph(keyword1, keyword2) {
       // Add Y axis
       var y = d3.scaleLinear()
         //.domain([0, 100])
-        .domain([0, d3.max(data, function(d) { return d.value; })])
+        .domain([0, d3.max(data, function(d) { return +d.value; })])
         .range([ height, 0 ]);
       svg.append("g")
         .call(d3.axisLeft(y));
@@ -45,7 +49,7 @@ function replace_graph(keyword1, keyword2) {
       //var bisect = d3.bisector(function(d) { return d.x; }).left;
 
       // Create the circle that travels along the curve of chart
-      var focus = svg
+      /*var focus = svg
         .append('g')
         .append('circle')
           .style("fill", "none")
@@ -59,7 +63,7 @@ function replace_graph(keyword1, keyword2) {
         .append('text')
           .style("opacity", 0)
           .attr("text-anchor", "left")
-          .attr("alignment-baseline", "middle")
+          .attr("alignment-baseline", "middle")*/
 
       // Add first line
       svg.append("path")
@@ -73,7 +77,7 @@ function replace_graph(keyword1, keyword2) {
           )
       
       // Add second line
-      secondKeyChosen = true
+      secondKeyChosen = (keyword2 != "keines")
       if (secondKeyChosen) {
         d3.csv("data/keywords/"+keyword2+".csv",
         function(d){
