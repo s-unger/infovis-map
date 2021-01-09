@@ -421,11 +421,7 @@ var width = 500,
                 setTimeout(function() {  
                     update();
                 }, 1000);
-                //console.log(trendList);
-                //trendList= await getTrendValueAverage();
-                //update();
-                //update();
-                //adaptColor(map_calendarweek);
+                
                 //executeAsynchronously(
                 //    [getTrendValue(), getTrendValueAverage(), update()], 10);
 
