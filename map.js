@@ -1,5 +1,5 @@
-var width = 500,
-                height = 620,
+var widthMap = 500,
+                heightMap = 620,
                 focused = null,
                 geoPath;
                 bayern=null;
@@ -12,14 +12,14 @@ var width = 500,
             
             var svg = d3.select(".tempcenter")
               .append("svg")
-                .attr("width", width)
-                .attr("height", height)
+                .attr("width", widthMap)
+                .attr("height", heightMap)
                 .attr("align","center");
             
             svg.append("rect")
                 .attr("class", "background")
-                .attr("width", width)
-                .attr("height", height);
+                .attr("width", widthMap)
+                .attr("height", heightMap);
             
             var g = svg.append("g")
               .append("g")
@@ -41,17 +41,17 @@ var width = 500,
                   projection = d3.geo.albers()
                     .parallels([bottomLeft[1],topRight[1]])
                     .rotate([rotLong,0,0])
-                    .translate([width/2,height/2])
+                    .translate([widthMap/2,heightMap/2])
                     .center(center),
                     
                   bottomLeftPx = projection(bottomLeft),
                   topRightPx = projection(topRight),
-                  scaleFactor = 1.00*Math.min(width/(topRightPx[0]-bottomLeftPx[0]), height/(-topRightPx[1]+bottomLeftPx[1])),
+                  scaleFactor = 1.00*Math.min(widthMap/(topRightPx[0]-bottomLeftPx[0]), heightMap/(-topRightPx[1]+bottomLeftPx[1])),
                   
                   projection = d3.geo.albers()
                     .parallels([bottomLeft[1],topRight[1]])
                     .rotate([rotLong,0,0])
-                    .translate([width/2,height/2])
+                    .translate([widthMap/2,heightMap/2])
                     .scale(scaleFactor*0.975*1000)
                     .center(center);
             
@@ -436,8 +436,8 @@ var width = 500,
                         
             
             function clickPath(d) {
-              var x = width/2,
-                  y = height/2,
+              var x = widthMap/2,
+                  y = heightMap/2,
                   k = 1,
                   name = d.properties.NAME_1;
             
@@ -469,7 +469,7 @@ var width = 500,
              
               g.transition()
                   .duration(1000)
-                  .attr("transform", "translate("+ (width/2) +","+ (height/2) +")scale("+ k +")translate("+ (-x) +","+ (-y) +")")
+                  .attr("transform", "translate("+ (widthMap/2) +","+ (heightMap/2) +")scale("+ k +")translate("+ (-x) +","+ (-y) +")")
                   .style("stroke-width", 1.75/k +"px");
             }
             
