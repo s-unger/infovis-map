@@ -1,228 +1,353 @@
 html {
-    background-color: white;
+  background-color: white;
 }
 
 #newspaper { 
-  background-image: url("img/papertexture.jpg");
-  background-repeat: repeat;
-  background-size: 600px 600px;
-  margin-top: 2%;
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 1300px;
-  margin-bottom: 100px;
+background-image: url("img/papertexture.jpg");
+background-repeat: repeat;
+background-size: 600px 600px;
+margin-top: 2%;
+width: 98%;
+margin-left: auto;
+margin-right: auto;
+height: 1300px;
+margin-bottom: 100px;
 }
 
 #header {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: 4px solid black;
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+border-bottom: 4px solid black;
 }
 
 #header h1 {
-  text-align: center;
-  padding-top: 10px;
-  font-size: 6em;
+text-align: center;
+padding-top: 10px;
+font-size: 6em;
 }
 
 #header p {
-  text-align: center;
-  width: 100%;
-  font-size: 2em;
-  margin-top: -40px;
+text-align: center;
+width: 100%;
+font-size: 2em;
+margin-top: -40px;
 }
 
 #content-wrapper {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: blue;
-  margin-top: 20px;
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+background-color: blue;
+margin-top: 20px;
 }
 
 #left {
-  box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-  width: 50%;
-  float: left;
-  border-right: 2px solid black;
-  text-align: center;
-  height: 1000;
+box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+width: 50%;
+float: left;
+border-right: 2px solid black;
+text-align: center;
+height: 1000;
 }
 
 #right {
-  box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-  width: 50%;
-  float: left;
-  border-left: 2px solid black;
-  height: 1000;
+box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+width: 50%;
+float: left;
+border-left: 2px solid black;
+height: 1000;
 }
 
 #graph {
-  margin-left: auto;
-  margin-right: auto;
+margin-left: auto;
+margin-right: auto;
 }
 
 #graph img {
-  width: 90%; height: auto
+width: 90%; height: auto
 }
 
 #map {
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  width: 100%;
+margin-left: auto;
+margin-right: auto;
+height: auto;
+width: 100%;
 }
 
 #map  .tempcenter {
-  text-align: center;
+text-align: center;
+position: relative;
+top: 0;
+left: 0;
+min-width: 500px;
+min-height: 620px;
+text-align: center;
+z-index: 1;
 }
 
-/*#articleview {
+#map #virusSVGBayern{
+  position: absolute;
+  bottom: 5%;
+  right: 28%;
+  opacity: 0;
+}
 
-}*/
+#map #virusSVGBaden{
+  position: absolute;
+  bottom: 5%;
+  right: 45%;
+  opacity: 0;
+}
+
+#map #virusSVGNrw{
+  position: absolute;
+  bottom: 40%;
+  right: 55%;
+  opacity: 0;
+}
+#map #virusSVGHessen{
+  position: absolute;
+  bottom: 30%;
+  right: 45%;
+  opacity: 0;
+}
+
+#map #virusSVGNiedersachsen{
+  position: absolute;
+  bottom: 50%;
+  right: 40%;
+  opacity: 0;
+}
+
+#map #virusSVGSchleswigHolst{
+  position: absolute;
+  top: 3%;
+  right: 38%;
+  opacity: 0;
+}
+
+#map #virusSVGMecklVorp{
+  position: absolute;
+  top: 4%;
+  right: 22%;
+  opacity: 0;
+}
+
+#map #virusSVGSaarland{
+  position: absolute;
+  bottom: 13%;
+  right: 58%;
+  opacity: 0;
+}
+
+#map #virusSVGRheinlandPfalz{
+  position: absolute;
+  bottom: 20%;
+  right: 58%;
+  opacity: 0;
+}
+
+#map #virusSVGSachsen{
+  position: absolute;
+  bottom: 30%;
+  right: 18%;
+  opacity: 0;
+}
+
+#map #virusSVGThueringen{
+  position: absolute;
+  bottom: 30%;
+  right: 32%;
+  opacity: 0;
+}
+
+#map #virusSVGHamburg{
+  position: absolute;
+  top: 9%;
+  right: 39%;
+  opacity: 0;
+}
+
+#map #virusSVGBremen{
+  position: absolute;
+  top: 13%;
+  right: 46%;
+  opacity: 0;
+}
+
+#map #virusSVGBerlin{
+  position: absolute;
+  bottom: 48%;
+  right: 18%;
+  opacity: 0;
+}
+
+#map #virusSVGBrandenburg{
+  position: absolute;
+  bottom: 42%;
+  right: 16%;
+  opacity: 0;
+}
+
+#map #virusSVGSachsenAnhalt{
+  position: absolute;
+  bottom: 42%;
+  right: 30%;
+  opacity: 0;
+}
+
+
+#articleview {
+height: 600px;
+width: 95%;
+margin-left: auto;
+margin-right: auto;
+overflow: hidden;
+overflow-y: scroll;
+}
 
 #funnytexts {
-  text-align: center;
+text-align: center;
 }
 
 #tagcloud {
-  text-align: center;
+text-align: center;
 }
 
 #tagcloud img {
-  width: 90%; height: auto
+width: 90%; height: auto
 }
 
 #dropdown {
-  height: 50px;
+height: 50px;
 }
 
 
 
 .time-slider-container {
-  margin: 20px;
-  text-align: center;
+margin: 20px;
+text-align: center;
 }
 .slider.slider-horizontal {
-  width: 100%;
+width: 100%;
 }
 
 .slider-tick-container {
-  display: none !important;
+display: none !important;
 }
 
 .slider-tick-label-container .slider-tick-label :first-child {
-  padding-left: 50px;
+padding-left: 50px;
 }
 .slider-tick-label-container .slider-tick-label:last-child {
-  padding-right: 50px;
-  }
+padding-right: 50px;
+}
 
 .slider-track-total {
-  background-color: #4A89DC;
-  opacity: 0.3;
+background-color: #4A89DC;
+opacity: 0.3;
 }
 .slider.slider-horizontal {
-  width: 90% !important;
-  height: 20px;
+width: 90% !important;
+height: 20px;
 }
 
 .map {
-  max-width:100%;
-  margin-left:auto;
-  margin-right:auto;
+max-width:100%;
+margin-left:auto;
+margin-right:auto;
 }
 
 
 .background {
-  
-  fill:rgb(230, 225, 225);
-  stroke: black;
-  stroke-width: 3.5px;
-  pointer-events: all;
+
+fill:rgb(230, 225, 225);
+stroke: black;
+stroke-width: 3.5px;
+pointer-events: all;
 }
 
 #states {
-  fill: rgb(219, 162, 38);
-  stroke: #fff;
-  stroke-width: 1.25px;
-  opacity: 0.85;
+fill: rgb(219, 162, 38);
+stroke: #fff;
+stroke-width: 1.25px;
+opacity: 0.85;
 }
 
 #states .active {
-  /*fill: lightblue;*/
-  fill: rgb(44, 47, 206);
+/*fill: lightblue;*/
+fill: rgb(44, 47, 206);
 }
 
 .graticuleLine {
-  fill: rgb(182, 17, 39);
-  stroke:white;
-  stroke-width: 0.5px;
+fill: rgb(182, 17, 39);
+stroke:white;
+stroke-width: 0.5px;
 }
 #vis{
-  padding-top: 10px;
+padding-top: 10px;
+height: 120px;
 }
 
 #play-button {
-  position: absolute;
-  top: 140px;
-  left: 50px;
-  background: #f08080;
-  padding-right: 26px;
-  border-radius: 3px;
-  border: none;
-  color: white;
-  margin: 0;
-  padding: 0 12px;
-  width: 60px;
-  cursor: pointer;
-  height: 30px;
+position: absolute;
+top: 140px;
+left: 50px;
+background: #f08080;
+padding-right: 26px;
+border-radius: 3px;
+border: none;
+color: white;
+margin: 0;
+padding: 0 12px;
+width: 60px;
+cursor: pointer;
+height: 30px;
 }
 
 #play-button:hover {
-  background-color: #696969;
+background-color: #696969;
 }
 
 
 .ticks {
-  font-size: 8px;
-  margin-top: 5px;
+font-size: 8px;
+margin-top: 5px;
 }
 
 .track,
 .track-inset,
 .track-overlay {
-  stroke-linecap: round;
-  margin-top: 5px;
+stroke-linecap: round;
+margin-top: 5px;
 }
 
 .track {
-  stroke: #000;
-  stroke-opacity: 0.3;
-  stroke-width: 0px;
+stroke: #000;
+stroke-opacity: 0.3;
+stroke-width: 0px;
 }
 
 .track-inset {
-  stroke: #dcdcdc;
-  stroke-width: 8px;
+stroke: #dcdcdc;
+stroke-width: 8px;
 }
 
 .track-overlay {
-  pointer-events: stroke;
-  stroke-width: 60px;
-  stroke: transparent;
-  cursor: crosshair;
+pointer-events: stroke;
+stroke-width: 60px;
+stroke: transparent;
+cursor: crosshair;
 }
 
 .handle {
-  fill: #fff;
-  stroke: #000;
-  stroke-opacity: 0.5;
-  stroke-width: 1.25px;
+fill: #fff;
+stroke: #000;
+stroke-opacity: 0.5;
+stroke-width: 1.25px;
 }
