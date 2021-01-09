@@ -28,7 +28,7 @@ function notify_keyword_1_changed(keyword) {
   updateGoogleTrend(keyword);
 }
 function notify_keyword_2_changed(keyword) {
-
+  updateArticleKeyword2(keyword);
 }
 
 function selectItemByValue(elmnt, value){
