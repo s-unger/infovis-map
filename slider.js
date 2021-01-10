@@ -2,97 +2,118 @@ var germanyData = [];
 function importGermanData(){
    //d3.json("https://opendata.ecdc.europa.eu/covid19/subnationalcaseweekly/json/", function(data){
     d3.json("coronaData.json", function(data){
-     console.log("Importing...");
+     //console.log("Importing...");
      data.forEach(element => {
       if(element.country == "Germany"){
         //console.log("Importing = "+element.region_name);
         germanyData.push(element);
       }
       else{
-        console.log("Item not found...");
+        //console.log("Item not found...");
       }
      });
-     console.log("German data:" +germanyData);
+     //console.log("German data:" +germanyData);
 
   });
 }
 
 importGermanData();
 
-var formatDateIntoMonthOfYear = d3.timeFormat("%B %Y");
-var formatDate = d3.timeFormat("CW %W/%Y");
-var parseDate = d3.timeParse("%m/%d/%y");
+var handle, slider, currentDate, startDate, endDate, x, formatDate;
 
-var startDate = new Date("2019-01-01"),
-    endDate = new Date("2020-10-30"),
+createSlider("2020")
+
+function createSlider(year) {
+  document.getElementById("slider").innerHTML = "";
+  //var formatDateIntoMonthOfYear = d3.timeFormat("%B %Y");
+  formatDate = d3.timeFormat("CW %W/%Y");
+  //var parseDate = d3.timeParse("%m/%d/%y");
+  if(year == "") {
+    startDate = new Date("2019-01-01");
+    endDate = new Date("2020-12-31");
     currentDate = new Date("2019-01-01");
+  } else if(year == "2019") {
+    startDate = new Date("2019-01-01");
+    endDate = new Date("2019-12-31");
+    currentDate = new Date("2019-01-01");
+  } else if(year == "2020") {
+    startDate = new Date("2020-01-01");
+    endDate = new Date("2020-12-31");
+    currentDate = new Date("2020-01-01");
+  }
 
-var marginSlider = {top:30, right:50, bottom:30, left:50}, // 50 50 0 50
-    widthSlider = 560 - marginSlider.left - marginSlider.right,
-    heightSlider = 100 - marginSlider.top - marginSlider.bottom; // 300
+  /*startDate = new Date("2019-01-01");
+  endDate = new Date("2020-10-30");
+  currentDate = new Date("2019-01-01");*/
 
-var svgSlider = d3.select("#slider")
-    .append("svg")
-    .attr("width", widthSlider + marginSlider.left + marginSlider.right)
-    .attr("height", heightSlider + marginSlider.top + marginSlider.bottom); // heightSlider + marginSlider.top + marginSlider.bottom
+  var marginSlider = {top:30, right:50, bottom:30, left:50}, // 50 50 0 50
+      widthSlider = 560 - marginSlider.left - marginSlider.right,
+      heightSlider = 100 - marginSlider.top - marginSlider.bottom; // 300
 
-//var headlineWeek = document.getElementById("current-week");
+  var svgSlider = d3.select("#slider")
+      .append("svg")
+      .attr("width", widthSlider + marginSlider.left + marginSlider.right)
+      .attr("height", heightSlider + marginSlider.top + marginSlider.bottom); // heightSlider + marginSlider.top + marginSlider.bottom
 
-////////// slider //////////
+  //var headlineWeek = document.getElementById("current-week");
 
-var moving = false;
-var currentValue = 0;
-var targetValue = widthSlider;
+  ////////// slider //////////
 
-var bavarianCasesSVG = d3.select("#virusSVG");
+  //var moving = false;
+  var currentValue = 0;
+  var targetValue = widthSlider;
 
-var x = d3.scaleTime()
-    .domain([startDate, endDate])
-    .range([0, targetValue])
-    .clamp(true);
+  //var bavarianCasesSVG = d3.select("#virusSVG");
 
-var slider = svgSlider.append("g")
-    .attr("class", "slider")
-    .attr("transform", "translate(" + marginSlider.left + "," + heightSlider + ")"); // /5
+  x = d3.scaleTime()
+      .domain([startDate, endDate])
+      .range([0, targetValue])
+      .clamp(true);
 
-slider.append("line")
-    .attr("class", "track")
-    .attr("x1", x.range()[0])
-    .attr("x2", x.range()[1])
-  .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
-    .attr("class", "track-inset")
-  .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
-    .attr("class", "track-overlay")
-    .call(d3.drag()
-        .on("start.interrupt", function() { slider.interrupt(); })
-        .on("start drag", function() {
-          currentValue = d3.event.x;
-          updateslider(x.invert(currentValue));
-        })
-    );
+  var slider = svgSlider.append("g")
+      .attr("class", "slider")
+      .attr("transform", "translate(" + marginSlider.left + "," + heightSlider + ")"); // /5
 
-slider.insert("g", ".track-overlay")
-    .attr("class", "ticks")
-    .attr("transform", "translate(0," + 18 + ")")
-  .selectAll("text")
-    .data(x.ticks(10))
-    .enter()
-    .append("text")
-    .attr("x", x)
-    .attr("y", 10)
-    .attr("text-anchor", "middle")
-    .attr("font-size", "small")
-    .text(function(d) { return (d.toLocaleDateString('de-DE', { month: 'short' }) + " " + d.getFullYear().toString().slice(2,4)); }); // formatDateIntoMonthOfYear(d)
+  slider.append("line")
+      .attr("class", "track")
+      .attr("x1", x.range()[0])
+      .attr("x2", x.range()[1])
+    .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+      .attr("class", "track-inset")
+    .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+      .attr("class", "track-overlay")
+      .call(d3.drag()
+          .on("start.interrupt", function() { slider.interrupt(); })
+          .on("start drag", function() {
+            currentValue = d3.event.x;
+            updateslider(x.invert(currentValue));
+          })
+      );
 
-var handle = slider.insert("circle", ".track-overlay")
-    .attr("class", "handle")
-    .attr("r", 9);
+  slider.insert("g", ".track-overlay")
+      .attr("class", "ticks")
+      .attr("transform", "translate(0," + 18 + ")")
+    .selectAll("text")
+      .data(x.ticks(10))
+      .enter()
+      .append("text")
+      .attr("x", x)
+      .attr("y", 10)
+      .attr("text-anchor", "middle")
+      .attr("font-size", "small")
+      .text(function(d) { if(year==""){return (d.toLocaleDateString('de-DE', { month: 'short' }) + " " + d.getFullYear().toString().slice(2,4)) 
+        } else {return (d.toLocaleDateString('de-DE', { month: 'short' })) }; }); // formatDateIntoMonthOfYear(d)
 
-var label = slider.append("text")
-    .attr("class", "label")
-    .attr("text-anchor", "middle")
-    .text(formatDate(startDate))
-    .attr("transform", "translate(0," + (-25) + ")");
+  handle = slider.insert("circle", ".track-overlay")
+      .attr("class", "handle")
+      .attr("r", 9);
+
+  label = slider.append("text")
+      .attr("class", "label")
+      .attr("text-anchor", "middle")
+      .text(formatDate(startDate))
+      .attr("transform", "translate(0," + (-25) + ")");
+}
 
 
 ////////// plot //////////
@@ -152,7 +173,7 @@ function getCasesOfWeek(currentDate, region, id){
       else if((element.region_name == region) && (element.year_week == newDateFormat)){
 
         if((element.rate_14_day_per_100k != null) && (element.rate_14_day_per_100k >0)){
-          console.log("Found cases: "+element.rate_14_day_per_100k);
+          //console.log("Found cases: "+element.rate_14_day_per_100k);
           return element.rate_14_day_per_100k/300;
         }
         //return element.rate_14_day_per_100k;
