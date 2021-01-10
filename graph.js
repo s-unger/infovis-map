@@ -1,4 +1,4 @@
-var selectedYear = "" // 2019 oder 2020 oder ""
+var selectedYear = "2019" // 2019 oder 2020 oder ""
 var yearPath = ""
 var firstDate = new Date()
 if(selectedYear == "") {
@@ -108,7 +108,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate) {
         .attr("stroke", "steelblue")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
-        .x(function(d) { return x(d.date) })
+        .x(function(d) { console.log(d.date); return x(d.date) })
         .y(function(d) { if(ratio < 1.0) {return y(d.value*ratio)} else { return y(d.value) } }))
 
 
