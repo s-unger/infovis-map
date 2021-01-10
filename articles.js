@@ -84,6 +84,14 @@ function echoArticles() {
       }
     }
   }
+  //UX-Verbesserung bei fehlenden Artikeln:
+  if (articleview_display == "") {
+    articleview_display = "<h2>In Kalenderwoche "+articleview_calendarweek+" des Jahres "+articleview_year+" gab es keine Artikel zum Thema "+articleview_keyword;
+    if (articleview_keyword_2 != "") {
+      articleview_display = articleview_display+" und "+articleview_keyword_2;
+    }
+    articleview_display = articleview_display+".</h2>"
+  }
   document.getElementById('articleview').innerHTML = articleview_display;
 }
 
