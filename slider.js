@@ -106,6 +106,21 @@ function updateslider(h) {
 
     currentDate = formatDate(h);
     document.getElementById("current-week").innerHTML = "Current week: "+currentDate;
+    
+    scaleIcon(bayern_virus, resizearray[0]);
+    scaleIcon(baden_virus, resizearray[1]);
+    scaleIcon(nrw_virus, resizearray[2]);
+    scaleIcon(hessen_virus, resizearray[3]);
+    scaleIcon(niedersachsen_virus, resizearray[4]);
+    scaleIcon(schleswigholst_virus, resizearray[5]);
+    scaleIcon(mecklvorp_virus, resizearray[6]);
+    scaleIcon(saarland_virus, resizearray[7]);
+    scaleIcon(thueringen_virus, resizearray[8]);
+    scaleIcon(hamburg_virus, resizearray[9]);
+    scaleIcon(bremen_virus, resizearray[10]);
+    scaleIcon(berlin_virus, resizearray[11]);
+    scaleIcon(brandenburg_virus, resizearray[12]);
+    scaleIcon(sachsenanhalt_virus, resizearray[13]);
 
     resizeVirus(currentDate, "Bayern", "virusSVGBayern");
     resizeVirus(currentDate, "Baden-Wurttemberg", "virusSVGBaden");
@@ -146,23 +161,18 @@ function resizeVirus(currentDate, region, id){
 
 function getCasesOfWeek(currentDate, region, id){
   germanyData.forEach(element => {
-    var img = document.getElementById(id);
-
     if(currentDate != null){
       var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
       if(newDateFormat.includes("2019")){
-        img.style.transform = 'scale(0)';
+        return 0;
       }
       else if((element.region_name == region) && (element.year_week == newDateFormat)){
 
         if((element.rate_14_day_per_100k != null) && (element.rate_14_day_per_100k >0)){
           console.log("Found cases: "+element.rate_14_day_per_100k);
-
-          img.style.transform = 'scale('+element.rate_14_day_per_100k/300+')';
-          img.style.opacity = 1;
-
+          return element.rate_14_day_per_100k/300;
         }
-        return element.rate_14_day_per_100k;
+        //return element.rate_14_day_per_100k;
       }
       else{
         //console.log("-------------couldnt find a match for "+region)

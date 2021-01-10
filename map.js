@@ -12,8 +12,7 @@ var widthMap = 500,
             
             var svg = d3.select(".tempcenter")
               .append("svg")
-                .attr("width", widthMap)
-                .attr("height", heightMap)
+                .attr("viewBox", "0 0 500 620")
                 .attr("align","center");
             
             svg.append("rect")
@@ -59,6 +58,104 @@ var widthMap = 500,
                 
               var graticule = d3.geo.graticule()
                   .step([1, 1]);
+                  
+              var bayern_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "260")
+              .attr('y', '430');
+              var baden_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "130")
+              .attr('y', '450');
+              var nrw_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "50")
+              .attr('y', '240');
+              var hessen_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "130")
+              .attr('y', '300');
+              var niedersachsen_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "160")
+              .attr('y', '150');
+              var schleswigholst_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "170")
+              .attr('y', '30');
+              var mecklvorp_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "280")
+              .attr('y', '70');
+              var saarland_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "30")
+              .attr('y', '390');
+              var rheinlandpfalz_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "60")
+              .attr('y', '340');
+              var sachsen_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "340")
+              .attr('y', '270');
+              var thueringen_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "230")
+              .attr('y', '290');
+              var hamburg_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "180")
+              .attr('y', '85');
+              var bremen_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "130")
+              .attr('y', '120');
+              var berlin_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "330")
+              .attr('y', '160');
+              var brandenburg_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "360")
+              .attr('y', '190');
+              var sachsenanhalt_virus = svg.append('image')
+              .attr('xlink:href', 'coronavirus-centered.svg')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("x", "260")
+              .attr('y', '190');
+              
             
              /* g.append("path")
                   .datum(graticule)
@@ -484,4 +581,31 @@ var widthMap = 500,
                   .duration(1000)
                   .attr("transform", "scale("+1+")translate("+0+","+0+")")
                   .style("stroke-width", 1.00+"px");
+            }
+            
+            function scaleIcon(icon, value) {
+              var icon_bbox = icon.node().getBBox();
+              var icon_x = icon_bbox.x;
+              var icon_y = icon_bbox.y;
+              var icon_scaling_factor = value;
+              icon.attr('transform', 'translate('+(1 - icon_scaling_factor) * (icon_x+50)+', '+(1 - icon_scaling_factor) * (icon_y+50)+') scale('+icon_scaling_factor+')');
+            }
+            
+            
+            
+            function execute_resize_array(resizearray) {
+              scaleIcon(bayern_virus, resizearray[0]);
+              scaleIcon(baden_virus, resizearray[1]);
+              scaleIcon(nrw_virus, resizearray[2]);
+              scaleIcon(hessen_virus, resizearray[3]);
+              scaleIcon(niedersachsen_virus, resizearray[4]);
+              scaleIcon(schleswigholst_virus, resizearray[5]);
+              scaleIcon(mecklvorp_virus, resizearray[6]);
+              scaleIcon(saarland_virus, resizearray[7]);
+              scaleIcon(thueringen_virus, resizearray[8]);
+              scaleIcon(hamburg_virus, resizearray[9]);
+              scaleIcon(bremen_virus, resizearray[10]);
+              scaleIcon(berlin_virus, resizearray[11]);
+              scaleIcon(brandenburg_virus, resizearray[12]);
+              scaleIcon(sachsenanhalt_virus, resizearray[13]);
             }

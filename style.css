@@ -81,20 +81,15 @@ margin-right: auto;
 width: 90%; height: auto
 }
 
-#map {
-margin-left: auto;
-margin-right: auto;
-height: auto;
-width: 100%;
-}
-
 #map  .tempcenter {
 text-align: center;
 position: relative;
 top: 0;
 left: 0;
-min-width: 500px;
-min-height: 620px;
+width: 80%;
+max-width: 400px;
+margin-left: auto;
+margin-right: auto;
 text-align: center;
 z-index: 1;
 }
@@ -102,8 +97,9 @@ z-index: 1;
 #map #virusSVGBayern{
   position: absolute;
   bottom: 5%;
-  right: 28%;
+  left: 35%;
   opacity: 0;
+  background-color: green;
 }
 
 #map #virusSVGBaden{
