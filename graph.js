@@ -1,5 +1,44 @@
+var selectedYear = "" // /2019 oder /2020
+
+
 replace_graph("corona", "keines");
+
+
+
 function replace_graph(keyword1, keyword2) {
+  ratio = 1.0
+  secondKeyChosen = (keyword2 != "keines")
+  var path = "data/keywords/"+selectedYear
+  if(secondKeyChosen) {
+    keywords = [0.0,0.0]
+    d3.csv(path+"quantifier.csv", 
+      function(scaling){
+        /*if (scaling.keyword == keyword1) {
+          return {factor : scaling.factor, keyword: 1}
+        } else if (scaling.keyword == keyword2) {
+          return {factor : scaling.factor, keyword: 2}
+        }*/
+        if (scaling.keyword == keyword1) {
+          keywords[0] = scaling.factor
+          return {factor : scaling.factor, keyword: 1}
+        } else if (scaling.keyword == keyword2) {
+          keywords[1] = scaling.factor
+          return {factor : scaling.factor, keyword: 2}
+        }
+      },
+      function(factorize) {
+        /*factorize.forEach(function(object) {
+          if(object.keyword == 1) {
+            ratio *= parseFloat(object.factor) 
+          } else if(object.keyword == 2) {
+            ratio /= parseFloat(object.factor) 
+          }
+        })*/
+        ratio = parseFloat(keywords[0])/parseFloat(keywords[1])
+      }
+    )
+    //ratio = parseFloat(keywords[0])/parseFloat(keywords[1])
+  }
   document.getElementById("graph").innerHTML = "";
   // set the dimensions and margins of the graph
   var margin = {top: 10, right: 30, bottom: 30, left: 60},
@@ -17,21 +56,37 @@ function replace_graph(keyword1, keyword2) {
   //Read the data
   //data/keywords/alkohol.csv
   //https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_IC.csv
-  d3.csv("data/keywords/"+keyword1+".csv",
+  d3.csv(path+keyword1+".csv",
     function(d){
-      if (d.date.slice(0,4) == "2019" || d.date.slice(0,4) == "2020" ) {
-        num = "0"
-        if (!isNaN(parseInt(d.value))){
-          num = d.value
+      if(selectedYear != "") {
+        if (d.date.slice(0,4) == selectedYear) {
+          num = "0"
+          if (!isNaN(parseInt(d.value))){
+            if(secondKeyChosen && ratio < 1.0) {
+              num = Math.round(d.value*ratio)
+            } else {
+              num = d.value
+            }
+          }
+          return { date : d3.timeParse("%Y-%m-%d")(d.date), value : num }
         }
-        return { date : d3.timeParse("%Y-%m-%d")(d.date), value : num }
+      } else {
+        num = "0"
+          if (!isNaN(parseInt(d.value))){
+            if(secondKeyChosen && ratio < 1.0) {
+              num = Math.round(d.value*ratio)
+            } else {
+              num = d.value
+            }
+          }
+          return { date : d3.timeParse("%Y-%m-%d")(d.date), value : num }
       }
     },
     function(data) {
     // Add X axis --> it is a date format
       var x = d3.scaleTime()
         //.domain([1,100])
-        .domain(d3.extent(data, function(d) { return d.date; }))
+        .domain(d3.extent(data, function(d) {return d.date;  }))
         .range([ 0, width ]);
       svg.append("g")
         .attr("transform", "translate(0," + height + ")")
@@ -40,10 +95,12 @@ function replace_graph(keyword1, keyword2) {
       // Add Y axis
       var y = d3.scaleLinear()
         //.domain([0, 100])
-        .domain([0, d3.max(data, function(d) { return +d.value; })])
+        .domain([0, d3.max(data, function(d) { return +d.value;  })])
         .range([ height, 0 ]);
-      svg.append("g")
+      if(!secondKeyChosen || (secondKeyChosen && ratio > 1.0)) {
+        svg.append("g")
         .call(d3.axisLeft(y));
+      }
 
       // This allows to find the closest X index of the mouse:
       //var bisect = d3.bisector(function(d) { return d.x; }).left;
@@ -64,7 +121,56 @@ function replace_graph(keyword1, keyword2) {
           .style("opacity", 0)
           .attr("text-anchor", "left")
           .attr("alignment-baseline", "middle")*/
+      
+      // Add second line
+      if (secondKeyChosen) {
+        d3.csv(path+keyword2+".csv",
+        function(d){
+          if(selectedYear != "") {
+            if (d.date.slice(0,4) == selectedYear) {
+              num = "0"
+              if (!isNaN(parseInt(d.value))){
+                if(ratio > 1.0) {
+                  num = Math.round(d.value/ratio)
+                } else {
+                  num = d.value
+                }
+              }
+              return { date : d3.timeParse("%Y-%m-%d")(d.date), value : num }
+            }
+          } else {
+            num = "0"
+              if (!isNaN(parseInt(d.value))){
+                if(ratio > 1.0) {
+                  num = Math.round(d.value/ratio)
+                } else {
+                  num = d.value
+                }
+              }
+            return { date : d3.timeParse("%Y-%m-%d")(d.date), value : num }
+          }
+        },
+        function(data2) {
+            
+            if(ratio < 1.0) {
+              y = d3.scaleLinear()
+                .domain([0, d3.max(data2, function(d) { return +d.value; })])
+                .range([ height, 0 ]);
+              svg.append("g")
+                .call(d3.axisLeft(y));
+            }
 
+            svg.append("path")
+              .datum(data2)
+              .attr("fill", "none")
+              .attr("stroke", "indianred")
+              .attr("stroke-width", 1.5)
+              .attr("d", d3.line()
+                .x(function(d) { return x(d.date) })
+                .y(function(d) { return y(d.value) })
+              )
+        })
+      }
       // Add first line
       svg.append("path")
         .datum(data)
@@ -72,31 +178,8 @@ function replace_graph(keyword1, keyword2) {
         .attr("stroke", "steelblue")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
-          .x(function(d) { return x(d.date) })
-          .y(function(d) { return y(d.value) })
-          )
-      
-      // Add second line
-      secondKeyChosen = (keyword2 != "keines")
-      if (secondKeyChosen) {
-        d3.csv("data/keywords/"+keyword2+".csv",
-        function(d){
-          if (d.date.slice(0,4) == "2019" || d.date.slice(0,4) == "2020" ) {
-            return { date : d3.timeParse("%Y-%m-%d")(d.date), value : d.value }
-          }
-        },
-        function(data) {
-            svg.append("path")
-              .datum(data)
-              .attr("fill", "none")
-              .attr("stroke", "indianred")
-              .attr("stroke-width", 1.5)
-              .attr("d", d3.line()
-                .x(function(d) { return x(d.date) })
-                .y(function(d) { return y(d.value) })
-                )
-        })
-      }
+        .x(function(d) { return x(d.date) })
+        .y(function(d) { return y(d.value) }))
 
       // Create a rect on top of the svg area: this rectangle recovers mouse position
       svg
