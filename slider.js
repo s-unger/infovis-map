@@ -20,6 +20,7 @@ function importGermanData(){
 importGermanData();
 
 var handle, slider, currentDate, startDate, endDate, x, formatDate;
+var currentValue = 0;
 
 createSlider("2020")
 
@@ -60,7 +61,6 @@ function createSlider(year) {
   ////////// slider //////////
 
   //var moving = false;
-  var currentValue = 0;
   var targetValue = widthSlider;
 
   //var bavarianCasesSVG = d3.select("#virusSVG");
