@@ -1,6 +1,7 @@
 var keyword_1 = "corona"; //Dont use this. For internal use only. External please go to notify_keyword
 var keyword_2 = "keines"
 
+selectItemByValue(document.getElementById("year"), "2020")
 selectItemByValue(document.getElementById("keyword1"), "corona")
 selectItemByValue(document.getElementById("keyword2"), "keines");
 
@@ -16,6 +17,11 @@ function change_keyword_1(msg) {
   }
   keyword_1 = msg;
   notify_keyword_1_changed(msg);
+}
+
+document.querySelector("#year").onchange = function () {
+  selectedYear = document.querySelector("#year").value;
+  replace_graph(keyword_1, keyword_2, true, null, selectedYear);
 }
 
 document.querySelector("#keyword1").onchange = function () {
@@ -39,12 +45,12 @@ function notify_keyword_1_changed(keyword) {
   keyword_1 = keyword
   updateArticleKeyword(keyword);
   updateGoogleTrend(keyword);
-  replace_graph(keyword_1, keyword_2, true, x.invert(currentValue))
+  replace_graph(keyword_1, keyword_2, true, x.invert(currentValue), selectedYear)
 }
 function notify_keyword_2_changed(keyword) {
   keyword_2 = keyword
   updateArticleKeyword2(keyword);
-  replace_graph(keyword_1, keyword_2, true, x.invert(currentValue))
+  replace_graph(keyword_1, keyword_2, true, x.invert(currentValue), selectedYear)
 }
 
 function selectItemByValue(elmnt, value){
