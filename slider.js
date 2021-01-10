@@ -5,7 +5,7 @@ function importGermanData(){
      console.log("Importing...");
      data.forEach(element => {
       if(element.country == "Germany"){
-        console.log("Importing = "+element.region_name);
+        //console.log("Importing = "+element.region_name);
         germanyData.push(element);
       }
       else{
@@ -106,22 +106,7 @@ function updateslider(h) {
 
     currentDate = formatDate(h);
     document.getElementById("current-week").innerHTML = "Current week: "+currentDate;
-    
-    scaleIcon(bayern_virus, resizearray[0]);
-    scaleIcon(baden_virus, resizearray[1]);
-    scaleIcon(nrw_virus, resizearray[2]);
-    scaleIcon(hessen_virus, resizearray[3]);
-    scaleIcon(niedersachsen_virus, resizearray[4]);
-    scaleIcon(schleswigholst_virus, resizearray[5]);
-    scaleIcon(mecklvorp_virus, resizearray[6]);
-    scaleIcon(saarland_virus, resizearray[7]);
-    scaleIcon(thueringen_virus, resizearray[8]);
-    scaleIcon(hamburg_virus, resizearray[9]);
-    scaleIcon(bremen_virus, resizearray[10]);
-    scaleIcon(berlin_virus, resizearray[11]);
-    scaleIcon(brandenburg_virus, resizearray[12]);
-    scaleIcon(sachsenanhalt_virus, resizearray[13]);
-
+/*
     resizeVirus(currentDate, "Bayern", "virusSVGBayern");
     resizeVirus(currentDate, "Baden-Wurttemberg", "virusSVGBaden");
     resizeVirus(currentDate, "Nordrhein-Westfalen", "virusSVGNrw");
@@ -137,11 +122,12 @@ function updateslider(h) {
     resizeVirus(currentDate, "Bremen", "virusSVGBremen");
     resizeVirus(currentDate, "Berlin", "virusSVGBerlin");
     resizeVirus(currentDate, "Brandenburg", "virusSVGBrandenburg");
-    resizeVirus(currentDate, "Sachsen-Anhalt", "virusSVGSachsenAnhalt");
+    resizeVirus(currentDate, "Sachsen-Anhalt", "virusSVGSachsenAnhalt");*/
 
     updateArticleTime(currentDate);
     updateMapTime(currentDate);
     draw_wordcloud(currentDate);
+    update_virusicons(currentDate);
     replace_graph(keyword_1, keyword_2, true, h)
   // filter data set and redraw plot
 /*  var newData = dataset.filter(function(d) {
@@ -153,10 +139,6 @@ function updateslider(h) {
 
 function getCurrentWeek(){
   return currentDate;
-}
-
-function resizeVirus(currentDate, region, id){
-  getCasesOfWeek(currentDate, region, id);
 }
 
 function getCasesOfWeek(currentDate, region, id){
