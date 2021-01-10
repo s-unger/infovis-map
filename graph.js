@@ -29,7 +29,7 @@ function replace_graph(keyword1, keyword2) {
   }
   document.getElementById("graph").innerHTML = "";
   // set the dimensions and margins of the graph
-  var margin = {top: 10, right: 30, bottom: 30, left: 60},
+  var margin = {top: 30, right: 30, bottom: 30, left: 60}, // top: 10
       width = 500 - margin.left - margin.right,
       height = 220 - margin.top - margin.bottom;
 
@@ -87,6 +87,25 @@ function replace_graph(keyword1, keyword2) {
         svg.append("g")
         .call(d3.axisLeft(y));
       }
+
+      // Add first line
+      svg.append("path")
+        .datum(data)
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr("stroke-width", 1.5)
+        .attr("d", d3.line()
+        .x(function(d) { return x(d.date) })
+        .y(function(d) { if(ratio < 1.0) {return y(d.value*ratio)} else { return y(d.value) } }))
+
+
+      var focusTextDate = svg
+        .append('g')
+        .append('text')
+          .style("opacity", 0)
+          .attr("text-anchor", "middle")
+          .attr("alignment-baseline", "middle")
+          .attr("y", -10)
       
       // Add second line
       if (secondKeyChosen) {
@@ -127,22 +146,14 @@ function replace_graph(keyword1, keyword2) {
             }
 
             // This allows to find the closest X index of the mouse:
-            var bisect2 = d3.bisector(function(d) { return x(d.date); }).left;
-
-            var focusTextDate = svg
-              .append('g')
-              .append('text')
-                .style("opacity", 0)
-                .attr("text-anchor", "middle")
-                .attr("alignment-baseline", "middle")
-                .attr("y", 0)
+            //var bisect2 = d3.bisector(function(d) { return x(d.date); }).left;
 
             var focusText1 = svg
               .append('g')
               .append('text')
                 .style("opacity", 0)
                 .attr("text-anchor", "right")
-                .attr("alignment-baseline", "middle")
+                .attr("alignment-baseline", "left")
                 .attr("fill", "midnightblue")
 
             // Create the circle that travels along the curve of chart
@@ -161,7 +172,7 @@ function replace_graph(keyword1, keyword2) {
               .append('text')
                 .style("opacity", 0)
                 .attr("text-anchor", "left")
-                .attr("alignment-baseline", "middle")
+                .attr("alignment-baseline", "left")
                 .attr("fill", "maroon")
 
             // Add first line
@@ -198,12 +209,22 @@ function replace_graph(keyword1, keyword2) {
             function mousemove2() {
               // recover coordinate we need
               var x0 = x.invert(d3.mouse(this)[0]);
-              var i = bisect2(data2, x(x0), 1);
+              var i = bisect(data2, x(x0), 1);
               selectedData2 = data2[i]
-              var j = bisect2(data, x(x0), 1);
+              var j = bisect(data, x(x0), 1);
               selectedData1 = data[j]
               if(selectedData2) {
+                adjustHeight1 = 0
+                adjustHeight2 = 0
                 if(secondKeyChosen && ratio > 1.0) {
+                  yVal1 = selectedData1.value
+                  yVal2 = selectedData2.value
+                  if (yVal1 > 90) {
+                    adjustHeight1 = yVal1 - 90
+                  }
+                  if (yVal2 > 90) {
+                    adjustHeight2 = yVal2 - 90
+                  }
                   focus2
                     .attr('x1', x(selectedData2.date))
                     .attr('x2', x(selectedData2.date))
@@ -212,13 +233,21 @@ function replace_graph(keyword1, keyword2) {
                       .attr("x", x(selectedData1.date))
                   focusText1
                     .html(selectedData1.value + "%")
-                      .attr("x", x(selectedData1.date)-35)
-                      .attr("y", y(selectedData1.value)+15)
+                      .attr("x", x(selectedData1.date)-40)
+                      .attr("y", y(selectedData1.value) + adjustHeight1)
                   focusText2
                   .html(Math.round(selectedData2.value) + "%")
                     .attr("x", x(selectedData2.date)+10)
-                    .attr("y", y(selectedData2.value)+15)
+                    .attr("y", y(selectedData2.value) + adjustHeight2)
                 } else {
+                  yVal1 = selectedData1.value
+                  yVal2 = selectedData2.value
+                  if (yVal1 > 90) {
+                    adjustHeight1 = yVal1 - 90
+                  }
+                  if (yVal2 > 90) {
+                    adjustHeight2 = yVal2 - 90
+                  }
                   focus2
                     .attr('x1', x(selectedData2.date))
                     .attr('x2', x(selectedData2.date))
@@ -226,13 +255,13 @@ function replace_graph(keyword1, keyword2) {
                     .html(selectedData1.date.toLocaleDateString('de-DE'))
                       .attr("x", x(selectedData1.date))
                   focusText1
-                    .html(Math.round(selectedData1.value/ratio) + "%")
-                      .attr("x", x(selectedData1.date)-35)
-                      .attr("y", y(selectedData1.value/ratio)+15)
+                    .html(Math.round(selectedData1.value) + "%") // /ratio
+                      .attr("x", x(selectedData1.date)-40)
+                      .attr("y", y(selectedData1.value) + adjustHeight1) // .attr("y", y(selectedData1.value/ratio)+15)
                   focusText2
                   .html(selectedData2.value + "%")
                     .attr("x", x(selectedData2.date)+10)
-                    .attr("y", y(selectedData2.value)+15)
+                    .attr("y", y(selectedData2.value) + adjustHeight2)
                 }
               }
             }
@@ -245,17 +274,12 @@ function replace_graph(keyword1, keyword2) {
         })
       }
 
-     // This allows to find the closest X index of the mouse:
-     var bisect = d3.bisector(function(d) { return x(d.date); }).left;
+      // This allows to find the closest X index of the mouse:
+      var bisect = d3.bisector(function(d) { return x(d.date); }).left;
 
       // Create the circle that travels along the curve of chart
       var focus = svg
         .append('g')
-        /*.append('circle')
-          .style("fill", "none")
-          .attr("stroke", "black")
-          .attr('r', 8.5)
-          .style("opacity", 0)*/
         .append('line')
         .attr('y1', 0)
         .attr('y2', height)
@@ -269,17 +293,18 @@ function replace_graph(keyword1, keyword2) {
         .append('text')
           .style("opacity", 0)
           .attr("text-anchor", "left")
-          .attr("alignment-baseline", "middle")
+          .attr("alignment-baseline", "left")
+          .attr("fill", "midnightblue")
 
       // Add first line
-      svg.append("path")
+      /*svg.append("path")
         .datum(data)
         .attr("fill", "none")
         .attr("stroke", "steelblue")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
         .x(function(d) { return x(d.date) })
-        .y(function(d) { return y(d.value) }))
+        .y(function(d) { if(ratio < 1.0) {return y(d.value*ratio)} else { return y(d.value) } }))*/
 
       
 
@@ -297,6 +322,7 @@ function replace_graph(keyword1, keyword2) {
       // What happens when the mouse move -> show the annotations at the right positions.
       function mouseover() {
         focus.style("opacity", 0.5)
+        focusTextDate.style("opacity", 0.7)
         focusText.style("opacity",0.8)
       }
 
@@ -306,31 +332,43 @@ function replace_graph(keyword1, keyword2) {
         var i = bisect(data, x(x0), 1);
         selectedData = data[i]
         if(selectedData) {
+          adjustHeight = 0
           if(secondKeyChosen && ratio < 1.0) {
+            yVal = selectedData.value/ratio
+            if (yVal > 90) {
+              adjustHeight = yVal - 90
+            }
             focus
-              /*.attr("cx", x(selectedData.date))
-              .attr("cy", y(selectedData.value/ratio))*/
               .attr('x1', x(selectedData.date))
               .attr('x2', x(selectedData.date))
+            focusTextDate
+              .html(selectedData.date.toLocaleDateString('de-DE'))
+                .attr("x", x(selectedData.date))
             focusText
-            .html(selectedData.value + "% am " + selectedData.date.toLocaleDateString('de-DE')) //.html("x:" + selectedData.date + "  -  " + "y:" + selectedData.value)
-              .attr("x", x(selectedData.date)+15)
-              .attr("y", y(selectedData.value/ratio))
+            .html(selectedData.value + "%")
+              .attr("x", x(selectedData.date)+10)
+              .attr("y", y(selectedData.value/ratio) + adjustHeight)
           } else {
+            yVal = selectedData.value
+            if (yVal > 90) {
+              adjustHeight = yVal - 90
+            }
             focus
-              /*.attr("cx", x(selectedData.date))
-              .attr("cy", y(selectedData.value))*/
               .attr('x1', x(selectedData.date))
               .attr('x2', x(selectedData.date))
+              focusTextDate
+              .html(selectedData.date.toLocaleDateString('de-DE'))
+                .attr("x", x(selectedData.date))
             focusText
-            .html(selectedData.value + "% am " + selectedData.date.toLocaleDateString('de-DE')) //.html("x:" + selectedData.date + "  -  " + "y:" + selectedData.value)
-              .attr("x", x(selectedData.date)+15)
-              .attr("y", y(selectedData.value))
+            .html(selectedData.value + "%")
+              .attr("x", x(selectedData.date)+10)
+              .attr("y", y(selectedData.value) + adjustHeight)
           }
         }
       }
       function mouseout() {
         focus.style("opacity", 0)
+        focusTextDate.style("opacity", 0)
         focusText.style("opacity", 0)
       }
 
