@@ -1,4 +1,8 @@
-var selectedYear = "" // /2019 oder /2020
+var selectedYear = "2020" // 2019 oder 2020 oder ""
+var yearPath = selectedYear + "/"
+if(selectedYear == "") {
+  yearPath = ""
+}
 
 
 replace_graph("corona", "keines");
@@ -8,7 +12,7 @@ replace_graph("corona", "keines");
 function replace_graph(keyword1, keyword2) {
   ratio = 1.0
   secondKeyChosen = (keyword2 != "keines")
-  var path = "data/keywords/"+selectedYear
+  var path = "data/keywords/"+yearPath
   if(secondKeyChosen) {
     keywords = [0.0,0.0]
     d3.csv(path+"quantifier.csv", 
