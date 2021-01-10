@@ -8,7 +8,6 @@ function draw_wordcloud(weekandyear_text) {
   if(wordcloud_files.length == 0) {
     get_all_data(weekandyear_text);
   } else {
-    console.log(wordcloud_files);
     //Woche parsen und zu Index umwandeln:
     calendarweek = parseInt(weekandyear_text.slice(3, 5));
     year = parseInt(weekandyear_text.slice(6, 10));
@@ -115,8 +114,6 @@ function get_all_data(weekandyear_text) {
   .await(function(error, d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, d20) {
     if (error) throw error;
     wordcloud_files = [d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, d20]
-    console.log(d1[2].value);
-    console.log(d2);
     draw_wordcloud(weekandyear_text);
   });
 }
