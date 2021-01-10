@@ -1,23 +1,25 @@
 var selectedYear = "2020" // 2019 oder 2020 oder ""
-var yearPath = ""
-var firstDate = new Date()
-if(selectedYear == "") {
-  yearPath = ""
-  firstDate = new Date("2019-01-01")
-} else if(selectedYear == "2019") {
-  yearPath = selectedYear + "/"
-  firstDate = new Date("2019-01-01")
-} else if(selectedYear == "2020") {
-  yearPath = selectedYear + "/"
-  firstDate = new Date("2020-01-01")
-}
 
+replace_graph("corona", "keines", true, null, selectedYear);
 
-replace_graph("corona", "keines", true, firstDate);
+function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
 
+  var yearPath = ""
+  var firstDate = new Date()
+  if(year == "") {
+    yearPath = ""
+    firstDate = new Date("2019-01-01")
+  } else if(year == "2019") {
+    yearPath = year + "/"
+    firstDate = new Date("2019-01-01")
+  } else if(year == "2020") {
+    yearPath = year + "/"
+    firstDate = new Date("2020-01-01")
+  }
 
-
-function replace_graph(keyword1, keyword2, showFocusLine, keyDate) {
+  if(keyDate == null) {
+    keyDate = firstDate
+  }
 
   ratio = 1.0
   secondKeyChosen = (keyword2 != "keines")
@@ -57,8 +59,8 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate) {
   //Read the data
   d3.csv(path+keyword1+".csv",
     function(d){
-      if(selectedYear != "") {
-        if (d.date.slice(0,4) == selectedYear) {
+      if(year != "") {
+        if (d.date.slice(0,4) == year) {
           num = "0"
           if (!isNaN(parseInt(d.value))){
             if(secondKeyChosen && ratio < 1.0) {
@@ -87,7 +89,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate) {
         //.domain([1,100])
         .domain(d3.extent(data, function(d) {return d.date;  }))
         .range([ 0, width ]);
-      if (selectedYear != "") { 
+      if (year != "") { 
         svg.append("g")
           .attr("transform", "translate(0," + height + ")")
           .call(d3.axisBottom(x)
@@ -157,8 +159,8 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate) {
       if (secondKeyChosen) {
         d3.csv(path+keyword2+".csv",
         function(d){
-          if(selectedYear != "") {
-            if (d.date.slice(0,4) == selectedYear) {
+          if(year != "") {
+            if (d.date.slice(0,4) == year) {
               num = "0"
               if (!isNaN(parseInt(d.value))){
                 if(ratio > 1.0) {

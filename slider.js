@@ -128,7 +128,8 @@ function updateslider(h) {
     updateMapTime(currentDate);
     draw_wordcloud(currentDate);
     update_virusicons(currentDate);
-    replace_graph(keyword_1, keyword_2, true, h)
+    replace_graph(keyword_1, keyword_2, true, h, selectedYear)
+
   // filter data set and redraw plot
 /*  var newData = dataset.filter(function(d) {
     return d.date < h;

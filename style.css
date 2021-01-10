@@ -229,7 +229,8 @@ margin-right: auto;
 
 #dropdown {
 height: auto;
-width: 40%;
+padding-top: 29px;
+width: 50%;
 float: left;
 }
 
