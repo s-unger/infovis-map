@@ -17,11 +17,15 @@ function draw_wordcloud(weekandyear_text) {
     
     // List of words
     var myWords = [{word: "alkohol", size: wordcloud_files[0][calendarweek].value}, {word: "attila hildmann", size: wordcloud_files[1][calendarweek].value}, {word: "bananenbrot", size: wordcloud_files[2][calendarweek].value}, {word: "baumarkt", size: wordcloud_files[3][calendarweek].value}, {word: "BER", size: wordcloud_files[4][calendarweek].value}, {word: "bill gates", size: wordcloud_files[5][calendarweek].value}, {word: "corona", size: wordcloud_files[5][calendarweek].value}, {word: "desinfektionsmittel", size: wordcloud_files[5][calendarweek].value}, {word: "drosten", size: wordcloud_files[5][calendarweek].value}, {word: "homeworkout", size: wordcloud_files[5][calendarweek].value}, {word: "klopapier", size: wordcloud_files[5][calendarweek].value}, {word: "kneipentour", size: wordcloud_files[5][calendarweek].value}, {word: "maske", size: wordcloud_files[5][calendarweek].value}, {word: "merkel", size: wordcloud_files[5][calendarweek].value}, {word: "netflix", size: wordcloud_files[5][calendarweek].value}, {word: "oktoberfest", size: wordcloud_files[5][calendarweek].value}, {word: "onlinesemester", size: wordcloud_files[5][calendarweek].value}, {word: "querdenken", size: wordcloud_files[5][calendarweek].value}, {word: "söder", size: wordcloud_files[5][calendarweek].value}, {word: "zoom", size: wordcloud_files[5][calendarweek].value}]
+    
+    for (var i = 0; i<20; i++) {
+      myWords[i].size = 15+(myWords[i].size*0.8); //Kompressionsfaktor, es geht nur darum, dass die Peaks der Wörter hier sichtbar sind, nicht um akurate Darstellung.
+    }
 
     // set the dimensions and margins of the graph
     var marginWords = {top: 0, right: 0, bottom: 0, left: 0},
-        widthWords = 900 - marginWords.left - marginWords.right,
-        heightWords = 450 - marginWords.top - marginWords.bottom;
+        widthWords = 550 - marginWords.left - marginWords.right,
+        heightWords = 300 - marginWords.top - marginWords.bottom;
 
     // append the svg object to the body of the page
     var svg2 = d3.select("#tagcloud").append("svg")
@@ -30,6 +34,15 @@ function draw_wordcloud(weekandyear_text) {
       .append("g")
         .attr("transform",
         "translate(" + marginWords.left + "," + marginWords.top + ")");
+        
+     var borderPath = svg2.append("rect")
+     .attr("x", 0)
+     .attr("y", 0)
+     .attr("height", heightWords)
+     .attr("width", widthWords)
+     .style("stroke", "black")
+     .style("fill", "none")
+     .style("stroke-width", 2);
 
     // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
     // Wordcloud features that are different from one word to the other must be here
@@ -51,6 +64,15 @@ function draw_wordcloud(weekandyear_text) {
           .selectAll("text")
       .data(words)
           .enter().append("text")
+      .on("click", function (d, i){
+          select_keyword_1(d.text);
+      })
+      .on("mouseover", function(d) {   
+        d3.select(this).style("cursor", "pointer");
+      })                  
+      .on("mouseout", function(d) {       
+        d3.select(this).style("cursor", "default");
+      })
       .style("font-size", function(d) { return d.size; })
       .style("fill", "#000000")
       .attr("text-anchor", "middle")

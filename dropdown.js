@@ -4,14 +4,23 @@ var keyword_2 = "keines"
 selectItemByValue(document.getElementById("keyword1"), "corona")
 selectItemByValue(document.getElementById("keyword2"), "keines");
 
+function select_keyword_1(keyword) {
+  change_keyword_1(keyword);
+  selectItemByValue(document.getElementById("keyword1"), keyword)
+}
+
+function change_keyword_1(msg) {
+  if (keyword_2 == msg) {
+    selectItemByValue(document.getElementById("keyword2"), "keines");
+    notify_keyword_2_changed("keines");
+  }
+  keyword_1 = msg;
+  notify_keyword_1_changed(msg);
+}
+
 document.querySelector("#keyword1").onchange = function () {
    let msg = document.querySelector("#keyword1").value;
-   if (keyword_2 == msg) {
-     selectItemByValue(document.getElementById("keyword2"), "keines");
-     notify_keyword_2_changed("keines");
-   }
-   keyword_1 = msg;
-   notify_keyword_1_changed(msg);
+   change_keyword_1(msg);
 }
 document.querySelector("#keyword2").onchange = function () {
    let msg = document.querySelector("#keyword2").value;
