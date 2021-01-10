@@ -126,6 +126,45 @@ function replace_graph(keyword1, keyword2) {
                 .call(d3.axisLeft(y));
             }
 
+            // This allows to find the closest X index of the mouse:
+            var bisect2 = d3.bisector(function(d) { return x(d.date); }).left;
+
+            var focusTextDate = svg
+              .append('g')
+              .append('text')
+                .style("opacity", 0)
+                .attr("text-anchor", "middle")
+                .attr("alignment-baseline", "middle")
+                .attr("y", 0)
+
+            var focusText1 = svg
+              .append('g')
+              .append('text')
+                .style("opacity", 0)
+                .attr("text-anchor", "right")
+                .attr("alignment-baseline", "middle")
+                .attr("fill", "midnightblue")
+
+            // Create the circle that travels along the curve of chart
+            var focus2 = svg
+              .append('g')
+              .append('line')
+              .attr('y1', 0)
+              .attr('y2', height)
+              .attr("stroke", "black")
+                .attr('r', 8.5)
+                .style("opacity", 0)
+
+            // Create the text that travels along the curve of chart
+            var focusText2 = svg
+              .append('g')
+              .append('text')
+                .style("opacity", 0)
+                .attr("text-anchor", "left")
+                .attr("alignment-baseline", "middle")
+                .attr("fill", "maroon")
+
+            // Add first line
             svg.append("path")
               .datum(data2)
               .attr("fill", "none")
@@ -135,6 +174,74 @@ function replace_graph(keyword1, keyword2) {
                 .x(function(d) { return x(d.date) })
                 .y(function(d) { return y(d.value) })
               )
+            
+
+            // Create a rect on top of the svg area: this rectangle recovers mouse position
+            svg
+              .append('rect')
+              .style("fill", "none")
+              .style("pointer-events", "all")
+              .attr('width', width)
+              .attr('height', height)
+              .on('mouseover', mouseover2)
+              .on('mousemove', mousemove2)
+              .on('mouseout', mouseout2);      
+
+            // What happens when the mouse move -> show the annotations at the right positions.
+            function mouseover2() {
+              focus2.style("opacity", 0.5)
+              focusTextDate.style("opacity", 0.8)
+              focusText1.style("opacity", 0.8)
+              focusText2.style("opacity",0.8)
+            }
+
+            function mousemove2() {
+              // recover coordinate we need
+              var x0 = x.invert(d3.mouse(this)[0]);
+              var i = bisect2(data2, x(x0), 1);
+              selectedData2 = data2[i]
+              var j = bisect2(data, x(x0), 1);
+              selectedData1 = data[j]
+              if(selectedData2) {
+                if(secondKeyChosen && ratio > 1.0) {
+                  focus2
+                    .attr('x1', x(selectedData2.date))
+                    .attr('x2', x(selectedData2.date))
+                  focusTextDate
+                    .html(selectedData1.date.toLocaleDateString('de-DE'))
+                      .attr("x", x(selectedData1.date))
+                  focusText1
+                    .html(selectedData1.value + "%")
+                      .attr("x", x(selectedData1.date)-35)
+                      .attr("y", y(selectedData1.value)+15)
+                  focusText2
+                  .html(Math.round(selectedData2.value) + "%")
+                    .attr("x", x(selectedData2.date)+10)
+                    .attr("y", y(selectedData2.value)+15)
+                } else {
+                  focus2
+                    .attr('x1', x(selectedData2.date))
+                    .attr('x2', x(selectedData2.date))
+                  focusTextDate
+                    .html(selectedData1.date.toLocaleDateString('de-DE'))
+                      .attr("x", x(selectedData1.date))
+                  focusText1
+                    .html(Math.round(selectedData1.value/ratio) + "%")
+                      .attr("x", x(selectedData1.date)-35)
+                      .attr("y", y(selectedData1.value/ratio)+15)
+                  focusText2
+                  .html(selectedData2.value + "%")
+                    .attr("x", x(selectedData2.date)+10)
+                    .attr("y", y(selectedData2.value)+15)
+                }
+              }
+            }
+            function mouseout2() {
+              focus2.style("opacity", 0)
+              focusTextDate.style("opacity", 0)
+              focusText1.style("opacity", 0)
+              focusText2.style("opacity", 0)
+            }
         })
       }
 
@@ -144,9 +251,15 @@ function replace_graph(keyword1, keyword2) {
       // Create the circle that travels along the curve of chart
       var focus = svg
         .append('g')
-        .append('circle')
+        /*.append('circle')
           .style("fill", "none")
           .attr("stroke", "black")
+          .attr('r', 8.5)
+          .style("opacity", 0)*/
+        .append('line')
+        .attr('y1', 0)
+        .attr('y2', height)
+        .attr("stroke", "black")
           .attr('r', 8.5)
           .style("opacity", 0)
 
@@ -183,8 +296,8 @@ function replace_graph(keyword1, keyword2) {
 
       // What happens when the mouse move -> show the annotations at the right positions.
       function mouseover() {
-        focus.style("opacity", 1)
-        focusText.style("opacity",1)
+        focus.style("opacity", 0.5)
+        focusText.style("opacity",0.8)
       }
 
       function mousemove() {
@@ -193,15 +306,29 @@ function replace_graph(keyword1, keyword2) {
         var i = bisect(data, x(x0), 1);
         selectedData = data[i]
         if(selectedData) {
-          focus
-            .attr("cx", x(selectedData.date))
-            .attr("cy", y(selectedData.value))
-          focusText
-          .html(selectedData.value + "% am " + selectedData.date.toLocaleDateString('de-DE')) //.html("x:" + selectedData.date + "  -  " + "y:" + selectedData.value)
-            .attr("x", x(selectedData.date)+15)
-            .attr("y", y(selectedData.value))
+          if(secondKeyChosen && ratio < 1.0) {
+            focus
+              /*.attr("cx", x(selectedData.date))
+              .attr("cy", y(selectedData.value/ratio))*/
+              .attr('x1', x(selectedData.date))
+              .attr('x2', x(selectedData.date))
+            focusText
+            .html(selectedData.value + "% am " + selectedData.date.toLocaleDateString('de-DE')) //.html("x:" + selectedData.date + "  -  " + "y:" + selectedData.value)
+              .attr("x", x(selectedData.date)+15)
+              .attr("y", y(selectedData.value/ratio))
+          } else {
+            focus
+              /*.attr("cx", x(selectedData.date))
+              .attr("cy", y(selectedData.value))*/
+              .attr('x1', x(selectedData.date))
+              .attr('x2', x(selectedData.date))
+            focusText
+            .html(selectedData.value + "% am " + selectedData.date.toLocaleDateString('de-DE')) //.html("x:" + selectedData.date + "  -  " + "y:" + selectedData.value)
+              .attr("x", x(selectedData.date)+15)
+              .attr("y", y(selectedData.value))
           }
         }
+      }
       function mouseout() {
         focus.style("opacity", 0)
         focusText.style("opacity", 0)
