@@ -1,17 +1,19 @@
 html {
-  background-color: white;
+  background-image: url("img/papertexture.jpg");
+  background-repeat: repeat;
+  background-size: 600px 600px;
 }
 
 #newspaper { 
-background-image: url("img/papertexture.jpg");
-background-repeat: repeat;
-background-size: 600px 600px;
-margin-top: 2%;
-width: 98%;
-margin-left: auto;
-margin-right: auto;
-height: 1300px;
-margin-bottom: 100px;
+  background-image: url("img/papertexture.jpg");
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  margin-top: 0%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1300px;
+  margin-bottom: 0px;
 }
 
 #header {
