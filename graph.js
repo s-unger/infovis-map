@@ -1,3 +1,6 @@
+var selectedYear = "" // /2019 oder /2020
+
+
 replace_graph("corona", "keines");
 
 
@@ -5,9 +8,10 @@ replace_graph("corona", "keines");
 function replace_graph(keyword1, keyword2) {
   ratio = 1.0
   secondKeyChosen = (keyword2 != "keines")
+  var path = "data/keywords/"+selectedYear
   if(secondKeyChosen) {
     keywords = [0.0,0.0]
-    d3.csv("data/quantifier.csv", 
+    d3.csv(path+"quantifier.csv", 
       function(scaling){
         /*if (scaling.keyword == keyword1) {
           return {factor : scaling.factor, keyword: 1}
@@ -52,25 +56,37 @@ function replace_graph(keyword1, keyword2) {
   //Read the data
   //data/keywords/alkohol.csv
   //https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_IC.csv
-  d3.csv("data/keywords/"+keyword1+".csv",
+  d3.csv(path+keyword1+".csv",
     function(d){
-      if (d.date.slice(0,4) == "2019" || d.date.slice(0,4) == "2020" ) {
-        num = "0"
-        if (!isNaN(parseInt(d.value))){
-          if(secondKeyChosen && ratio < 1.0) {
-            num = Math.round(d.value*ratio)
-          } else {
-            num = d.value
+      if(selectedYear != "") {
+        if (d.date.slice(0,4) == selectedYear) {
+          num = "0"
+          if (!isNaN(parseInt(d.value))){
+            if(secondKeyChosen && ratio < 1.0) {
+              num = Math.round(d.value*ratio)
+            } else {
+              num = d.value
+            }
           }
+          return { date : d3.timeParse("%Y-%m-%d")(d.date), value : num }
         }
-        return { date : d3.timeParse("%Y-%m-%d")(d.date), value : num }
+      } else {
+        num = "0"
+          if (!isNaN(parseInt(d.value))){
+            if(secondKeyChosen && ratio < 1.0) {
+              num = Math.round(d.value*ratio)
+            } else {
+              num = d.value
+            }
+          }
+          return { date : d3.timeParse("%Y-%m-%d")(d.date), value : num }
       }
     },
     function(data) {
     // Add X axis --> it is a date format
       var x = d3.scaleTime()
         //.domain([1,100])
-        .domain(d3.extent(data, function(d) { return d.date; }))
+        .domain(d3.extent(data, function(d) {return d.date;  }))
         .range([ 0, width ]);
       svg.append("g")
         .attr("transform", "translate(0," + height + ")")
@@ -79,7 +95,7 @@ function replace_graph(keyword1, keyword2) {
       // Add Y axis
       var y = d3.scaleLinear()
         //.domain([0, 100])
-        .domain([0, d3.max(data, function(d) { return +d.value; })])
+        .domain([0, d3.max(data, function(d) { return +d.value;  })])
         .range([ height, 0 ]);
       if(!secondKeyChosen || (secondKeyChosen && ratio > 1.0)) {
         svg.append("g")
@@ -108,17 +124,29 @@ function replace_graph(keyword1, keyword2) {
       
       // Add second line
       if (secondKeyChosen) {
-        d3.csv("data/keywords/"+keyword2+".csv",
+        d3.csv(path+keyword2+".csv",
         function(d){
-          if (d.date.slice(0,4) == "2019" || d.date.slice(0,4) == "2020" ) {
-            num = "0"
-            if (!isNaN(parseInt(d.value))){
-              if(ratio > 1.0) {
-                num = Math.round(d.value/ratio)
-              } else {
-                num = d.value
+          if(selectedYear != "") {
+            if (d.date.slice(0,4) == selectedYear) {
+              num = "0"
+              if (!isNaN(parseInt(d.value))){
+                if(ratio > 1.0) {
+                  num = Math.round(d.value/ratio)
+                } else {
+                  num = d.value
+                }
               }
+              return { date : d3.timeParse("%Y-%m-%d")(d.date), value : num }
             }
+          } else {
+            num = "0"
+              if (!isNaN(parseInt(d.value))){
+                if(ratio > 1.0) {
+                  num = Math.round(d.value/ratio)
+                } else {
+                  num = d.value
+                }
+              }
             return { date : d3.timeParse("%Y-%m-%d")(d.date), value : num }
           }
         },
