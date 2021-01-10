@@ -34,6 +34,15 @@ font-size: 2em;
 margin-top: -40px;
 }
 
+#interactive {
+  width: 90%;
+  height: 100;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 4px solid black;
+}
+
 #content-wrapper {
 width: 90%;
 margin-left: auto;
@@ -221,13 +230,19 @@ width: 70%;
 margin-left: auto;
 margin-right: auto;
 }
-}
 
 #dropdown {
-height: 50px;
+height: auto;
+width: 40%;
+float: left;
 }
 
-
+#slider {
+  height: auto;
+  width: 40%;
+  float: left;
+}
+  
 
 .time-slider-container {
 margin: 20px;
@@ -292,26 +307,7 @@ stroke-width: 0.5px;
 #vis{
 padding-top: 10px;
 height: 120px;
-}
-
-#play-button {
-position: absolute;
-top: 140px;
-left: 50px;
-background: #f08080;
-padding-right: 26px;
-border-radius: 3px;
-border: none;
-color: white;
-margin: 0;
-padding: 0 12px;
-width: 60px;
-cursor: pointer;
-height: 30px;
-}
-
-#play-button:hover {
-background-color: #696969;
+float: left;
 }
 
 

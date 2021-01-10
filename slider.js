@@ -27,14 +27,14 @@ var startDate = new Date("2019-01-01"),
     endDate = new Date("2020-10-30"),
     currentDate = new Date("2019-01-01");
 
-var margin = {top:50, right:50, bottom:0, left:50},
-    width = 560 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+var marginSlider = {top:30, right:50, bottom:30, left:50}, // 50 50 0 50
+    widthSlider = 560 - marginSlider.left - marginSlider.right,
+    heightSlider = 100 - marginSlider.top - marginSlider.bottom; // 300
 
-var svg = d3.select("#vis")
+var svgSlider = d3.select("#slider")
     .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom);
+    .attr("width", widthSlider + marginSlider.left + marginSlider.right)
+    .attr("height", heightSlider + marginSlider.top + marginSlider.bottom); // heightSlider + marginSlider.top + marginSlider.bottom
 
 //var headlineWeek = document.getElementById("current-week");
 
@@ -42,9 +42,7 @@ var svg = d3.select("#vis")
 
 var moving = false;
 var currentValue = 0;
-var targetValue = width;
-
-var playButton = d3.select("#play-button");
+var targetValue = widthSlider;
 
 var bavarianCasesSVG = d3.select("#virusSVG");
 
@@ -53,9 +51,9 @@ var x = d3.scaleTime()
     .range([0, targetValue])
     .clamp(true);
 
-var slider = svg.append("g")
+var slider = svgSlider.append("g")
     .attr("class", "slider")
-    .attr("transform", "translate(" + margin.left + "," + height/5 + ")");
+    .attr("transform", "translate(" + marginSlider.left + "," + heightSlider + ")"); // /5
 
 slider.append("line")
     .attr("class", "track")
@@ -83,7 +81,8 @@ slider.insert("g", ".track-overlay")
     .attr("x", x)
     .attr("y", 10)
     .attr("text-anchor", "middle")
-    .text(function(d) { return formatDateIntoMonthOfYear(d); });
+    .attr("font-size", "small")
+    .text(function(d) { return (d.toLocaleDateString('de-DE', { month: 'short' }) + " " + d.getFullYear().toString().slice(2,4)); }); // formatDateIntoMonthOfYear(d)
 
 var handle = slider.insert("circle", ".track-overlay")
     .attr("class", "handle")

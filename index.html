@@ -1,7 +1,7 @@
 <DOCTYPE html>
     <html>
     <head>
-        <title>InfoVis Map</title>
+        <title>InfoVis News</title>
         <link rel="icon" href="./img/favicon.png?v=2" type="image/x-icon">
         <link rel="shortcut icon" href="./img/favicon.png?v=2" type="image/x-icon">
         <meta charset="utf-8">
@@ -23,77 +23,79 @@
     <body>
     <div id="newspaper">
     <div id="header">
-    <div><h1>2020 News</h1></div>
+    <h1>
+    
+    </h1>
+    <div><h1><p style = "font-family:'Times New Roman', Times, serif; font-size: larger;">InfoVis News</p></h1></div>
     <h1>
         
     </h1>
-    <div><p>Zeitungsmeldungen aus einem verrückten Jahr</p></div>
+    <div><p  style = "font-family:'Times New Roman', Times, serif">Zeitungsmeldungen aus 2019 und einem verrückten Jahr</p></div>
     </div><!--Header Ende-->
 
-    <div id="content-wrapper">
-    <div id="left">
-    <div id="dropdown">
-        <my-dropdown value="ws1920" id="mydropdown">
-        Keyword 1:
-        <select id="keyword1" onchange="update()">
-            <option value="corona">corona</option>
-            <option value="netflix">netflix</option>
-            <option value="maske">maske</option>
-            <option value="merkel">merkel</option>
-            <option value="oktoberfest">oktoberfest</option>
-            <option value="baumarkt">baumarkt</option>
-            <option value="zoom">zoom</option>
-            <option value="söder">söder</option>
-            <option value="drosten">drosten</option>
-            <option value="desinfektionsmittel">desinfektionsmittel</option>
-            <option value="klopapier">klopapier</option>
-            <option value="alkohol">alkohol</option>
-            <option value="bill gates">bill gates</option>
-            <option value="BER">BER</option>
-            <option value="attila hildmann">attila hildmann</option>
-            <option value="querdenken">querdenken</option>
-            <option value="bananenbrot">bananenbrot</option>
-            <option value="kneipentour">kneipentour</option>
-            <option value="homeworkout">homeworkout</option>
-            <option value="onlinesemester">onlinesemester</option>
-        </select>
-        Keyword 2:
-        <select id="keyword2" onchange="update()">
-            <option value="keines">keines</option>
-            <option value="corona">corona</option>
-            <option value="netflix">netflix</option>
-            <option value="maske">maske</option>
-            <option value="merkel">merkel</option>
-            <option value="oktoberfest">oktoberfest</option>
-            <option value="baumarkt">baumarkt</option>
-            <option value="zoom">zoom</option>
-            <option value="söder">söder</option>
-            <option value="drosten">drosten</option>
-            <option value="desinfektionsmittel">desinfektionsmittel</option>
-            <option value="klopapier">klopapier</option>
-            <option value="alkohol">alkohol</option>
-            <option value="bill gates">bill gates</option>
-            <option value="BER">BER</option>
-            <option value="attila hildmann">attila hildmann</option>
-            <option value="querdenken">querdenken</option>
-            <option value="bananenbrot">bananenbrot</option>
-            <option value="kneipentour">kneipentour</option>
-            <option value="homeworkout">homeworkout</option>
-            <option value="onlinesemester">onlinesemester</option>
-        </select>
-    </my-dropdown>
-    <script src="dropdown.js"></script>
-    </div>
-    
-    <div id="graph"><img src="img/graph-placeholder.png" /></div>
-    <script src="graph.js"></script>
-
-    <div id="vis">
-        <button id="play-button">Play</button>
-        <div id="slider">
-        <script src="slider.js"></script>
+    <div id="interactive">
+        <div id="dropdown">
+            <my-dropdown value="ws1920" id="mydropdown">
+                Keyword 1:
+                <select id="keyword1" onchange="update()">
+                    <option value="corona">corona</option>
+                    <option value="netflix">netflix</option>
+                    <option value="maske">maske</option>
+                    <option value="merkel">merkel</option>
+                    <option value="oktoberfest">oktoberfest</option>
+                    <option value="baumarkt">baumarkt</option>
+                    <option value="zoom">zoom</option>
+                    <option value="söder">söder</option>
+                    <option value="drosten">drosten</option>
+                    <option value="desinfektionsmittel">desinfektionsmittel</option>
+                    <option value="klopapier">klopapier</option>
+                    <option value="alkohol">alkohol</option>
+                    <option value="bill gates">bill gates</option>
+                    <option value="BER">BER</option>
+                    <option value="attila hildmann">attila hildmann</option>
+                    <option value="querdenken">querdenken</option>
+                    <option value="bananenbrot">bananenbrot</option>
+                    <option value="kneipentour">kneipentour</option>
+                    <option value="homeworkout">homeworkout</option>
+                    <option value="onlinesemester">onlinesemester</option>
+                </select>
+                Keyword 2:
+                <select id="keyword2" onchange="update()">
+                    <option value="keines">keines</option>
+                    <option value="corona">corona</option>
+                    <option value="netflix">netflix</option>
+                    <option value="maske">maske</option>
+                    <option value="merkel">merkel</option>
+                    <option value="oktoberfest">oktoberfest</option>
+                    <option value="baumarkt">baumarkt</option>
+                    <option value="zoom">zoom</option>
+                    <option value="söder">söder</option>
+                    <option value="drosten">drosten</option>
+                    <option value="desinfektionsmittel">desinfektionsmittel</option>
+                    <option value="klopapier">klopapier</option>
+                    <option value="alkohol">alkohol</option>
+                    <option value="bill gates">bill gates</option>
+                    <option value="BER">BER</option>
+                    <option value="attila hildmann">attila hildmann</option>
+                    <option value="querdenken">querdenken</option>
+                    <option value="bananenbrot">bananenbrot</option>
+                    <option value="kneipentour">kneipentour</option>
+                    <option value="homeworkout">homeworkout</option>
+                    <option value="onlinesemester">onlinesemester</option>
+                </select>
+            </my-dropdown>
+            <script src="dropdown.js"></script>
         </div>
+        <div id="slider">
+            <script src="slider.js"></script>                
+        </div>
+    </div><!--Interactive Ende-->
+    <div id="content-wrapper">
+    <div id="left">    
+    <div id="graph">
+        <script src="graph.js"></script>
     </div>
+        <!--<img src="img/graph-placeholder.png" />-->
 
     <div id="articleview">
     <h2>Deutsche hamstern Klopapier</h2>
