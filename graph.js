@@ -1,4 +1,4 @@
-var selectedYear = "2019" // 2019 oder 2020 oder ""
+var selectedYear = "2020" // 2019 oder 2020 oder ""
 var yearPath = ""
 var firstDate = new Date()
 if(selectedYear == "") {
@@ -42,7 +42,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate) {
   }
   document.getElementById("graph").innerHTML = "";
   // set the dimensions and margins of the graph
-  var margin = {top: 30, right: 30, bottom: 30, left: 60}, // top: 10
+  var margin = {top: 30, right: 40, bottom: 60, left: 60}, // top: 10
       width = 500 - margin.left - margin.right,
       height = 220 - margin.top - margin.bottom;
 
@@ -87,9 +87,20 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate) {
         //.domain([1,100])
         .domain(d3.extent(data, function(d) {return d.date;  }))
         .range([ 0, width ]);
-      svg.append("g")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
+      if (selectedYear != "") { 
+        svg.append("g")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x)
+          .ticks(d3.timeDay.every(32))
+          .tickFormat(function(d) {
+            return d3.timeFormat("%b")(d)
+          })
+          .tickSizeInner(5))
+      } else {
+        svg.append("g")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x))
+      }
 
       // Add Y axis
       var y = d3.scaleLinear()
@@ -108,7 +119,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate) {
         .attr("stroke", "steelblue")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
-        .x(function(d) { console.log(d.date); return x(d.date) })
+        .x(function(d) { return x(d.date) })
         .y(function(d) { if(ratio < 1.0) {return y(d.value*ratio)} else { return y(d.value) } }))
 
 
