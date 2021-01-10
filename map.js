@@ -174,6 +174,7 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
   .attr('height', 100)
   .attr("x", "260")
   .attr('y', '190');
+  scale_to_zero();
   
 
  /* g.append("path")
@@ -273,21 +274,16 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
     
 function update(){
     if(d3.select("#myCheckbox").property("checked")){
-        console.log("checked");
         colorBL();
     } else {
-        console.log("not checked");	
         adaptColor(map_calendarweek);
     }	
 }
 function colorBL() {
 
-    //console.log(trendListAverage);
     trendListAverage.forEach(function (arrayItem) {
     var valueBL = arrayItem.Value;
     var nameBL = arrayItem.Kategorie;
-    console.log(nameBL);
-    //console.log(valueBL);
     if (nameBL=="Baden-Württemberg"){
         console.log(valueBL);
         g.select("#baden").style("fill", getcolor(valueBL));
@@ -489,9 +485,9 @@ function getTrendValue(){
 
 };
 function adaptColor(week){
-    console.log(week);
-    console.log(currentDate);
-    console.log(trendList);
+    //console.log(week);
+    //console.log(currentDate);
+    //console.log(trendList);
     if (map_year==2019){
         //console.log("2019");
     }else{
@@ -611,27 +607,25 @@ function scaleIcon(icon, value) {
 }
 
 function update_virusicons(week_text) {
-  getCasesOfWeek(week_text, "Bayern", bayern_virus);/*
-  resizearray.push(getCasesOfWeek(week_text, "Baden-Wurttemberg"));
-  resizearray.push(getCasesOfWeek(week_text, "Nordrhein-Westfalen"));
-  resizearray.push(getCasesOfWeek(week_text, "Hessen"));
-  resizearray.push(getCasesOfWeek(week_text, "Niedersachsen"));
-  resizearray.push(getCasesOfWeek(week_text, "Schleswig-Holstein"));
-  resizearray.push(getCasesOfWeek(week_text, "Mecklenburg-Vorpommern"));
-  resizearray.push(getCasesOfWeek(week_text, "Saarland"));
-  resizearray.push(getCasesOfWeek(week_text, "Rheinland-Pfalz"));
-  resizearray.push(getCasesOfWeek(week_text, "Thuringen"));
-  resizearray.push(getCasesOfWeek(week_text, "Sachsen"));
-  resizearray.push(getCasesOfWeek(week_text, "Hamburg"));
-  resizearray.push(getCasesOfWeek(week_text, "Bremen"));
-  resizearray.push(getCasesOfWeek(week_text, "Berlin"));
-  resizearray.push(getCasesOfWeek(week_text, "Brandenburg"));
-  resizearray.push(getCasesOfWeek(week_text, "Sachsen-Anhalt"));
-  console.log(resizearray);
-  execute_resize_array(resizearray);*/
+   setVirusIconScaleByCases(week_text, "Bayern", bayern_virus);
+   setVirusIconScaleByCases(week_text, "Baden-Wurttemberg", baden_virus);
+   setVirusIconScaleByCases(week_text, "Nordrhein-Westfalen", nrw_virus);
+   setVirusIconScaleByCases(week_text, "Hessen", hessen_virus);
+   setVirusIconScaleByCases(week_text, "Niedersachsen", niedersachsen_virus);
+   setVirusIconScaleByCases(week_text, "Schleswig-Holstein", schleswigholst_virus);
+   setVirusIconScaleByCases(week_text, "Mecklenburg-Vorpommern", mecklvorp_virus);
+   setVirusIconScaleByCases(week_text, "Saarland", saarland_virus);
+   setVirusIconScaleByCases(week_text, "Rheinland-Pfalz", rheinlandpfalz_virus);
+   setVirusIconScaleByCases(week_text, "Thuringen", thueringen_virus);
+   setVirusIconScaleByCases(week_text, "Sachsen", sachsen_virus);
+   setVirusIconScaleByCases(week_text, "Hamburg", hamburg_virus);
+   setVirusIconScaleByCases(week_text, "Bremen", bremen_virus);
+   setVirusIconScaleByCases(week_text, "Berlin", berlin_virus);
+   setVirusIconScaleByCases(week_text, "Brandenburg", brandenburg_virus);
+   setVirusIconScaleByCases(week_text, "Sachsen-Anhalt", sachsenanhalt_virus);
 }
 
-function getCasesOfWeek(currentDate, region, icon){
+function  setVirusIconScaleByCases(currentDate, region, icon){
   germanyData.forEach(element => {
   if(currentDate != null){
     var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
@@ -641,8 +635,8 @@ function getCasesOfWeek(currentDate, region, icon){
     else if((element.region_name == region) && (element.year_week == newDateFormat)){
 
       if((element.rate_14_day_per_100k != null) && (element.rate_14_day_per_100k >0)){
-        console.log("Found cases: "+element.rate_14_day_per_100k/300);
-        scaleIcon(icon, element.rate_14_day_per_100k/300);
+        //console.log("Found cases: "+element.rate_14_day_per_100k/300);
+        scaleIcon(icon, Math.sqrt((element.rate_14_day_per_100k/Math.PI))/10);
       } else {
         scaleIcon(icon, 0);
       }
@@ -661,19 +655,21 @@ function getCasesOfWeek(currentDate, region, icon){
 
 
 
-function execute_resize_array(resizearray) {
-  scaleIcon(bayern_virus, resizearray[0]);
-  scaleIcon(baden_virus, resizearray[1]);
-  scaleIcon(nrw_virus, resizearray[2]);
-  scaleIcon(hessen_virus, resizearray[3]);
-  scaleIcon(niedersachsen_virus, resizearray[4]);
-  scaleIcon(schleswigholst_virus, resizearray[5]);
-  scaleIcon(mecklvorp_virus, resizearray[6]);
-  scaleIcon(saarland_virus, resizearray[7]);
-  scaleIcon(thueringen_virus, resizearray[8]);
-  scaleIcon(hamburg_virus, resizearray[9]);
-  scaleIcon(bremen_virus, resizearray[10]);
-  scaleIcon(berlin_virus, resizearray[11]);
-  scaleIcon(brandenburg_virus, resizearray[12]);
-  scaleIcon(sachsenanhalt_virus, resizearray[13]);
+function scale_to_zero() {
+  scaleIcon(bayern_virus, 0);
+  scaleIcon(baden_virus, 0);
+  scaleIcon(nrw_virus, 0);
+  scaleIcon(hessen_virus, 0);
+  scaleIcon(niedersachsen_virus, 0);
+  scaleIcon(schleswigholst_virus, 0);
+  scaleIcon(mecklvorp_virus, 0);
+  scaleIcon(saarland_virus, 0);
+  scaleIcon(thueringen_virus, 0);
+  scaleIcon(hamburg_virus, 0);
+  scaleIcon(bremen_virus, 0);
+  scaleIcon(berlin_virus, 0);
+  scaleIcon(brandenburg_virus, 0);
+  scaleIcon(sachsenanhalt_virus, 0);
+  scaleIcon(rheinlandpfalz_virus, 0);
+  scaleIcon(sachsen_virus, 0);
 }
