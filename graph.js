@@ -1,5 +1,7 @@
 var selectedYear = "2020" // 2019 oder 2020 oder ""
 
+// bug: netflix + maske
+
 replace_graph("corona", "keines", true, null, selectedYear);
 
 function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
@@ -109,7 +111,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
         //.domain([0, 100])
         .domain([0, d3.max(data, function(d) { return +d.value;  })])
         .range([ height, 0 ]);
-      if(!secondKeyChosen || (secondKeyChosen && ratio > 1.0)) {
+      if(!secondKeyChosen || (secondKeyChosen && Math.round(ratio*1000) >= 1000)) {
         svg.append("g")
         .call(d3.axisLeft(y));
       }
@@ -184,8 +186,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
           }
         },
         function(data2) {
-            
-            if(ratio < 1.0) {
+            if(Math.round(ratio*1000) < 1000) {
               y = d3.scaleLinear()
                 .domain([0, d3.max(data2, function(d) { return +d.value; })])
                 .range([ height, 0 ]);
