@@ -5,6 +5,8 @@ var articleview_calendarweek = 0;
 var articleview_year = 2019;
 var articleview_keyword = "corona";
 var articleview_content;
+var articleview_keyword_2 = "";
+var articleview_content_2 = [];
 
 function updateArticleTime(text_week) {
   articleview_calendarweek = parseInt(text_week.slice(3, 5));
@@ -27,23 +29,68 @@ function updateArticleKeyword (keyword) {
 
 }
 
+function updateArticleKeyword2 (keyword) {
+  if (keyword == "keines") {
+    articleview_keyword_2 = "";
+  } else {
+    var article_datarequest = new XMLHttpRequest();
+    article_datarequest.onreadystatechange = function() {
+        if (article_datarequest.readyState == 4 && article_datarequest.status == 200) {
+            var articleview_json = article_datarequest.responseText;
+            articleview_content_2 = JSON.parse(articleview_json);
+            echoArticles();
+        }
+    }
+    article_datarequest.open("GET", "data/articles/"+keyword+".json");
+    article_datarequest.send();
+    articleview_keyword_2 = keyword;
+  }
+}
+
 function echoArticles() {
   var articleview_display = "";
-  for (let i=0; i<articleview_content.length; i++) {
-    var local_day = parseInt(articleview_content[i][2].slice(0, 2));
-    var local_month = parseInt(articleview_content[i][2].slice(3, 5));
-    var local_year = parseInt(articleview_content[i][2].slice(6, 10));
-    var week_information = kalenderWoche(local_year,local_month,local_day);
-    //alert("Artikelinformation: "+week_information[0]+"-"+week_information[1]+"\n Woche: "+articleview_year+"-"+articleview_calendarweek);
-    if (local_year == articleview_year && week_information == articleview_calendarweek) {
-      articleview_display = 
-        articleview_display + "<h2><a href=" +
-        articleview_content[i][3] + " target=_blank>" +
-        articleview_content[i][1] + "</a></h2><p>" +
-        articleview_content[i][2] + " - Süddeutsche Zeitung - " +
-        articleview_keyword + "</p><p>" +
-        articleview_content[i][4];
+  var article_lists_max = Math.max(articleview_content.length, articleview_content_2.length)
+  for (let i=0; i<article_lists_max; i++) {
+    if (i < articleview_content.length) {
+      var local_day = parseInt(articleview_content[i][2].slice(0, 2));
+      var local_month = parseInt(articleview_content[i][2].slice(3, 5));
+      var local_year = parseInt(articleview_content[i][2].slice(6, 10));
+      var week_information = kalenderWoche(local_year,local_month,local_day);
+      //alert("Artikelinformation: "+week_information[0]+"-"+week_information[1]+"\n Woche: "+articleview_year+"-"+articleview_calendarweek);
+      if (local_year == articleview_year && week_information == articleview_calendarweek) {
+        articleview_display = 
+          articleview_display + "<h2><a href=" +
+          articleview_content[i][3] + " target=_blank>" +
+          articleview_content[i][1] + "</a></h2><p>" +
+          articleview_content[i][2] + " - Süddeutsche Zeitung - " +
+          articleview_keyword + "</p><p>" +
+          articleview_content[i][4];
+      }
     }
+    if (i < articleview_content_2.length && articleview_keyword_2 != "") {
+      var local_day = parseInt(articleview_content_2[i][2].slice(0, 2));
+      var local_month = parseInt(articleview_content_2[i][2].slice(3, 5));
+      var local_year = parseInt(articleview_content_2[i][2].slice(6, 10));
+      var week_information = kalenderWoche(local_year,local_month,local_day);
+      //alert("Artikelinformation: "+week_information[0]+"-"+week_information[1]+"\n Woche: "+articleview_year+"-"+articleview_calendarweek);
+      if (local_year == articleview_year && week_information == articleview_calendarweek) {
+        articleview_display = 
+          articleview_display + "<h2><a href=" +
+          articleview_content_2[i][3] + " target=_blank>" +
+          articleview_content_2[i][1] + "</a></h2><p>" +
+          articleview_content_2[i][2] + " - Süddeutsche Zeitung - " +
+          articleview_keyword_2 + "</p><p>" +
+          articleview_content_2[i][4];
+      }
+    }
+  }
+  //UX-Verbesserung bei fehlenden Artikeln:
+  if (articleview_display == "") {
+    articleview_display = "<h2>In Kalenderwoche "+articleview_calendarweek+" des Jahres "+articleview_year+" gab es keine Artikel zum Thema "+articleview_keyword;
+    if (articleview_keyword_2 != "") {
+      articleview_display = articleview_display+" und "+articleview_keyword_2;
+    }
+    articleview_display = articleview_display+".</h2>"
   }
   document.getElementById('articleview').innerHTML = articleview_display;
 }

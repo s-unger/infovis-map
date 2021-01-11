@@ -1,17 +1,19 @@
 html {
-  background-color: white;
+  background-image: url("img/papertexture.jpg");
+  background-repeat: repeat;
+  background-size: 600px 600px;
 }
 
 #newspaper { 
-background-image: url("img/papertexture.jpg");
-background-repeat: repeat;
-background-size: 600px 600px;
-margin-top: 2%;
-width: 98%;
-margin-left: auto;
-margin-right: auto;
-height: 1300px;
-margin-bottom: 100px;
+  background-image: url("img/papertexture.jpg");
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  margin-top: 0%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1300px;
+  margin-bottom: 0px;
 }
 
 #header {
@@ -32,6 +34,15 @@ text-align: center;
 width: 100%;
 font-size: 2em;
 margin-top: -40px;
+}
+
+#interactive {
+  width: 90%;
+  height: 100;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 4px solid black;
 }
 
 #content-wrapper {
@@ -72,20 +83,15 @@ margin-right: auto;
 width: 90%; height: auto
 }
 
-#map {
-margin-left: auto;
-margin-right: auto;
-height: auto;
-width: 100%;
-}
-
 #map  .tempcenter {
 text-align: center;
 position: relative;
 top: 0;
 left: 0;
-min-width: 500px;
-min-height: 620px;
+width: 80%;
+max-width: 400px;
+margin-left: auto;
+margin-right: auto;
 text-align: center;
 z-index: 1;
 }
@@ -93,8 +99,9 @@ z-index: 1;
 #map #virusSVGBayern{
   position: absolute;
   bottom: 5%;
-  right: 28%;
+  left: 35%;
   opacity: 0;
+  background-color: green;
 }
 
 #map #virusSVGBaden{
@@ -217,17 +224,24 @@ text-align: center;
 
 #tagcloud {
 text-align: center;
-}
-
-#tagcloud img {
-width: 90%; height: auto
+width: 70%;
+margin-left: auto;
+margin-right: auto;
 }
 
 #dropdown {
-height: 50px;
+height: auto;
+padding-top: 29px;
+width: 55%;
+float: left;
 }
 
-
+#slider {
+  height: auto;
+  width: 40%;
+  float: left;
+}
+  
 
 .time-slider-container {
 margin: 20px;
@@ -292,26 +306,7 @@ stroke-width: 0.5px;
 #vis{
 padding-top: 10px;
 height: 120px;
-}
-
-#play-button {
-position: absolute;
-top: 140px;
-left: 50px;
-background: #f08080;
-padding-right: 26px;
-border-radius: 3px;
-border: none;
-color: white;
-margin: 0;
-padding: 0 12px;
-width: 60px;
-cursor: pointer;
-height: 30px;
-}
-
-#play-button:hover {
-background-color: #696969;
+float: left;
 }
 
 

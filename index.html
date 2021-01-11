@@ -1,95 +1,107 @@
 <DOCTYPE html>
     <html>
     <head>
-        <title>InfoVis Map</title>
+        <title>InfoVis News</title>
+        <link rel="icon" href="./img/favicon.png?v=2" type="image/x-icon">
+        <link rel="shortcut icon" href="./img/favicon.png?v=2" type="image/x-icon">
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.1/css/bootstrap-slider.min.css">
         <!--link rel="stylesheet" href="slider.css"-->
         <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.1/bootstrap-slider.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
         <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/d3.v4.js"></script>
         <!--script src="slider.js"></script-->
     <script src="dropdownclass.js"></script>
     </head>
-    <body>
+    <body">
     <div id="newspaper">
     <div id="header">
-    <div><h1>2020 News</h1></div>
+    <h1>
+    
+    </h1>
+    <div><h1><p style = "font-family:'Times New Roman', Times, serif; font-size: larger;">InfoVis News</p></h1></div>
     <h1>
         
     </h1>
-    <div><p>Zeitungsmeldungen aus einem verrückten Jahr</p></div>
+    <div><p  style = "font-family:'Times New Roman', Times, serif">Zeitungsmeldungen aus 2019 und aus einem verrückten Jahr</p></div>
     </div><!--Header Ende-->
 
-    <div id="content-wrapper">
-    <div id="left">
-    <div id="dropdown">
-        <my-dropdown value="ws1920" id="mydropdown">
-        Keyword 1:
-        <select id="keyword1" onchange="update()">
-            <option value="corona">corona</option>
-            <option value="netflix">netflix</option>
-            <option value="maske">maske</option>
-            <option value="merkel">merkel</option>
-            <option value="oktoberfest">oktoberfest</option>
-            <option value="baumarkt">baumarkt</option>
-            <option value="zoom">zoom</option>
-            <option value="söder">söder</option>
-            <option value="drosten">drosten</option>
-            <option value="desinfektionsmittel">desinfektionsmittel</option>
-            <option value="klopapier">klopapier</option>
-            <option value="alkohol">alkohol</option>
-            <option value="bill gates">bill gates</option>
-            <option value="BER">BER</option>
-            <option value="attila hildmann">attila hildmann</option>
-            <option value="querdenken">querdenken</option>
-            <option value="bananenbrot">bananenbrot</option>
-            <option value="kneipentour">kneipentour</option>
-            <option value="homeworkout">homeworkout</option>
-            <option value="onlinesemester">onlinesemester</option>
-        </select>
-        Keyword 2:
-        <select id="keyword2" onchange="update()">
-            <option value="keines">keines</option>
-            <option value="corona">corona</option>
-            <option value="netflix">netflix</option>
-            <option value="maske">maske</option>
-            <option value="merkel">merkel</option>
-            <option value="oktoberfest">oktoberfest</option>
-            <option value="baumarkt">baumarkt</option>
-            <option value="zoom">zoom</option>
-            <option value="söder">söder</option>
-            <option value="drosten">drosten</option>
-            <option value="desinfektionsmittel">desinfektionsmittel</option>
-            <option value="klopapier">klopapier</option>
-            <option value="alkohol">alkohol</option>
-            <option value="bill gates">bill gates</option>
-            <option value="BER">BER</option>
-            <option value="attila hildmann">attila hildmann</option>
-            <option value="querdenken">querdenken</option>
-            <option value="bananenbrot">bananenbrot</option>
-            <option value="kneipentour">kneipentour</option>
-            <option value="homeworkout">homeworkout</option>
-            <option value="onlinesemester">onlinesemester</option>
-        </select>
-    </my-dropdown>
-    <script src="dropdown.js"></script>
-    </div>
-    
-    <div id="graph"><img src="img/graph-placeholder.png" /></div>
-    <script src="graph.js"></script>
-
-    <div id="vis">
-        <button id="play-button">Play</button>
-        <div id="slider">
-        <script src="slider.js"></script>
+    <div id="interactive">
+        <div id="dropdown">
+            <my-dropdown value="ws1920" id="mydropdown">
+                Jahr:
+                <select id="year" onchange="update()">
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="">19 / 20</option>
+                </select>
+                <span style = "color:midnightblue">&nbsp;&nbsp;&nbsp;&nbsp;Keyword 1:
+                <select id="keyword1" onchange="update()">
+                    <option value="corona">corona</option>
+                    <option value="netflix">netflix</option>
+                    <option value="maske">maske</option>
+                    <option value="merkel">merkel</option>
+                    <option value="oktoberfest">oktoberfest</option>
+                    <option value="baumarkt">baumarkt</option>
+                    <option value="zoom">zoom</option>
+                    <option value="söder">söder</option>
+                    <option value="drosten">drosten</option>
+                    <option value="desinfektionsmittel">desinfektionsmittel</option>
+                    <option value="klopapier">klopapier</option>
+                    <option value="alkohol">alkohol</option>
+                    <option value="bill gates">bill gates</option>
+                    <option value="BER">BER</option>
+                    <option value="attila hildmann">attila hildmann</option>
+                    <option value="querdenken">querdenken</option>
+                    <option value="bananenbrot">bananenbrot</option>
+                    <option value="kneipentour">kneipentour</option>
+                    <option value="homeworkout">homeworkout</option>
+                    <option value="onlinesemester">onlinesemester</option>
+                </select></span>
+                <span style = "color:maroon">&nbsp;&nbsp;&nbsp;&nbsp;Keyword 2:
+                <select id="keyword2" onchange="update()">
+                    <option value="keines">keines</option>
+                    <option value="corona">corona</option>
+                    <option value="netflix">netflix</option>
+                    <option value="maske">maske</option>
+                    <option value="merkel">merkel</option>
+                    <option value="oktoberfest">oktoberfest</option>
+                    <option value="baumarkt">baumarkt</option>
+                    <option value="zoom">zoom</option>
+                    <option value="söder">söder</option>
+                    <option value="drosten">drosten</option>
+                    <option value="desinfektionsmittel">desinfektionsmittel</option>
+                    <option value="klopapier">klopapier</option>
+                    <option value="alkohol">alkohol</option>
+                    <option value="bill gates">bill gates</option>
+                    <option value="BER">BER</option>
+                    <option value="attila hildmann">attila hildmann</option>
+                    <option value="querdenken">querdenken</option>
+                    <option value="bananenbrot">bananenbrot</option>
+                    <option value="kneipentour">kneipentour</option>
+                    <option value="homeworkout">homeworkout</option>
+                    <option value="onlinesemester">onlinesemester</option>
+                </select></span>
+            </my-dropdown>
+            <script src="dropdown.js"></script>
         </div>
+        <div id="slider">
+            <script src="slider.js"></script>                
+        </div>
+    </div><!--Interactive Ende-->
+    <div id="content-wrapper">
+    <div id="left">    
+    <div id="graph">
+        <script src="graph.js"></script>
     </div>
+        <!--<img src="img/graph-placeholder.png" />-->
 
     <div id="articleview">
     <h2>Deutsche hamstern Klopapier</h2>
@@ -116,51 +128,15 @@
     <div id="map">
         <div class="tempcenter">
             <input type="checkbox" id="myCheckbox"> Zeige Durschnittswert pro Bundesland für diesen Trend
-                    <img  id = "virusSVGBayern" src= "coronavirus.svg" width="200" height="200">
-                    <img  id = "virusSVGBaden" src= "coronavirus.svg" width="200" height="200">
-                    <img  id = "virusSVGNrw" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGHessen" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGNiedersachsen" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGSchleswigHolst" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGMecklVorp" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGSaarland" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGRheinlandPfalz" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGSachsen" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGThueringen" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGHamburg" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGBremen" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGBerlin" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGBrandenburg" src="coronavirus.svg" width="200" height="200"/>
-                    <img  id = "virusSVGSachsenAnhalt" src="coronavirus.svg" width="200" height="200"/>-->
             <script src="map.js"></script>    
          </div>
-         
-         
-
-        <!--<img  id = "virusSVGBadenWuerttemberg" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGNrw" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGHessen" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGNiedersachsen" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGSchleswigHolst" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGMecklVorp" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGSaarland" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGRheinlandPfalz" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGSachsen" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGThueringen" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGHamburg" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGBremen" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGBerlin" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGBrandenburg" src="coronavirus.svg" width="0" height="0"/>
-        <img  id = "virusSVGSachsenAnhalt" src="coronavirus.svg" width="0" height="0"/>-->
-</div>
+    </div>
     <div id="funnytexts">
     <p>Die Leute in Baden-Wüttenberg finden Klopapier am coolsten.</p>
     <p>Mecklenburg-Vorpommern will nichts davon wissen</p>
     </div>
-    <div id="tagcloud">
-    <h2>Meistgesucht in dieser Woche</h2>
-    <img src="img/wordcloud-placeholder.jpg" />
-    </div>
+    <div id="tagcloud"></div>
+    <script src="wordcloud.js"></script>
     </div><!--right Ende-->
     </div>
     </div><!--Newspaper Ende-->
