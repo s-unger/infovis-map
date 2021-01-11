@@ -53,8 +53,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
   // append the svg object to the body of the page
   var svg = d3.select("#graph")
     .append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
+      .attr("viewBox", `0 0 600 300`)
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
