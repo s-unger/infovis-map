@@ -126,7 +126,7 @@ function updateslider(h) {
     .text(formatDate(h));
 
     currentDate = formatDate(h);
-    document.getElementById("current-week").innerHTML = "Current week: "+currentDate;
+    //document.getElementById("current-week").innerHTML = "Current week: "+currentDate;
 /*
     resizeVirus(currentDate, "Bayern", "virusSVGBayern");
     resizeVirus(currentDate, "Baden-Wurttemberg", "virusSVGBaden");
