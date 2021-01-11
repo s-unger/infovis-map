@@ -624,13 +624,12 @@ function update_virusicons(week_text) {
    setVirusIconScaleByCases(week_text, "Brandenburg", brandenburg_virus);
    setVirusIconScaleByCases(week_text, "Sachsen-Anhalt", sachsenanhalt_virus);
 }
-
 function  setVirusIconScaleByCases(currentDate, region, icon){
   germanyData.forEach(element => {
   if(currentDate != null){
     var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
     if(newDateFormat.includes("2019")){
-      return 0;
+      scale_to_zero();
     }
     else if((element.region_name == region) && (element.year_week == newDateFormat)){
 
