@@ -22,7 +22,9 @@ function change_keyword_1(msg) {
 document.querySelector("#year").onchange = function () {
   selectedYear = document.querySelector("#year").value;
   replace_graph(keyword_1, keyword_2, true, null, selectedYear);
-  createSlider(selectedYear)
+  createSlider(selectedYear);
+  update_virusicons("CW 00/2019");
+  draw_wordcloud("CW 00/2019");
 }
 
 document.querySelector("#keyword1").onchange = function () {
