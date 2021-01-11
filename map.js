@@ -284,68 +284,70 @@ function colorBL() {
     trendListAverage.forEach(function (arrayItem) {
     var valueBL = arrayItem.Value;
     var nameBL = arrayItem.Kategorie;
+    console.log("NAMEBL===");
+    console.log(nameBL);
     if (nameBL=="Baden-Württemberg"){
-        console.log(valueBL);
+        //console.log(valueBL);
         g.select("#baden").style("fill", getcolor(valueBL));
     }
     if (nameBL=="Bayern"){
-        console.log(valueBL);
+        //console.log(valueBL);
         g.select("#bayern").style("fill", getcolor(valueBL));
     }
     if (nameBL=="Berlin"){
-        console.log(valueBL);
+        //console.log(valueBL);
         g.select("#berlin").style("fill", getcolor(valueBL));
     }   
     if (nameBL=="Sachsen"){
-        console.log(valueBL);
+        //console.log(valueBL);
         g.select("#sachsen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Nordrhein-Westfalen"){
-        console.log(valueBL);
+        //console.log(valueBL);
         g.select("#nrw").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Thüringen"){
-        console.log(valueBL);
+        //console.log(valueBL);
         g.select("#thüringen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Bremen"){
-        console.log(valueBL);
+       // console.log(valueBL);
         g.select("#bremen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Sachsen-Anhalt"){
-        console.log(valueBL);
+        //console.log(valueBL);
         g.select("#sachsen-anhalt").style("fill", getcolor(valueBL));
     } 
     if (nameBL=="Rheinland-Pfalz"){
-        console.log(valueBL);
+       // console.log(valueBL);
         g.select("#rheinland").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Schleswig-Holstein"){
-        console.log(valueBL);
+       // console.log(valueBL);
         g.select("#schleswig").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Niedersachsen"){
-        console.log(valueBL);
+       // console.log(valueBL);
         g.select("#niedersachsen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Hessen"){
-        console.log(valueBL);
+       // console.log(valueBL);
         g.select("#hessen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Hamburg"){
-        console.log(valueBL);
+       // console.log(valueBL);
         g.select("#hamburg").style("fill", getcolor(valueBL));
     } 
     if (nameBL=="Saarland"){
-        console.log(valueBL);
+       // console.log(valueBL);
         g.select("#saarland").style("fill", getcolor(valueBL));
     } 
     if (nameBL=="Mecklenburg-Vorpommern"){
-        console.log(valueBL);
+       // console.log(valueBL);
         g.select("#mecklenburg").style("fill", getcolor(valueBL));
     }
     if (nameBL=="Brandenburg"){
-        console.log(valueBL);
+       // console.log(valueBL);
         g.select("#brandenburg").style("fill", getcolor(valueBL));
     }   
     });
@@ -359,44 +361,44 @@ return "rgb(28, 234, 227)";
 }
 
 if (value<30 && value>19){
-    console.log("2");
+    //console.log("2");
     return "rgb(105, 210, 152)";
     
 }
 if (value<40 && value>29){
-    console.log("3");
+    
     return "rgb(170, 189, 89)";
     
 }
 if (value<50 && value>39){
-    console.log("4");
+    
     return "rgb(203, 178, 57)";
     //return "rgb(255, 0, 255)";
     
 }
 if (value<60&& value>49){
-    console.log("5");
+   
     return "rgb(236, 168, 25)";
     //return "rgb(255, 0, 255)";
     
 }
 if (value<70&& value>59){
-    console.log("6");
+    
     return "rgb(249, 123, 11)";
     
 }
 if (value<80&& value>69){
-    console.log("7");
+   
     return "rgb(251, 90, 8)";
     
 }
 if (value<90&& value>79){
-    console.log("8");
+   
     return "rgb(252, 57, 5)";
 
 }
 if (value>89){
-    console.log("9");
+    
     return "rgb(255, 0, 0)";
     
 }
@@ -416,6 +418,10 @@ function getTrendValueAverage(){
     if (map_currentWord==="bill gates"){
         console.log("Bill Gates ausgewählt");
         wordData= "billGates.csv";
+    }
+    if (map_currentWord==="netflix"){
+        console.log("Bill Gates ausgewählt");
+        wordData= "netflix.csv";
     }
 
 d3.csv(wordData, function(data) {
@@ -447,6 +453,10 @@ function getTrendValue(){
     if (map_currentWord==="bill gates"){
         console.log("Bill Gates ausgewählt");
         var wordData= "billGates.csv";
+    }
+    if (map_currentWord==="netflix"){
+        console.log("Bill Gates ausgewählt");
+        var wordData= "allBLnetflix.csv";
     }
 
 
@@ -485,19 +495,31 @@ function getTrendValue(){
 
 };
 function adaptColor(week){
-    //console.log(week);
-    //console.log(currentDate);
-    //console.log(trendList);
+
+    if (week==0){
+        colorWeek0();
+
+    }else{
+
+    
+    
     if (map_year==2019){
+       week=week-1;
         //console.log("2019");
     }else{
         //console.log("2020");
-        week=week+52;
+        week=week+51;
+        console.log("2020");
+        
     }
 trendList.forEach(function (d, i) {
+
     if (i==week){
     //colorBL2(d);
     g.select("#bayern").style("fill", getcolor(d.Bayern));
+    console.log(week);
+    console.log(d.Bayern);
+   
     g.select("#berlin").style("fill", getcolor(d.Berlin));
     g.select("#bremen").style("fill", getcolor(d.Bremen));
     g.select("#brandenburg").style("fill", getcolor(d.Brandenburg));
@@ -515,7 +537,7 @@ trendList.forEach(function (d, i) {
     g.select("#sachsen-anhalt").style("fill", getcolor(d.SachsenA));
     }
 
-});
+});}
 }
 
 function updateMapTime(text_week) {
@@ -545,7 +567,24 @@ function executeAsynchronously(functions, timeout) {
     }
   }
 
-            
+   function colorWeek0(){
+    g.select("#berlin").style("fill", getcolor(50));
+    g.select("#bremen").style("fill", getcolor(50));
+    g.select("#brandenburg").style("fill", getcolor(50));
+    g.select("#hamburg").style("fill", getcolor(50));
+    g.select("#hessen").style("fill", getcolor(50));
+    g.select("#mecklenburg").style("fill", getcolor(50));
+    g.select("#niedersachsen").style("fill", getcolor(50));
+    g.select("#nrw").style("fill", getcolor(50));
+    g.select("#rheinland").style("fill", getcolor(50));
+    g.select("#saarland").style("fill", getcolor(50));
+    g.select("#sachsen").style("fill", getcolor(50));
+    g.select("#schleswig").style("fill", getcolor(50));
+    g.select("#thüringen").style("fill", getcolor(50));
+    g.select("#baden").style("fill", getcolor(50));
+    g.select("#sachsen-anhalt").style("fill", getcolor(50));
+    g.select("#bayern").style("fill", getcolor(50));
+   }         
 
 function clickPath(d) {
   var x = widthMap/2,
