@@ -17,6 +17,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <script src="https://d3js.org/d3.v4.js"></script>
+
+       
+    <script src="d3.chart.js"></script>
+    <script src="horizontal-legend.js"></script>
         <!--script src="slider.js"></script-->
     <script src="dropdownclass.js"></script>
     </head>
@@ -133,10 +137,10 @@
          </div>
     </div>
     <div id="funnytexts">
+        
         <p>Farblegende:</p>
-        <!--script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/d3-legend/1.1.0/d3-legend.js"></script>
-        <script src="colorLegend.js"></script!-->
+        <svg id="my_dataviz" height=120 width=450></svg>
+        <script src="legendColor.js"></script>
     
     </div>
     <div id="tagcloud"></div>

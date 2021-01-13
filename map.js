@@ -357,49 +357,49 @@ function getcolor(value) {
 //console.log(value);
 if (value<10){
     //console.log("1");
-return "rgb(28, 234, 227)";
+return "#ffffcc";
 }
 
 if (value<30 && value>19){
     //console.log("2");
-    return "rgb(105, 210, 152)";
+    return "#ffefa5";
     
 }
 if (value<40 && value>29){
     
-    return "rgb(170, 189, 89)";
+    return "#fedc7f";
     
 }
 if (value<50 && value>39){
     
-    return "rgb(203, 178, 57)";
+    return "#febf5b";
     //return "rgb(255, 0, 255)";
     
 }
 if (value<60&& value>49){
    
-    return "rgb(236, 168, 25)";
+    return "#fd9d43";
     //return "rgb(255, 0, 255)";
     
 }
 if (value<70&& value>59){
     
-    return "rgb(249, 123, 11)";
+    return "#fc7034";
     
 }
 if (value<80&& value>69){
    
-    return "rgb(251, 90, 8)";
+    return "#f23d26";
     
 }
 if (value<90&& value>79){
    
-    return "rgb(252, 57, 5)";
+    return "#d91620";
 
 }
 if (value>89){
     
-    return "rgb(255, 0, 0)";
+    return "#800026";
     
 }
 
