@@ -444,6 +444,7 @@ function getTrendValue(){
     if (map_currentWord==="klopapier"){
         console.log("Klopapier ausgewählt");
         var wordData= "allBLKlopapier.csv";
+        console.log("merge");
     }
     if (map_currentWord==="corona"){
         var wordData= "allBLcorona.csv";
