@@ -1,5 +1,6 @@
 var svgLegend = d3.select("svg");
 
+
       // Color legend.
       var colorScale = d3.scale.quantize()
         .domain([ 0, 100 ])
