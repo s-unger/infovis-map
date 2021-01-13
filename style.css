@@ -287,8 +287,8 @@ pointer-events: all;
 }
 
 #states {
-fill: rgb(219, 162, 38);
-stroke: #fff;
+fill: #ffefa5;
+stroke: grey;
 stroke-width: 1.25px;
 opacity: 0.85;
 }

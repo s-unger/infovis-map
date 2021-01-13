@@ -568,22 +568,22 @@ function executeAsynchronously(functions, timeout) {
   }
 
    function colorWeek0(){
-    g.select("#berlin").style("fill", getcolor(50));
-    g.select("#bremen").style("fill", getcolor(50));
-    g.select("#brandenburg").style("fill", getcolor(50));
-    g.select("#hamburg").style("fill", getcolor(50));
-    g.select("#hessen").style("fill", getcolor(50));
-    g.select("#mecklenburg").style("fill", getcolor(50));
-    g.select("#niedersachsen").style("fill", getcolor(50));
-    g.select("#nrw").style("fill", getcolor(50));
-    g.select("#rheinland").style("fill", getcolor(50));
-    g.select("#saarland").style("fill", getcolor(50));
-    g.select("#sachsen").style("fill", getcolor(50));
-    g.select("#schleswig").style("fill", getcolor(50));
-    g.select("#thüringen").style("fill", getcolor(50));
-    g.select("#baden").style("fill", getcolor(50));
-    g.select("#sachsen-anhalt").style("fill", getcolor(50));
-    g.select("#bayern").style("fill", getcolor(50));
+    g.select("#berlin").style("fill", getcolor(0));
+    g.select("#bremen").style("fill", getcolor(0));
+    g.select("#brandenburg").style("fill", getcolor(0));
+    g.select("#hamburg").style("fill", getcolor(0));
+    g.select("#hessen").style("fill", getcolor(0));
+    g.select("#mecklenburg").style("fill", getcolor(0));
+    g.select("#niedersachsen").style("fill", getcolor(0));
+    g.select("#nrw").style("fill", getcolor(0));
+    g.select("#rheinland").style("fill", getcolor(0));
+    g.select("#saarland").style("fill", getcolor(0));
+    g.select("#sachsen").style("fill", getcolor(0));
+    g.select("#schleswig").style("fill", getcolor(0));
+    g.select("#thüringen").style("fill", getcolor(0));
+    g.select("#baden").style("fill", getcolor(0));
+    g.select("#sachsen-anhalt").style("fill", getcolor(0));
+    g.select("#bayern").style("fill", getcolor(0));
    }         
 
 function clickPath(d) {
