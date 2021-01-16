@@ -310,6 +310,33 @@ float: left;
 }
 
 
+#mypopup {
+  width: 400px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 10pt;
+  background-color: white;
+  border-radius: 6px;
+  position: absolute;
+  display: none;
+}
+
+#mypopup::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  background-color: white;
+  position: absolute;
+  right: -6px;
+  top: 28px;
+}
+
+#colorLetters h3{
+  -webkit-text-stroke: 10px #531A16;
+}
+
+
 .ticks {
 font-size: 8px;
 margin-top: 5px;

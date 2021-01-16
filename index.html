@@ -131,16 +131,35 @@
     <div id="right">
     <div id="map">
         <div class="tempcenter">
-            <input type="checkbox" id="myCheckbox"> Zeige Durschnittswert pro Bundesland für diesen Trend
+            <input type="checkbox" id="myCheckbox"> Zeige Durschnittswert pro Bundesland für Keyword1 in 2020:
             <script src="map.js"></script>   
            
          </div>
     </div>
     <div id="funnytexts">
         
-        <p>Farblegende:</p>
-        <!--svg id="my_dataviz" height=120 width=450></svg>
-        <script src="legendColor.js"></script-->
+        
+        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+        <svg id="my_dataviz" height=80 width=450></svg>
+        <div id="mypopup">
+			<h3 id="colorLetters">
+                <span style='color: black'>F</span>
+                <span style='color: #800026'>a</span>
+                <span style='color: #b40325'>r</span>
+                <span style='color: #d91620'>b</span>
+                <span style='color: #f23d26'>l</span>
+                <span style='color: #fc7034'>e</span>
+                <span style='color: #fd9d43'>g</span>
+                <span style='color: #febf5b'>e</span>
+                <span style='color: #fedc7f'>n</span>
+                <span style='color: #ffefa5'>d</span>
+                <span style='color: #ffefa5'>e</span>
+            </h3>
+			<p>Interesse im zeitlichen Verlauf</p>
+			<p>Die Werte geben das Suchinteresse relativ zum höchsten Punkt im Diagramm für die ausgewählte Region im festgelegten Zeitraum an. Der Wert 100 steht für die höchste Beliebtheit dieses Suchbegriffs. Der Wert 50 bedeutet, dass der Begriff halb so beliebt ist und der Wert 0 bedeutet, dass für diesen Begriff nicht genügend Daten vorlagen.</p>
+        </div>
+        <script src="legendColor.js"></script>
+        
     
     </div>
     <div id="tagcloud"></div>
