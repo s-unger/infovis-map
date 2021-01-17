@@ -89,7 +89,7 @@ position: relative;
 top: 0;
 left: 0;
 width: 80%;
-max-width: 400px;
+max-width: 450px;
 margin-left: auto;
 margin-right: auto;
 text-align: center;
@@ -310,7 +310,7 @@ float: left;
 }
 
 
-#mypopup {
+#popupLegend {
   width: 400px;
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -321,7 +321,7 @@ float: left;
   display: none;
 }
 
-#mypopup::before {
+#popupLegend::before {
   content: "";
   width: 12px;
   height: 12px;

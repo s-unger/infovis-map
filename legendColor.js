@@ -1,9 +1,5 @@
 var svgLegend = d3.select("#my_dataviz")
 
-var description= "Interesse im zeitlichen Verlauf. Die Werte geben das Suchinteresse relativ zum höchsten Punkt im Diagramm für die ausgewählte Region im festgelegten Zeitraum an. ";
-
-var mypopup = d3.select("#mypopup")
-
 
 svgLegend.append("text").attr("x", 100).attr("y", 50).text("0%").style("font-size", "15px").attr("alignment-baseline","middle")
 svgLegend.append("circle").attr("cx",140).attr("cy",50).attr("r", 8).style("fill", "#ffffcc")
@@ -27,22 +23,24 @@ svgLegend.append('text')
    .attr("fill","black");
 
 
-var myicon = document.getElementById("infoIcon");
-var mypopup = document.getElementById("mypopup");
+var infoIcon = document.getElementById("infoIcon");
+var popupLegend = document.getElementById("popupLegend");
+var legendDescription= document.getElementById("legendDescription");
 
-myicon.addEventListener("mouseover", showPopup);
-myicon.addEventListener("mouseout", hidePopup);
+infoIcon.addEventListener("mouseover", showPopupLegend);
+infoIcon.addEventListener("mouseout", hidePopupLegend);
 
-function showPopup(evt) {
+function showPopupLegend() {
   svgLegend.select("#infoIcon").style("fill", "red");
-  var iconPos = myicon.getBoundingClientRect();
-  mypopup.style.left = (iconPos.left -420) + "px";
-  mypopup.style.top = (window.scrollY + iconPos.top - 20) + "px";
-  mypopup.style.display = "block";
+  var iconPos = infoIcon.getBoundingClientRect();
+  popupLegend.style.left = (iconPos.left -420) + "px";
+  popupLegend.style.top = (window.scrollY + iconPos.top - 20) + "px";
+  popupLegend.style.display = "block";
 }
 
-function hidePopup(evt) {
+function hidePopupLegend() {
+  //legendDescription.innerHTML = "whatever";
   svgLegend.select("#infoIcon").style("fill", "black");
-  mypopup.style.display = "none";
+  popupLegend.style.display = "none";
 }
 

@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.1/css/bootstrap-slider.min.css">
+        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
         <!--link rel="stylesheet" href="slider.css"-->
         <script src="https://d3js.org/d3.v3.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
@@ -131,7 +132,7 @@
     <div id="right">
     <div id="map">
         <div class="tempcenter">
-            <input type="checkbox" id="myCheckbox"> Zeige Durschnittswert pro Bundesland für Keyword1 in 2020:
+            <input type="checkbox" id="myCheckbox"> <label id="checkboxLabel">Durschnittswert pro Bundesland für Keyword "Corona":</label>
             <script src="map.js"></script>   
            
          </div>
@@ -139,14 +140,14 @@
     <div id="funnytexts">
         
         
-        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+       
         <svg id="my_dataviz" height=80 width=450></svg>
-        <div id="mypopup">
+        <div id="popupLegend">
 			<h3 id="colorLetters">
                 <span style='color: #800026'>F</span>
                 <span style='color: #800026'>a</span>
                 <span style='color: #b40325'>r</span>
-                <span style='color:#b40325'>b</span>
+                <span style='color: #b40325'>b</span>
                 <span style='color: #d91620'>l</span>
                 <span style='color: #f23d26'>e</span>
                 <span style='color: #f23d26'>g</span>
@@ -156,7 +157,7 @@
                 <span style='color: #fd9d43'>e</span>
             </h3>
 			<p>Interesse im zeitlichen Verlauf</p>
-			<p>Die Werte geben das Suchinteresse relativ zum höchsten Punkt im Diagramm für die ausgewählte Region im festgelegten Zeitraum an. Der Wert 100 steht für die höchste Beliebtheit dieses Suchbegriffs. Der Wert 50 bedeutet, dass der Begriff halb so beliebt ist und der Wert 0 bedeutet, dass für diesen Begriff nicht genügend Daten vorlagen.</p>
+			<p id="legendDescription">Die Werte geben das Suchinteresse relativ zum höchsten Punkt im Diagramm für die jeweiligen Bundesländer im festgelegten Zeitraum an. Der Wert 100 steht für die höchste Beliebtheit dieses Suchbegriffs. Der Wert 50 bedeutet, dass der Begriff halb so beliebt ist und der Wert 0 bedeutet, dass für diesen Begriff nicht genügend Daten vorlagen.</p>
         </div>
         <script src="legendColor.js"></script>
         

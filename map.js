@@ -27,6 +27,8 @@
     map_calendarweek=0;
     map_year=0;
     map_currentWord="corona";
+    checkboxLabel= document.getElementById("checkboxLabel");
+    berlinTest=null;
     
 
 var svg = d3.select(".tempcenter")
@@ -202,6 +204,8 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
         
         d3.select(this).attr("id", "berlin");
         
+        
+        
         }
         if (i==3){
         
@@ -257,16 +261,21 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
         d3.select(this).attr("id", "thüringen");
         }
         
+        
         })
     .attr("class", "feature")
     .attr("d", geoPath)
     .on("click", clickPath);
+    //.on("click", showPopUpWindow)
+    //.on("mouseover", showPopUpWindow);
 
     //adaptColor(12);
     update();
 
+    
   
 });
+
 
 
 //d3.select("#myCheckbox").on("change",update);
@@ -553,6 +562,7 @@ function updateGoogleTrend(currentWord) {
     console.log("update GOOGLETREND");
     getTrendValue();
     getTrendValueAverage();
+    checkboxLabel.innerHTML = 'Durschnittswert pro Bundesland für Keyword " '+ currentWord+ '":';
     setTimeout(function() {  
         update();
     }, 1000);
@@ -560,8 +570,31 @@ function updateGoogleTrend(currentWord) {
     //executeAsynchronously(
     //    [getTrendValue(), getTrendValueAverage(), update()], 10);
 
-
 }
+
+
+function showPopUpWindow(d){
+    console.log("HOVERED funktioniert");
+    var name= d.properties.name;
+    var idtest= "#"+name;
+    console.log(idtest);
+    //g.select(idtest).style("fill", getcolor(90));
+    
+  if ((focused === null) || !(focused === d)) {
+    var centroid = geoPath.centroid(d);
+    focused = d;
+    g.select(idtest).style("fill", getcolor(90));
+    
+  } else {
+      console.log("else funktioniert");
+    focused = null;
+    g.select(idtest).style("fill", getcolor(70));
+  };
+
+  
+}
+
+
 function executeAsynchronously(functions, timeout) {
     for(var i = 0; i < functions.length; i++) {
       setTimeout(functions[i], timeout);
@@ -588,6 +621,8 @@ function executeAsynchronously(functions, timeout) {
    }         
 
 function clickPath(d) {
+    console.log("clickPath");
+    console.log(d);
   var x = widthMap/2,
       y = heightMap/2,
       k = 1,
