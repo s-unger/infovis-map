@@ -89,10 +89,10 @@ function showPopupPercentages(d){
   if (circleId=="bubble1"){
     var iconPos = bubble1.getBoundingClientRect();
     currentHoveredBubble=bubble1;
-    popUpPercentages.innerHTML="<10%";
+    popUpPercentages.innerHTML="< 10";
   }
   if (circleId=="bubble2"){
-   popUpPercentages.innerHTML="<20%";
+   popUpPercentages.innerHTML="< 20";
     var iconPos = bubble2.getBoundingClientRect();
     currentHoveredBubble=bubble2;
    
@@ -100,43 +100,43 @@ function showPopupPercentages(d){
   if (circleId=="bubble3"){
     var iconPos = bubble3.getBoundingClientRect();
     currentHoveredBubble=bubble3;
-    popUpPercentages.innerHTML="<30%";
+    popUpPercentages.innerHTML="< 30";
   }
   
   if (circleId=="bubble4"){
     var iconPos = bubble4.getBoundingClientRect();
     currentHoveredBubble=bubble4;
-    popUpPercentages.innerHTML="<40%";
+    popUpPercentages.innerHTML="< 40";
   }
   if (circleId=="bubble5"){
     var iconPos = bubble5.getBoundingClientRect();
     currentHoveredBubble=bubble5;
-    popUpPercentages.innerHTML="<50%";
+    popUpPercentages.innerHTML="< 50";
   }
   if (circleId=="bubble6"){
     var iconPos = bubble6.getBoundingClientRect();
     currentHoveredBubble=bubble6;
-    popUpPercentages.innerHTML="<60%";
+    popUpPercentages.innerHTML="< 60";
   }
   if (circleId=="bubble7"){
     var iconPos = bubble7.getBoundingClientRect();
     currentHoveredBubble=bubble7;
-    popUpPercentages.innerHTML="<70%";
+    popUpPercentages.innerHTML="< 70";
   }
   if (circleId=="bubble8"){
     var iconPos = bubble8.getBoundingClientRect();
     currentHoveredBubble=bubble8;
-    popUpPercentages.innerHTML="<80%";
+    popUpPercentages.innerHTML="< 80";
   }
   if (circleId=="bubble9"){
     var iconPos = bubble9.getBoundingClientRect();
     currentHoveredBubble=bubble9;
-    popUpPercentages.innerHTML="<90%";
+    popUpPercentages.innerHTML="< 90";
   }
   if (circleId=="bubble10"){
     var iconPos = bubble10.getBoundingClientRect();
     currentHoveredBubble=bubble10;
-    popUpPercentages.innerHTML="<=100%";
+    popUpPercentages.innerHTML="<= 100";
   }
   //var iconPos = bubble1.getBoundingClientRect();
   popUpPercentages.style.left = (iconPos.left-25) + "px";
