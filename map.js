@@ -29,6 +29,28 @@
     map_currentWord="corona";
     checkboxLabel= document.getElementById("checkboxLabel");
     berlinTest=null;
+    x_map=0;
+    y_map=0;
+    popUpDescription= document.getElementById("popupWindows");
+    popUpHeadline= document.getElementById("popupHeadlineBL");
+    bayern_trendValue=0;
+    baden_trendValue=0;
+    brandenburg_trendValue=0;
+    berlin_trendValue=0;
+    bremen_trendValue=0;
+    hamburg_trendValue=0;
+    hessen_trendValue=0;
+    nrw_trendValue=0;
+    niedersachsen_trendValue=0;
+    sachen_trendValue=0;
+    sachsenA_trendValue=0;
+    rheinland_trendValue=0;
+    schleswig_trendValue=0;
+    mecklenburg_trendValue=0;
+    thüringen_trendValue=0;
+    saarland_trendValue=0;
+    mypopup = document.getElementById("popupWindows");
+    currentHoveredState=null;
     
 
 var svg = d3.select(".tempcenter")
@@ -85,97 +107,130 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "260")
-  .attr('y', '430');
+  .attr('y', '430')
+  .on("mouseover", popUpBayern)
+  .on("mouseout", hidePopupWindow);
   baden_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "130")
-  .attr('y', '450');
+  .attr('y', '450')
+  .on("mouseover", popUpBaden)
+  .on("mouseout", hidePopupWindow);
   nrw_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "50")
-  .attr('y', '240');
+  .attr('y', '240')
+  .on("mouseover", popUpNRW)
+  .on("mouseout", hidePopupWindow);
   hessen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "130")
-  .attr('y', '300');
+  .attr('y', '300')
+  .on("mouseover", popUpHessen)
+  .on("mouseout", hidePopupWindow);
   niedersachsen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "160")
-  .attr('y', '150');
+  .attr('y', '150')
+  .on("mouseover", popUpNiedersachsen)
+  .on("mouseout", hidePopupWindow);
   schleswigholst_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "170")
-  .attr('y', '30');
+  .attr('y', '30')
+  .on("mouseover", popUpSchleswig)
+  .on("mouseout", hidePopupWindow);
   mecklvorp_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "280")
-  .attr('y', '70');
+  .attr('y', '70')
+  .on("mouseover", popUpMecklenburg)
+  .on("mouseout", hidePopupWindow);
   saarland_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "30")
-  .attr('y', '390');
+  .attr('y', '390')
+  .on("mouseover", popUpSaarland)
+  .on("mouseout", hidePopupWindow);
   rheinlandpfalz_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "60")
-  .attr('y', '340');
+  .attr('y', '340')
+  .on("mouseover", popUpRheinland)
+  .on("mouseout", hidePopupWindow);
   sachsen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "340")
-  .attr('y', '270');
+  .attr('y', '270')
+  .on("mouseover", popUpSachsen)
+  .on("mouseout", hidePopupWindow);
   thueringen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "230")
-  .attr('y', '290');
+  .attr('y', '290')
+  .on("mouseover", popUpThüringen)
+  .on("mouseout", hidePopupWindow);
   hamburg_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "180")
-  .attr('y', '85');
+  .attr('y', '85')
+  .attr("id", "virusHamburg")
+  .on("mouseover", popUpHamburg)
+  .on("mouseout", hidePopupWindow);
   bremen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "130")
-  .attr('y', '120');
+  .attr('y', '120')
+  .on("mouseover", popUpBremen)
+  .on("mouseout", hidePopupWindow);
   berlin_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "330")
-  .attr('y', '160');
+  .attr('y', '160')
+  .on("mouseover", popUpBerlin)
+  .on("mouseout", hidePopupWindow);
   brandenburg_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "360")
-  .attr('y', '190');
+  .attr('y', '190')
+  .on("mouseover", popUpBrandenburg)
+  .on("mouseout", hidePopupWindow);
   sachsenanhalt_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "260")
-  .attr('y', '190');
+  .attr('y', '190')
+  .on("mouseover", popUpSachsenA)
+  .on("mouseout", hidePopupWindow);
   scale_to_zero();
   
 
@@ -265,9 +320,10 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
         })
     .attr("class", "feature")
     .attr("d", geoPath)
-    .on("click", clickPath);
-    //.on("click", showPopUpWindow)
-    //.on("mouseover", showPopUpWindow);
+    //.on("click", clickPath);
+    .on("click", showPopUpWindow)
+    .on("mouseover", showPopUpWindow)
+    .on("mouseout", hidePopupWindow);
 
     //adaptColor(12);
     update();
@@ -282,6 +338,7 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
 //update();
     
 function update(){
+   // hamburg_virus.addEventListener("mouseover", showPopUpWindow);
     if(d3.select("#myCheckbox").property("checked")){
         colorBL();
     } else {
@@ -297,66 +354,68 @@ function colorBL() {
     console.log(nameBL);
     if (nameBL=="Baden-Württemberg"){
         //console.log(valueBL);
+        baden_trendValue=valueBL;
         g.select("#baden").style("fill", getcolor(valueBL));
     }
     if (nameBL=="Bayern"){
         //console.log(valueBL);
+        bayern_trendValue=valueBL;
         g.select("#bayern").style("fill", getcolor(valueBL));
     }
     if (nameBL=="Berlin"){
-        //console.log(valueBL);
+        berlin_trendValue=valueBL;
         g.select("#berlin").style("fill", getcolor(valueBL));
     }   
     if (nameBL=="Sachsen"){
-        //console.log(valueBL);
+        sachsenA_trendValue=valueBL;
         g.select("#sachsen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Nordrhein-Westfalen"){
-        //console.log(valueBL);
+        nrw_trendValue=valueBL;
         g.select("#nrw").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Thüringen"){
-        //console.log(valueBL);
+        thüringen_trendValue=valueBL;
         g.select("#thüringen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Bremen"){
-       // console.log(valueBL);
+        bremen_trendValue=valueBL;
         g.select("#bremen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Sachsen-Anhalt"){
-        //console.log(valueBL);
+        sachsenA_trendValue=valueBL;
         g.select("#sachsen-anhalt").style("fill", getcolor(valueBL));
     } 
     if (nameBL=="Rheinland-Pfalz"){
-       // console.log(valueBL);
+        rheinland_trendValue=valueBL;
         g.select("#rheinland").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Schleswig-Holstein"){
-       // console.log(valueBL);
+        schleswig_trendValue=valueBL;
         g.select("#schleswig").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Niedersachsen"){
-       // console.log(valueBL);
+        niedersachsen_trendValue=valueBL;
         g.select("#niedersachsen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Hessen"){
-       // console.log(valueBL);
+        hessen_trendValue=valueBL;
         g.select("#hessen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Hamburg"){
-       // console.log(valueBL);
+        hamburg_trendValue=valueBL;
         g.select("#hamburg").style("fill", getcolor(valueBL));
     } 
     if (nameBL=="Saarland"){
-       // console.log(valueBL);
+       saarland_trendValue=valueBL;
         g.select("#saarland").style("fill", getcolor(valueBL));
     } 
     if (nameBL=="Mecklenburg-Vorpommern"){
-       // console.log(valueBL);
+        mecklenburg_trendValue=valueBL;
         g.select("#mecklenburg").style("fill", getcolor(valueBL));
     }
     if (nameBL=="Brandenburg"){
-       // console.log(valueBL);
+        brandenburg_trendValue=valueBL;
         g.select("#brandenburg").style("fill", getcolor(valueBL));
     }   
     });
@@ -527,33 +586,61 @@ trendList.forEach(function (d, i) {
     if (i==week){
     //colorBL2(d);
     g.select("#bayern").style("fill", getcolor(d.Bayern));
-    console.log(week);
+    bayern_trendValue= d.Bayern;
+    console.log("Test bayern variable");
     console.log(d.Bayern);
    
     g.select("#berlin").style("fill", getcolor(d.Berlin));
+    berlin_trendValue=d.Berlin;
     g.select("#bremen").style("fill", getcolor(d.Bremen));
+    bremen_trendValue=d.Bremen;
     g.select("#brandenburg").style("fill", getcolor(d.Brandenburg));
+    brandenburg_trendValue=d.Brandenburg;
     g.select("#hamburg").style("fill", getcolor(d.Hamburg));
+    hamburg_trendValue=d.Hamburg;
     g.select("#hessen").style("fill", getcolor(d.Hessen));
+    hessen_trendValue=d.Hessen;
     g.select("#mecklenburg").style("fill", getcolor(d.Mecklenburg));
+    mecklenburg_trendValue=d.Mecklenburg;
     g.select("#niedersachsen").style("fill", getcolor(d.Niedersachsen));
+    niedersachsen_trendValue=d.Niedersachsen;
     g.select("#nrw").style("fill", getcolor(d.Nordrhein));
+    nrw_trendValue=d.Nordrhein;
     g.select("#rheinland").style("fill", getcolor(d.Rheinland));
+    rheinland_trendValue=d.Rheinland;
     g.select("#saarland").style("fill", getcolor(d.Saarland));
+    saarland_trendValue=d.Saarland;
     g.select("#sachsen").style("fill", getcolor(d.Sachsen));
+    sachen_trendValue=d.Sachsen;
     g.select("#schleswig").style("fill", getcolor(d.Schleswig));
+    schleswig_trendValue=d.Schleswig;
     g.select("#thüringen").style("fill", getcolor(d.Thüringen));
+    thüringen_trendValue=d.Thüringen;
     g.select("#baden").style("fill", getcolor(d.Baden));
+    baden_trendValue=d.Baden;
     g.select("#sachsen-anhalt").style("fill", getcolor(d.SachsenA));
+    sachsenA_trendValue=d.SachsenA;
     }
 
 });}
 }
+/*function returnCurrentTrendValue(week, name) {
+    //console.log(trendList);
+    trendList.forEach(function (d, i) {
+
+        if (i==week){
+            //console.log("TESTTTTTT");
+            //console.log(week);
+            //console.log(d.Bayern);
+            return bayern_trendValue;
+        }
+    });}*/
 
 function updateMapTime(text_week) {
     map_calendarweek = parseInt(text_week.slice(3, 5));
     map_year = parseInt(text_week.slice(6, 10));
-    adaptColor(map_calendarweek);
+    //adaptColor(map_calendarweek);
+    update();
     
 }
 
@@ -571,28 +658,235 @@ function updateGoogleTrend(currentWord) {
     //    [getTrendValue(), getTrendValueAverage(), update()], 10);
 
 }
+/*$("#popupWindows").mousemove(function(e){
+    x_map = e.pageX - this.offsetLeft;
+    y_map = e.pageY - this.offsetTop;
+}); */
 
-
-function showPopUpWindow(d){
-    console.log("HOVERED funktioniert");
-    var name= d.properties.name;
-    var idtest= "#"+name;
-    console.log(idtest);
-    //g.select(idtest).style("fill", getcolor(90));
-    
-  if ((focused === null) || !(focused === d)) {
-    var centroid = geoPath.centroid(d);
-    focused = d;
-    g.select(idtest).style("fill", getcolor(90));
-    
-  } else {
-      console.log("else funktioniert");
-    focused = null;
-    g.select(idtest).style("fill", getcolor(70));
-  };
-
-  
+var cursor_x = -1;
+var cursor_y = -1;
+document.onmousemove = function(event)
+{
+ cursor_x = event.pageX;
+ cursor_y = event.pageY;
 }
+//setInterval(check_cursor, 1000);
+//function check_cursor(){console.log('Cursor at: '+cursor_x+', '+cursor_y);}
+
+
+
+
+/*document.addEventListener('mousemove', onMouseUpdate, false);
+function onMouseUpdate(e) {
+    x_map = e.pageX;
+    y_map= e.pageY;
+    
+  }*/
+ 
+  function hidePopupWindow() {
+    mypopup.style.display = "none";
+
+    hidePopupWindowStroke();
+  }
+  function hidePopupWindowStroke() {
+      console.log("HIDE");
+      console.log(currentHoveredState);
+    currentHoveredState.attr("stroke-width","1.25");
+    
+  }
+  
+  
+
+function showPopUpWindow(d) {
+    //var mypopup = document.getElementById("popupWindows");
+  /*  console.log("mypopup");
+    console.log(x_map);
+    console.log(y_map);
+    console.log(x_map+document.body.scrollLeft);
+    console.log(y_map+document.body.scrollTop);
+    var centroid = geoPath.centroid(d),
+        x = +centroid[0],
+        y = +centroid[1],
+        k = 1.75;
+        //console.log(x);
+        //console.log(y);*/
+    //var iconPos = d.getBoundingClientRect();
+    //mypopup.style.right = (220) + "px";
+    //mypopup.style.top = (400) + "px";
+
+    var name= d.properties.name;
+
+    if (name=="Baden-Württemberg"){
+        popUpBaden(d);
+    }
+    if (name=="Bayern"){
+        popUpBayern(d);
+    }
+    if (name=="Berlin"){
+        popUpBerlin(d);
+    }
+    if (name=="Bremen"){
+        popUpBremen(d);
+    }
+    if (name=="Hamburg"){
+        popUpHamburg(d);
+    }
+    if (name=="Hessen"){
+        popUpHessen(d);
+    }
+    if (name=="Niedersachsen"){
+        popUpNiedersachsen(d);
+    }
+    if (name=="Sachsen"){
+        popUpSachsen(d);
+    }
+    if (name=="Sachsen-Anhalt"){
+        popUpSachsenA(d);
+    }
+    if (name=="Saarland"){
+        popUpSaarland(d);
+    }
+    if (name=="Schleswig-Holstein"){
+        popUpSchleswig(d);
+    }
+    if (name=="Mecklenburg-Vorpommern"){
+        popUpMecklenburg(d);
+    }
+    if (name=="Tühringen"){
+       popUpThüringen(d);
+    }
+    if (name=="Nordrhein-Westfalen"){
+        popUpNRW(d);
+    }
+    if (name=="Brandenburg"){
+        popUpBrandenburg(d);
+    }
+    if (name=="Rheinland-Pfalz"){
+       popUpRheinland(d);
+    }
+  }
+  function popUpWindowPositioning(d){ 
+    mypopup.style.left = cursor_x-750;
+    mypopup.style.top = cursor_y-280;
+    mypopup.style.display = "block";
+}
+
+function popUpHamburg(d){ 
+    currentHoveredState=d3.select("#hamburg");
+    d3.select("#hamburg").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Hamburg</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ hamburg_trendValue;   
+    popUpWindowPositioning(d);    
+}
+function popUpBremen(d){ 
+    currentHoveredState=d3.select("#bremen");
+    d3.select("#bremen").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Bremen</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ bremen_trendValue;  
+    popUpWindowPositioning(d);     
+}
+function popUpBerlin(d){ 
+    currentHoveredState=d3.select("#berlin");
+    d3.select("#berlin").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Berlin</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ berlin_trendValue;  
+    popUpWindowPositioning(d);     
+}
+function popUpBayern(d){ 
+    currentHoveredState=d3.select("#bayern");
+    d3.select("#bayern").attr("stroke-width","3");
+    //d3.select("#bayern").attr("stroke","black");
+    popUpDescription.innerHTML =  "<span style=color:#fc7034;font-weight:bold;>Bayern</span> <br />"+ "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ bayern_trendValue;  
+    popUpWindowPositioning(d);     
+}
+function popUpBaden(d){ 
+    currentHoveredState=d3.select("#baden");
+    d3.select("#baden").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Baden_Württemberg</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ baden_trendValue;     
+    popUpWindowPositioning(d); 
+   
+}
+function popUpBrandenburg(d){ 
+    currentHoveredState=d3.select("#brandenburg");
+    d3.select("#brandenburg").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Brandenburg</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ brandenburg_trendValue;  
+    popUpWindowPositioning(d);     
+}
+function popUpSachsen(d){ 
+    currentHoveredState=d3.select("#sachsen");
+    d3.select("#sachsen").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Sachsen</span> <br />" + "Wert in KW " +map_calendarweek + 
+    " für "+ '"'+ map_currentWord +'"'+ ": "+ sachen_trendValue;  
+    popUpWindowPositioning(d);    
+}
+function popUpSachsenA(d){ 
+    currentHoveredState=d3.select("#sachsen-anhalt");
+    d3.select("#sachsen-anhalt").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>SachsenAnhalt</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ sachsenA_trendValue;  
+    popUpWindowPositioning(d);     
+}
+function popUpNiedersachsen(d){ 
+    currentHoveredState=d3.select("#niedersachsen");
+    d3.select("#niedersachsen").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Niedersachsen</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ niedersachsen_trendValue;  
+    popUpWindowPositioning(d);     
+}
+
+function popUpRheinland(d){ 
+    currentHoveredState=d3.select("#rheinland");
+    d3.select("#rheinland").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Rheinland-Pfalz</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ rheinland_trendValue;  
+    popUpWindowPositioning(d);     
+}
+function popUpNRW(d){ 
+    currentHoveredState=d3.select("#nrw");
+    d3.select("#nrw").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Nordrhein-Westfalen</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ nrw_trendValue;  
+    popUpWindowPositioning(d);     
+}
+function popUpSaarland(d){ 
+    currentHoveredState=d3.select("#saarland");
+    d3.select("#saarland").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Saarland</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ saarland_trendValue;  
+    popUpWindowPositioning(d);     
+}
+function popUpThüringen(d){ 
+    currentHoveredState=d3.select("#thüringen");
+    d3.select("#thüringen").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Thüringen</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ thüringen_trendValue;  
+    popUpWindowPositioning(d);     
+}
+function popUpMecklenburg(d){ 
+    currentHoveredState=d3.select("#mecklenburg");
+    d3.select("#mecklenburg").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Mecklenburg-Vorpommern</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ mecklenburg_trendValue;  
+    popUpWindowPositioning(d);     
+}
+function popUpSchleswig(d){ 
+    currentHoveredState=d3.select("#schleswig");
+    d3.select("#schleswig").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Schleswig-Holstein</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ schleswig_trendValue;  
+    popUpWindowPositioning(d);     
+}
+function popUpHessen(d){ 
+    currentHoveredState=d3.select("#hessen");
+    d3.select("#hessen").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Hessen</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ hessen_trendValue;  
+    popUpWindowPositioning(d);     
+}
+
 
 
 function executeAsynchronously(functions, timeout) {
@@ -618,6 +912,22 @@ function executeAsynchronously(functions, timeout) {
     g.select("#baden").style("fill", getcolor(0));
     g.select("#sachsen-anhalt").style("fill", getcolor(0));
     g.select("#bayern").style("fill", getcolor(0));
+    bayern_trendValue=0;
+    baden_trendValue=0;
+    brandenburg_trendValue=0;
+    berlin_trendValue=0;
+    bremen_trendValue=0;
+    hamburg_trendValue=0;
+    hessen_trendValue=0;
+    nrw_trendValue=0;
+    niedersachsen_trendValue=0;
+    sachen_trendValue=0;
+    sachsenA_trendValue=0;
+    rheinland_trendValue=0;
+    schleswig_trendValue=0;
+    mecklenburg_trendValue=0;
+    thüringen_trendValue=0;
+    saarland_trendValue=0;
    }         
 
 function clickPath(d) {
