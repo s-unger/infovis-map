@@ -321,11 +321,11 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
     .attr("class", "feature")
     .attr("d", geoPath)
     //.on("click", clickPath);
-    .on("click", showPopUpWindow)
+    .on("click", clickPath)
     .on("mouseover", showPopUpWindow)
     .on("mouseout", hidePopupWindow);
 
-    //adaptColor(12);
+    
     update();
 
     
@@ -334,11 +334,9 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
 
 
 
-//d3.select("#myCheckbox").on("change",update);
-//update();
+
     
 function update(){
-   // hamburg_virus.addEventListener("mouseover", showPopUpWindow);
     if(d3.select("#myCheckbox").property("checked")){
         colorBL();
     } else {
@@ -353,12 +351,12 @@ function colorBL() {
     console.log("NAMEBL===");
     console.log(nameBL);
     if (nameBL=="Baden-Württemberg"){
-        //console.log(valueBL);
+        
         baden_trendValue=valueBL;
         g.select("#baden").style("fill", getcolor(valueBL));
     }
     if (nameBL=="Bayern"){
-        //console.log(valueBL);
+        
         bayern_trendValue=valueBL;
         g.select("#bayern").style("fill", getcolor(valueBL));
     }
@@ -422,47 +420,50 @@ function colorBL() {
  
 }
 function getcolor(value) {
-//console.log(value);
+
 if (value<10){
-    //console.log("1");
+   
 return "#ffffcc";
 }
+if (value>9 && value<20){
+   
+    return "#ffefa5";
+    }
 
 if (value<30 && value>19){
-    //console.log("2");
-    return "#ffefa5";
-    
-}
-if (value<40 && value>29){
     
     return "#fedc7f";
     
 }
-if (value<50 && value>39){
+if (value<40 && value>29){
     
     return "#febf5b";
-    //return "rgb(255, 0, 255)";
+    
+}
+if (value<50 && value>39){
+    
+    return "#fd9d43";
+    
     
 }
 if (value<60&& value>49){
    
-    return "#fd9d43";
-    //return "rgb(255, 0, 255)";
+    return "#fc7034";
     
 }
 if (value<70&& value>59){
     
-    return "#fc7034";
+    return "#f23d26";
     
 }
 if (value<80&& value>69){
    
-    return "#f23d26";
+    return "#d91620";
     
 }
 if (value<90&& value>79){
    
-    return "#d91620";
+    return "#b40325";
 
 }
 if (value>89){
@@ -529,8 +530,6 @@ function getTrendValue(){
     }
 
 
-    //var wordData= "allBLKlopapier.csv";
-
     d3.csv(wordData, function(data) {
 
     data.forEach(function(d) {
@@ -554,13 +553,8 @@ function getTrendValue(){
     trendList= data;
     
     
-    //console.log(trendList);
-    //console.log(trendList[0]);
-    //(1);
-    //console.log("not average");	
     
     });
-    //update();
 
 };
 function adaptColor(week){
@@ -569,14 +563,12 @@ function adaptColor(week){
         colorWeek0();
 
     }else{
-
-    
     
     if (map_year==2019){
        week=week-1;
-        //console.log("2019");
+       
     }else{
-        //console.log("2020");
+        
         week=week+51;
         console.log("2020");
         
@@ -584,11 +576,9 @@ function adaptColor(week){
 trendList.forEach(function (d, i) {
 
     if (i==week){
-    //colorBL2(d);
+    
     g.select("#bayern").style("fill", getcolor(d.Bayern));
     bayern_trendValue= d.Bayern;
-    console.log("Test bayern variable");
-    console.log(d.Bayern);
    
     g.select("#berlin").style("fill", getcolor(d.Berlin));
     berlin_trendValue=d.Berlin;
@@ -624,17 +614,6 @@ trendList.forEach(function (d, i) {
 
 });}
 }
-/*function returnCurrentTrendValue(week, name) {
-    //console.log(trendList);
-    trendList.forEach(function (d, i) {
-
-        if (i==week){
-            //console.log("TESTTTTTT");
-            //console.log(week);
-            //console.log(d.Bayern);
-            return bayern_trendValue;
-        }
-    });}*/
 
 function updateMapTime(text_week) {
     map_calendarweek = parseInt(text_week.slice(3, 5));
@@ -653,35 +632,31 @@ function updateGoogleTrend(currentWord) {
     setTimeout(function() {  
         update();
     }, 1000);
-    
-    //executeAsynchronously(
-    //    [getTrendValue(), getTrendValueAverage(), update()], 10);
 
 }
-/*$("#popupWindows").mousemove(function(e){
-    x_map = e.pageX - this.offsetLeft;
-    y_map = e.pageY - this.offsetTop;
-}); */
+
 
 var cursor_x = -1;
 var cursor_y = -1;
 document.onmousemove = function(event)
 {
- cursor_x = event.pageX;
- cursor_y = event.pageY;
+ cursor_x=event.pageX;
+ cursor_y=event.pageY;
+ //cursor_x = event.clientX;
+ //cursor_y = event.clientY;
 }
 //setInterval(check_cursor, 1000);
 //function check_cursor(){console.log('Cursor at: '+cursor_x+', '+cursor_y);}
 
+function popUpWindowPositioning(d){ 
+    mypopup.style.left = cursor_x-750;
+    mypopup.style.top = cursor_y-280;
+    //mypopup.style.left = cursor_x-900;
+    //mypopup.style.top = cursor_y;
+    mypopup.style.display = "block";  
+}
 
 
-
-/*document.addEventListener('mousemove', onMouseUpdate, false);
-function onMouseUpdate(e) {
-    x_map = e.pageX;
-    y_map= e.pageY;
-    
-  }*/
  
   function hidePopupWindow() {
     mypopup.style.display = "none";
@@ -689,7 +664,6 @@ function onMouseUpdate(e) {
     hidePopupWindowStroke();
   }
   function hidePopupWindowStroke() {
-      console.log("HIDE");
       console.log(currentHoveredState);
     currentHoveredState.attr("stroke-width","1.25");
     
@@ -698,23 +672,9 @@ function onMouseUpdate(e) {
   
 
 function showPopUpWindow(d) {
-    //var mypopup = document.getElementById("popupWindows");
-  /*  console.log("mypopup");
-    console.log(x_map);
-    console.log(y_map);
-    console.log(x_map+document.body.scrollLeft);
-    console.log(y_map+document.body.scrollTop);
-    var centroid = geoPath.centroid(d),
-        x = +centroid[0],
-        y = +centroid[1],
-        k = 1.75;
-        //console.log(x);
-        //console.log(y);*/
-    //var iconPos = d.getBoundingClientRect();
-    //mypopup.style.right = (220) + "px";
-    //mypopup.style.top = (400) + "px";
 
     var name= d.properties.name;
+    console.log(name);
 
     if (name=="Baden-Württemberg"){
         popUpBaden(d);
@@ -765,11 +725,7 @@ function showPopUpWindow(d) {
        popUpRheinland(d);
     }
   }
-  function popUpWindowPositioning(d){ 
-    mypopup.style.left = cursor_x-750;
-    mypopup.style.top = cursor_y-280;
-    mypopup.style.display = "block";
-}
+  
 
 function popUpHamburg(d){ 
     currentHoveredState=d3.select("#hamburg");
@@ -795,7 +751,6 @@ function popUpBerlin(d){
 function popUpBayern(d){ 
     currentHoveredState=d3.select("#bayern");
     d3.select("#bayern").attr("stroke-width","3");
-    //d3.select("#bayern").attr("stroke","black");
     popUpDescription.innerHTML =  "<span style=color:#fc7034;font-weight:bold;>Bayern</span> <br />"+ "Wert in KW " + map_calendarweek + 
     " für "+ '"'+ map_currentWord + '"'+ ": "+ bayern_trendValue;  
     popUpWindowPositioning(d);     
@@ -825,7 +780,7 @@ function popUpSachsen(d){
 function popUpSachsenA(d){ 
     currentHoveredState=d3.select("#sachsen-anhalt");
     d3.select("#sachsen-anhalt").attr("stroke-width","3");
-    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>SachsenAnhalt</span> <br />" + "Wert in KW " + map_calendarweek + 
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Sachsen-Anhalt</span> <br />" + "Wert in KW " + map_calendarweek + 
     " für "+ '"'+ map_currentWord + '"'+ ": "+ sachsenA_trendValue;  
     popUpWindowPositioning(d);     
 }

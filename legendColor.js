@@ -41,6 +41,8 @@ var bubble10= document.getElementById("bubble10");
 var currentHoveredBubble=null;
 
 
+
+
 infoIcon.addEventListener("mouseover", showPopupLegend);
 infoIcon.addEventListener("mouseout", hidePopupLegend);
 bubble1.addEventListener("mouseover", showPopupPercentages);
