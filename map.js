@@ -477,20 +477,66 @@ function getTrendValueAverage(){
     var wordData= "klopapier.csv";
 
     if (map_currentWord==="klopapier"){
-        console.log("Klopapier ausgewählt");
         wordData= "klopapier.csv";
     }
     if (map_currentWord==="corona"){
-        console.log("Average: Corona ausgewählt");
+       
         wordData= "corona.csv";
     }
     if (map_currentWord==="bill gates"){
-        console.log("Bill Gates ausgewählt");
         wordData= "billGates.csv";
     }
     if (map_currentWord==="netflix"){
         console.log("Bill Gates ausgewählt");
         wordData= "netflix.csv";
+    }
+    if (map_currentWord==="maske"){
+        var wordData= "maske.csv";
+    }
+    if (map_currentWord==="merkel"){
+        var wordData= "merkel.csv";
+    }
+    if (map_currentWord==="oktoberfest"){
+        var wordData= "oktoberfest.csv";
+    }
+    if (map_currentWord==="baumarkt"){
+        var wordData= "baumarkt.csv";
+    }
+    if (map_currentWord==="zoom"){
+        var wordData= "zoom.csv";
+    }
+    if (map_currentWord==="söder"){
+        var wordData= "söder.csv";
+    }
+    if (map_currentWord==="drosten"){
+        var wordData= "drosten.csv";
+    }
+    if (map_currentWord==="desinfektionsmittel"){
+        var wordData= "desinfektionsmittel.csv";
+    }
+    if (map_currentWord==="alkohol"){
+        var wordData= "alkohol.csv";
+    }
+    if (map_currentWord==="BER"){
+        var wordData= "BER.csv";
+    }
+    if (map_currentWord==="attilla hildmann"){
+        var wordData= "attillaHildmann.csv";
+    }
+    if (map_currentWord==="querdenken"){
+        var wordData= "querdenken.csv";
+    }
+    if (map_currentWord==="bananenbrot"){
+        var wordData= "bananenbrot.csv";
+    }
+    if (map_currentWord==="kenipentour"){
+        var wordData= "kenipentour.csv";
+    }
+    if (map_currentWord==="homeworkout"){
+        var wordData= "homeworkout.csv";
+    }
+    if (map_currentWord==="onlinesemester"){
+        var wordData= "onlinesemester.csv";
     }
 
 d3.csv(wordData, function(data) {
@@ -521,13 +567,61 @@ function getTrendValue(){
 
     }
     if (map_currentWord==="bill gates"){
-        console.log("Bill Gates ausgewählt");
-        var wordData= "billGates.csv";
+        
+        var wordData= "allBLBillGates.csv";
     }
     if (map_currentWord==="netflix"){
-        console.log("Bill Gates ausgewählt");
         var wordData= "allBLnetflix.csv";
     }
+    if (map_currentWord==="maske"){
+        var wordData= "allBLmaske.csv";
+    }
+    if (map_currentWord==="merkel"){
+        var wordData= "allBLmerkel.csv";
+    }
+    if (map_currentWord==="oktoberfest"){
+        var wordData= "allBLoktoberfest.csv";
+    }
+    if (map_currentWord==="baumarkt"){
+        var wordData= "allBLbaumarkt.csv";
+    }
+    if (map_currentWord==="zoom"){
+        var wordData= "allBLzoom.csv";
+    }
+    if (map_currentWord==="söder"){
+        var wordData= "allBLsöder.csv";
+    }
+    if (map_currentWord==="drosten"){
+        var wordData= "allBLdrosten.csv";
+    }
+    if (map_currentWord==="desinfektionsmittel"){
+        var wordData= "allBLdesinfektionsmittel.csv";
+    }
+    if (map_currentWord==="alkohol"){
+        var wordData= "allBLalkohol.csv";
+    }
+    if (map_currentWord==="BER"){
+        var wordData= "allBLBER.csv";
+    }
+    if (map_currentWord==="attilla hildmann"){
+        var wordData= "allBLattillaHildmann.csv";
+    }
+    if (map_currentWord==="querdenken"){
+        var wordData= "allBLquerdenken.csv";
+    }
+    if (map_currentWord==="bananenbrot"){
+        var wordData= "allBLbananenbrot.csv";
+    }
+    if (map_currentWord==="kenipentour"){
+        var wordData= "allBLkenipentour.csv";
+    }
+    if (map_currentWord==="homeworkout"){
+        var wordData= "allBLhomeworkout.csv";
+    }
+    if (map_currentWord==="onlinesemester"){
+        var wordData= "allBLonlinesemester.csv";
+    }
+    
 
 
     d3.csv(wordData, function(data) {
