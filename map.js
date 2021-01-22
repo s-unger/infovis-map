@@ -732,6 +732,7 @@ function updateMapTime(text_week) {
     //adaptColor(map_calendarweek);
     if(map_calendarweek<14){
         scale_to_zero();
+        resetVirusValues();
     }
     update();
     
@@ -1102,21 +1103,6 @@ function  setVirusIconScaleByCases(currentDate, region, icon){
 });
 }
 
-function containsUndefinedValue(newDateFormat){
-    return newDateFormat.includes("W01") 
-        || newDateFormat.includes("W02") 
-        || newDateFormat.includes("W03") 
-        || newDateFormat.includes("W04") 
-        || newDateFormat.includes("W05") 
-        || newDateFormat.includes("W06") 
-        || newDateFormat.includes("W07") 
-        || newDateFormat.includes("W08") 
-        || newDateFormat.includes("W09") 
-        || newDateFormat.includes("W10") 
-        || newDateFormat.includes("W11") 
-        || newDateFormat.includes("W12"); 
-}
-
 function updateVirusValue(region, value){
     switch(region){
         case "Bayern": bayern_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
@@ -1137,6 +1123,26 @@ function updateVirusValue(region, value){
         case "Sachsen-Anhalt": sachsenanhalt_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
 
     }
+}
+
+function resetVirusValues(){
+  
+    bayern_virus_value = 0;
+    baden_virus_value = 0;
+    nrw_virus_value = 0;
+    hessen_virus_value = 0;
+    niedersachsen_virus_value = 0;
+    schleswigholst_virus_value = 0;
+    mecklvorp_virus_value = 0;
+    saarland_virus_value = 0;
+    rheinlandpfalz_virus_value = 0;
+    thueringen_virus_value = 0;
+    sachsen_virus_value = 0;
+    hamburg_virus_value = 0;
+    berlin_virus_value = 0;
+    brandenburg_virus_value = 0;
+    sachsenanhalt_virus_value = 0;
+
 }
 
 
