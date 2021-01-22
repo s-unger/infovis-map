@@ -730,6 +730,9 @@ function updateMapTime(text_week) {
     map_calendarweek = parseInt(text_week.slice(3, 5));
     map_year = parseInt(text_week.slice(6, 10));
     //adaptColor(map_calendarweek);
+    if(map_calendarweek<14){
+        scale_to_zero();
+    }
     update();
     
 }
@@ -1079,10 +1082,8 @@ function  setVirusIconScaleByCases(currentDate, region, icon){
   germanyData.forEach(element => {
   if(currentDate != null){
     var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
-    if(newDateFormat.includes("2019") || containsUndefinedValue(newDateFormat)){
-      scale_to_zero();
-    }
-    else if((element.region_name == region) && (element.year_week == newDateFormat)){
+    
+    if((element.region_name == region) && (element.year_week == newDateFormat)){
 
         if((element.rate_14_day_per_100k !== undefined) && (element.rate_14_day_per_100k >0)){
             updateVirusValue(region, element.rate_14_day_per_100k);
@@ -1094,6 +1095,9 @@ function  setVirusIconScaleByCases(currentDate, region, icon){
     else if((element.region_name == region) && (element.year_week == undefined)){
         scaleIcon(icon, 0);
     } 
+    else if(newDateFormat.includes("2019")){
+        scale_to_zero();
+      }
   }
 });
 }
