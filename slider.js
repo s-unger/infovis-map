@@ -2,18 +2,11 @@ var germanyData = [];
 function importGermanData(){
    //d3.json("https://opendata.ecdc.europa.eu/covid19/subnationalcaseweekly/json/", function(data){
     d3.json("coronaData.json", function(data){
-     //console.log("Importing...");
      data.forEach(element => {
       if(element.country == "Germany"){
-        //console.log("Importing = "+element.region_name);
         germanyData.push(element);
       }
-      else{
-        //console.log("Item not found...");
-      }
      });
-     //console.log("German data:" +germanyData);
-
   });
 }
 
