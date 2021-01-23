@@ -333,7 +333,7 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
     .attr("class", "feature")
     .attr("d", geoPath)
     //.on("click", clickPath);
-    .on("click", clickPath)
+    .on("click", showPopUpWindow)
     .on("mouseover", showPopUpWindow)
     .on("mouseout", hidePopupWindow);
 
