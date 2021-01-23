@@ -5,6 +5,7 @@
         <link rel="icon" href="./img/favicon.png?v=2" type="image/x-icon">
         <link rel="shortcut icon" href="./img/favicon.png?v=2" type="image/x-icon">
         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.1/css/bootstrap-slider.min.css">
@@ -25,17 +26,11 @@
         <!--script src="slider.js"></script-->
     <script src="dropdownclass.js"></script>
     </head>
-    <body">
+    <body>
     <div id="newspaper">
     <div id="header">
-    <h1>
-    
-    </h1>
-    <div><h1><p style = "font-family:'Times New Roman', Times, serif; font-size: larger;">InfoVis News</p></h1></div>
-    <h1>
-        
-    </h1>
-    <div><p  style = "font-family:'Times New Roman', Times, serif">Zeitungsmeldungen aus 2019 und aus einem verrückten Jahr</p></div>
+    <h1>InfoVis News</h1>
+    <p>Zeitungsmeldungen aus 2019 und aus einem verrückten Jahr</p>
     </div><!--Header Ende-->
 
     <div id="interactive">
@@ -131,6 +126,8 @@
     
     <div id="right">
     <div id="map">
+      <div id="map_top_checkbox">
+        <input type="checkbox" id="myCheckbox"> <label id="checkboxLabel">Durschnittswert pro Bundesland für Keyword "Corona":</label></div>
         <div class="tempcenter">
             <div id="popupWindows">
                 <h3 id="popupHeadlineBL">
@@ -138,7 +135,6 @@
                 </h3>
                 <p >Interesse im zeitlichen Verlauf</p>
                </div>
-            <input type="checkbox" id="myCheckbox"> <label id="checkboxLabel">Durschnittswert pro Bundesland für Keyword "Corona":</label>
             <script src="map.js"></script>   
            
          </div>

@@ -2,22 +2,25 @@ html {
   background-image: url("img/papertexture.jpg");
   background-repeat: repeat;
   background-size: 600px 600px;
+  height: 100vh;
+  padding: 0px;
+  font-family:'Times New Roman', Times, serif;
 }
 
-#newspaper { 
+#newspaper {
+  margin-top: -15px;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 0px;
+  overflow: hidden;
   background-image: url("img/papertexture.jpg");
   background-repeat: repeat;
   background-size: 600px 600px;
-  margin-top: 0%;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 1300px;
-  margin-bottom: 0px;
 }
 
 #header {
 width: 90%;
+height: auto;
 margin-left: auto;
 margin-right: auto;
 border-bottom: 4px solid black;
@@ -25,20 +28,20 @@ border-bottom: 4px solid black;
 
 #header h1 {
 text-align: center;
-padding-top: 10px;
-font-size: 6em;
+font-size: 4em;
+display: block;
 }
 
 #header p {
 text-align: center;
 width: 100%;
 font-size: 2em;
-margin-top: -40px;
+display: block;
 }
 
 #interactive {
   width: 90%;
-  height: 100;
+  height: 100px;
   padding-top: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -77,10 +80,7 @@ height: 1000;
 #graph {
 margin-left: auto;
 margin-right: auto;
-}
-
-#graph img {
-width: 90%; height: auto
+max-width: 600px;
 }
 
 #map  .tempcenter {
@@ -89,128 +89,19 @@ position: relative;
 top: 0;
 left: 0;
 width: 80%;
-max-width: 450px;
+max-width: 250px;
 margin-left: auto;
 margin-right: auto;
 text-align: center;
 z-index: 1;
 }
 
-#map #virusSVGBayern{
-  position: absolute;
-  bottom: 5%;
-  left: 35%;
-  opacity: 0;
-  background-color: green;
+#map_top_checkbox {
+  text-align: center;
 }
-
-#map #virusSVGBaden{
-  position: absolute;
-  bottom: 5%;
-  right: 45%;
-  opacity: 0;
-}
-
-#map #virusSVGNrw{
-  position: absolute;
-  bottom: 40%;
-  right: 55%;
-  opacity: 0;
-}
-#map #virusSVGHessen{
-  position: absolute;
-  bottom: 30%;
-  right: 45%;
-  opacity: 0;
-}
-
-#map #virusSVGNiedersachsen{
-  position: absolute;
-  bottom: 50%;
-  right: 40%;
-  opacity: 0;
-}
-
-#map #virusSVGSchleswigHolst{
-  position: absolute;
-  top: 3%;
-  right: 38%;
-  opacity: 0;
-}
-
-#map #virusSVGMecklVorp{
-  position: absolute;
-  top: 4%;
-  right: 22%;
-  opacity: 0;
-}
-
-#map #virusSVGSaarland{
-  position: absolute;
-  bottom: 13%;
-  right: 58%;
-  opacity: 0;
-}
-
-#map #virusSVGRheinlandPfalz{
-  position: absolute;
-  bottom: 20%;
-  right: 58%;
-  opacity: 0;
-}
-
-#map #virusSVGSachsen{
-  position: absolute;
-  bottom: 30%;
-  right: 18%;
-  opacity: 0;
-}
-
-#map #virusSVGThueringen{
-  position: absolute;
-  bottom: 30%;
-  right: 32%;
-  opacity: 0;
-}
-
-#map #virusSVGHamburg{
-  position: absolute;
-  top: 9%;
-  right: 39%;
-  opacity: 0;
-}
-
-#map #virusSVGBremen{
-  position: absolute;
-  top: 13%;
-  right: 46%;
-  opacity: 0;
-}
-
-#map #virusSVGBerlin{
-  position: absolute;
-  bottom: 48%;
-  right: 18%;
-  opacity: 0;
-}
-
-#map #virusSVGBrandenburg{
-  position: absolute;
-  bottom: 42%;
-  right: 16%;
-  opacity: 0;
-}
-
-#map #virusSVGSachsenAnhalt{
-  position: absolute;
-  bottom: 42%;
-  right: 30%;
-  opacity: 0;
-}
-
 
 #articleview {
-height: 600px;
+height: 350px;
 width: 95%;
 margin-left: auto;
 margin-right: auto;
@@ -224,7 +115,8 @@ text-align: center;
 
 #tagcloud {
 text-align: center;
-width: 70%;
+width: 90%;
+max-width: 300px;
 margin-left: auto;
 margin-right: auto;
 }
@@ -417,4 +309,27 @@ fill: #fff;
 stroke: #000;
 stroke-opacity: 0.5;
 stroke-width: 1.25px;
+}
+
+@media all and (max-width: 1233px) { 
+
+#interactive {
+  width: 90%;
+  height: 200px;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 4px solid black;
+}
+
+#dropdown {
+  height: auto;
+  width: 100%;
+  float: left;
+}
+
+#newspaper {
+  overflow: scroll;
+}
+
 }
