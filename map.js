@@ -250,11 +250,6 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
   .on("mouseout", hidePopupWindow);
   scale_to_zero();
   
-
- /* g.append("path")
-      .datum(graticule)
-     .attr("class", "graticuleLine")
-      .attr("d", geoPath);*/
   
   g.selectAll("path.feature")
     .data(collection.features)
@@ -348,9 +343,6 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
     
   
 });
-
-
-
 
     
 function update(){
@@ -729,7 +721,6 @@ trendList.forEach(function (d, i) {
 function updateMapTime(text_week) {
     map_calendarweek = parseInt(text_week.slice(3, 5));
     map_year = parseInt(text_week.slice(6, 10));
-    //adaptColor(map_calendarweek);
     if(map_calendarweek<14){
         scale_to_zero();
         resetVirusValues();
@@ -757,17 +748,11 @@ document.onmousemove = function(event)
 {
  cursor_x=event.pageX;
  cursor_y=event.pageY;
- //cursor_x = event.clientX;
- //cursor_y = event.clientY;
 }
-//setInterval(check_cursor, 1000);
-//function check_cursor(){console.log('Cursor at: '+cursor_x+', '+cursor_y);}
 
 function popUpWindowPositioning(d){ 
     mypopup.style.left = cursor_x-750;
     mypopup.style.top = cursor_y-280;
-    //mypopup.style.left = cursor_x-900;
-    //mypopup.style.top = cursor_y;
     mypopup.style.display = "block";  
 }
 
@@ -1053,6 +1038,8 @@ function clickText(d) {
       .style("stroke-width", 1.00+"px");
 }
 
+/*scales a specific icon to a given value by scaling it and adjusting its center*/
+
 function scaleIcon(icon, value) {
   var icon_bbox = icon.node().getBBox();
   var icon_x = icon_bbox.x;
@@ -1060,6 +1047,8 @@ function scaleIcon(icon, value) {
   var icon_scaling_factor = value;
   icon.attr('transform', 'translate('+(1 - icon_scaling_factor) * (icon_x+50)+', '+(1 - icon_scaling_factor) * (icon_y+50)+') scale('+icon_scaling_factor+')');
 }
+
+/* updates all virus-icons according to a given week */
 
 function update_virusicons(week_text) {
    setVirusIconScaleByCases(week_text, "Bayern", bayern_virus);
@@ -1079,15 +1068,24 @@ function update_virusicons(week_text) {
    setVirusIconScaleByCases(week_text, "Brandenburg", brandenburg_virus);
    setVirusIconScaleByCases(week_text, "Sachsen-Anhalt", sachsenanhalt_virus);
 }
+
+/* This function is called per region to resize the virus icon according to the currentdate selected by the slider.
+    The currentdate is reformatted to fit the format in the data. Then it is searched for an element that matches the given region
+    and date and if existing, the 14-day-case rate is retrieved and used to scale the virus-icon of that region as well
+    as to update the regions value for the pop-up.*/
+
 function  setVirusIconScaleByCases(currentDate, region, icon){
   germanyData.forEach(element => {
   if(currentDate != null){
+    //reformat date of slider to match format in data
     var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
     
     if((element.region_name == region) && (element.year_week == newDateFormat)){
 
         if((element.rate_14_day_per_100k !== undefined) && (element.rate_14_day_per_100k >0)){
+            //update value for popup
             updateVirusValue(region, element.rate_14_day_per_100k);
+            //scale icon to make surface area fit the case value
             scaleIcon(icon, Math.sqrt((element.rate_14_day_per_100k/Math.PI))/10);
         } else {
             scaleIcon(icon, 0);
@@ -1102,6 +1100,8 @@ function  setVirusIconScaleByCases(currentDate, region, icon){
   }
 });
 }
+
+/* updates the virus values per region that are displayed in the popup according to a given value that is rounded to two decimals */
 
 function updateVirusValue(region, value){
     switch(region){
@@ -1125,6 +1125,8 @@ function updateVirusValue(region, value){
     }
 }
 
+/* resets all virus values that are displayed in the pop-up to zero */
+
 function resetVirusValues(){
   
     bayern_virus_value = 0;
@@ -1145,7 +1147,7 @@ function resetVirusValues(){
 
 }
 
-
+/* scales all virus icons to zero */
 
 function scale_to_zero() {
   scaleIcon(bayern_virus, 0);
