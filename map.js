@@ -812,7 +812,7 @@ function showPopUpWindow(d) {
     if (name=="Mecklenburg-Vorpommern"){
         popUpMecklenburg(d);
     }
-    if (name=="Tühringen"){
+    if (name=="Thüringen"){
        popUpThüringen(d);
     }
     if (name=="Nordrhein-Westfalen"){
