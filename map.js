@@ -88,7 +88,7 @@ getTrendValueAverage();
 getTrendValue();
 
 d3.select("#myCheckbox").on("change",update);
-d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2_bundeslaender/1_sehr_hoch.geo.json", function(collection) {
+d3.json("statesGermany.json", function(collection) {
 
   var bounds = d3.geo.bounds(collection),
       bottomLeft = bounds[0],
