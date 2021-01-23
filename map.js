@@ -483,7 +483,7 @@ if (value>89){
 
 }
 function getTrendValueAverage(){
-    var wordData= "klopapier.csv";
+    var wordData= "corona.csv";
 
     if (map_currentWord==="klopapier"){
         wordData= "klopapier.csv";
@@ -563,16 +563,16 @@ console.log(trendListAverage[0]);
 };
 
 function getTrendValue(){
-    var wordData= "allBLKlopapier.csv";
+    var wordData= "allBLcorona.csv";
 
     if (map_currentWord==="klopapier"){
-        console.log("Klopapier ausgewählt");
+    
         var wordData= "allBLKlopapier.csv";
-        console.log("merge");
+       
     }
     if (map_currentWord==="corona"){
         var wordData= "allBLcorona.csv";
-        console.log("Bl Corona liste");
+       
 
     }
     if (map_currentWord==="bill gates"){
