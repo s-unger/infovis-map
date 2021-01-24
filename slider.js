@@ -122,7 +122,9 @@ function updateslider(h) {
     updateArticleTime(currentDate);
     updateMapTime(currentDate);
     draw_wordcloud(currentDate);
-    update_virusicons(currentDate);
+    if (focused == null) {
+      update_virusicons(currentDate);
+    }
     replace_graph(keyword_1, keyword_2, true, h, selectedYear)
 
 }

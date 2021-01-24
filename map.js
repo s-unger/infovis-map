@@ -995,6 +995,7 @@ function clickPath(d) {
 
   g.selectAll("text")
     .remove();
+  var zoomIn = false;
   if ((focused === null) || !(focused === d)) {
     var centroid = geoPath.centroid(d),
         x = +centroid[0],
@@ -1012,6 +1013,10 @@ function clickPath(d) {
       .style("fill","black")
       .style("font-family","Times New Roman")
       .on("click", clickText);
+    // virus icons to zero
+    scale_to_zero();
+    resetVirusValues();
+    zoomIn = true;
   } else {
     focused = null;
   };
@@ -1023,6 +1028,10 @@ function clickPath(d) {
       .duration(1000)
       .attr("transform", "translate("+ (widthMap/2) +","+ (heightMap/2) +")scale("+ k +")translate("+ (-x) +","+ (-y) +")")
       .style("stroke-width", 1.75/k +"px");
+  // update virus icons after zoom out 
+  if (!zoomIn) {
+    setTimeout(() => {update_virusicons(currentDate)}, 1000);
+  }
 }
 
 
