@@ -12,7 +12,6 @@ html {
   width: 100%;
   height: 100vh;
   margin-bottom: 0px;
-  overflow: hidden;
   background-image: url("img/papertexture.jpg");
   background-repeat: repeat;
   background-size: 600px 600px;
@@ -52,8 +51,8 @@ display: block;
 width: 90%;
 margin-left: auto;
 margin-right: auto;
-background-color: blue;
 margin-top: 20px;
+height: 100%;
 }
 
 #left {
@@ -64,7 +63,7 @@ width: 50%;
 float: left;
 border-right: 2px solid black;
 text-align: center;
-height: 1000;
+height: 100%;
 }
 
 #right {
@@ -74,7 +73,7 @@ box-sizing: border-box;
 width: 50%;
 float: left;
 border-left: 2px solid black;
-height: 1000;
+height: 100%;
 }
 
 #graph {
@@ -326,10 +325,6 @@ stroke-width: 1.25px;
   height: auto;
   width: 100%;
   float: left;
-}
-
-#newspaper {
-  overflow: scroll;
 }
 
 }
