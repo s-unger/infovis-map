@@ -23,12 +23,14 @@ height: auto;
 margin-left: auto;
 margin-right: auto;
 border-bottom: 4px solid black;
+font-family:'Times New Roman', Times, serif;
 }
 
 #header h1 {
 text-align: center;
 font-size: 4em;
 display: block;
+font-family:'Times New Roman', Times, serif;
 }
 
 #header p {

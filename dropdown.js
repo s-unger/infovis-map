@@ -16,7 +16,7 @@ function change_keyword_1(msg) {
     notify_keyword_2_changed("keines");
   }
   keyword_1 = msg;
-  notify_keyword_1_changed(msg);
+  notify_keyword_1_changed(msg); 
 }
 
 document.querySelector("#year").onchange = function () {
@@ -48,12 +48,18 @@ function notify_keyword_1_changed(keyword) {
   keyword_1 = keyword
   updateArticleKeyword(keyword);
   updateGoogleTrend(keyword);
-  replace_graph(keyword_1, keyword_2, true, x.invert(currentValue), selectedYear)
+  replace_graph(keyword_1, keyword_2, true, x.invert(currentValue), selectedYear);
+  selected1.innerHTML =  "" + keyword + ""; 
 }
 function notify_keyword_2_changed(keyword) {
   keyword_2 = keyword
   updateArticleKeyword2(keyword);
-  replace_graph(keyword_1, keyword_2, true, x.invert(currentValue), selectedYear)
+  replace_graph(keyword_1, keyword_2, true, x.invert(currentValue), selectedYear);
+  if (keyword == "keines") {
+    selected2.innerHTML =  "";
+  } else {
+    selected2.innerHTML = "" + keyword + ""; 
+  }
 }
 
 function selectItemByValue(elmnt, value){
