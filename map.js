@@ -538,8 +538,8 @@ function getTrendValueAverage(){
     if (map_currentWord==="bananenbrot"){
         var wordData= "bananenbrot.csv";
     }
-    if (map_currentWord==="kenipentour"){
-        var wordData= "kenipentour.csv";
+    if (map_currentWord==="kneipentour"){
+        var wordData= "kneipentour.csv";
     }
     if (map_currentWord==="homeworkout"){
         var wordData= "homeworkout.csv";
@@ -621,8 +621,8 @@ function getTrendValue(){
     if (map_currentWord==="bananenbrot"){
         var wordData= "allBLbananenbrot.csv";
     }
-    if (map_currentWord==="kenipentour"){
-        var wordData= "allBLkenipentour.csv";
+    if (map_currentWord==="kneipentour"){
+        var wordData= "allBLkneipentour.csv";
     }
     if (map_currentWord==="homeworkout"){
         var wordData= "allBLhomeworkout.csv";
