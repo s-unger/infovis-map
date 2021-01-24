@@ -333,7 +333,7 @@ d3.json("statesGermany.json", function(collection) {
     .attr("class", "feature")
     .attr("d", geoPath)
     //.on("click", clickPath);
-    .on("click", showPopUpWindow)
+    .on("click", clickPath)
     .on("mouseover", showPopUpWindow)
     .on("mouseout", hidePopupWindow);
 
