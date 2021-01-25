@@ -16,8 +16,7 @@ function draw_wordcloud(weekandyear_text) {
     }
     if (calendarweek != wordcloud_last_calendar_week) {
       wordcloud_last_calendar_week = calendarweek;
-      document.getElementById("tagcloud").innerHTML = "<h2>Meistgesucht in dieser Woche</h2>";
-
+      document.getElementById("tagcloud").innerHTML = "<p></br>Meistgesucht in dieser Woche</p>";
       
       // List of words
       var myWords = [{word: "alkohol", size: wordcloud_files[0][calendarweek].value}, {word: "attila hildmann", size: wordcloud_files[1][calendarweek].value}, {word: "bananenbrot", size: wordcloud_files[2][calendarweek].value}, {word: "baumarkt", size: wordcloud_files[3][calendarweek].value}, {word: "BER", size: wordcloud_files[4][calendarweek].value}, {word: "bill gates", size: wordcloud_files[5][calendarweek].value}, {word: "corona", size: wordcloud_files[5][calendarweek].value}, {word: "desinfektionsmittel", size: wordcloud_files[5][calendarweek].value}, {word: "drosten", size: wordcloud_files[5][calendarweek].value}, {word: "homeworkout", size: wordcloud_files[5][calendarweek].value}, {word: "klopapier", size: wordcloud_files[5][calendarweek].value}, {word: "kneipentour", size: wordcloud_files[5][calendarweek].value}, {word: "maske", size: wordcloud_files[5][calendarweek].value}, {word: "merkel", size: wordcloud_files[5][calendarweek].value}, {word: "netflix", size: wordcloud_files[5][calendarweek].value}, {word: "oktoberfest", size: wordcloud_files[5][calendarweek].value}, {word: "onlinesemester", size: wordcloud_files[5][calendarweek].value}, {word: "querdenken", size: wordcloud_files[5][calendarweek].value}, {word: "söder", size: wordcloud_files[5][calendarweek].value}, {word: "zoom", size: wordcloud_files[5][calendarweek].value}]
@@ -38,14 +37,14 @@ function draw_wordcloud(weekandyear_text) {
           .attr("transform",
           "translate(" + marginWords.left + "," + marginWords.top + ")");
           
-       var borderPath = svg2.append("rect")
+       /*var borderPath = svg2.append("rect")
        .attr("x", 0)
        .attr("y", 0)
        .attr("height", heightWords)
        .attr("width", widthWords)
        .style("stroke", "black")
        .style("fill", "none")
-       .style("stroke-width", 2);
+       .style("stroke-width", 2);*/
 
       // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
       // Wordcloud features that are different from one word to the other must be here

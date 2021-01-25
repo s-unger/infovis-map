@@ -78,6 +78,34 @@ border-left: 2px solid black;
 height: 100%;
 }
 
+#infoGraph {
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+}
+
+#graphDescription {
+  width: 39%;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 8pt;
+  background-color: white;
+  border-radius: 6px;
+  position: absolute;
+  display: none;
+}
+
+#graphDescription::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  background-color: white;
+  position: absolute;
+  left: -6px;
+  top: 23px;
+}
+
 #graph {
 margin-left: auto;
 margin-right: auto;
@@ -108,6 +136,7 @@ margin-left: auto;
 margin-right: auto;
 overflow: hidden;
 overflow-y: scroll;
+font-family:'Times New Roman', Times, serif;
 }
 
 #funnytexts {
