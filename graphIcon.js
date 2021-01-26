@@ -1,6 +1,6 @@
 // append icon image to div infoGraph
 var graphInfoIcon = d3.select("#infoGraph");
-graphInfoIcon.append('image').attr("href", "./img/infoIcon.png").attr("id", "graphIcon").attr("width", "20px").attr("height", "20px");
+graphInfoIcon.append('image').attr("href", "./img/infoIcon.png").attr("id", "graphIcon").attr("width", "25px").attr("height", "25px");
 
 // add event actions to icon image
 var infoGraphIcon = document.getElementById("graphIcon");

@@ -734,7 +734,7 @@ function updateGoogleTrend(currentWord) {
     console.log("update GOOGLETREND");
     getTrendValue();
     getTrendValueAverage();
-    checkboxLabel.innerHTML = 'Durschnittswert pro Bundesland für Keyword " '+ currentWord+ '":';
+    checkboxLabel.innerHTML = 'Durchschnittswert über den gesamten Zeitraum für Keyword "'+ currentWord+ '":';
     setTimeout(function() {  
         update();
     }, 1000);
