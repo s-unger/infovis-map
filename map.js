@@ -751,7 +751,7 @@ document.onmousemove = function(event)
 }
 
 function popUpWindowPositioning(d){ 
-    mypopup.style.left = cursor_x-750;
+    mypopup.style.left = cursor_x-1050;
     mypopup.style.top = cursor_y-280;
     mypopup.style.display = "block";  
 }
