@@ -1,24 +1,24 @@
 var svgLegend = d3.select("#my_dataviz")
 
 
-svgLegend.append("text").attr("x", 80).attr("y", 38).text("0%").style("font-size", "15px").attr("alignment-baseline","middle")
-svgLegend.append("circle").attr("cx",120).attr("cy",38).attr("r", 7).attr("id", "bubble1").style("fill", "#ffffcc");
-svgLegend.append("circle").attr("cx",140).attr("cy",38).attr("r", 7).attr("id", "bubble2").style("fill", "#ffefa5")
-svgLegend.append("circle").attr("cx",160).attr("cy",38).attr("r", 7).attr("id", "bubble3").style("fill", "#fedc7f")
-svgLegend.append("circle").attr("cx",180).attr("cy",38).attr("r", 7).attr("id", "bubble4").style("fill", "#febf5b")
-svgLegend.append("circle").attr("cx",200).attr("cy",38).attr("r", 7).attr("id", "bubble5").style("fill", "#fd9d43")
-svgLegend.append("circle").attr("cx",220).attr("cy",38).attr("r", 7).attr("id", "bubble6").style("fill", "#fc7034")
-svgLegend.append("circle").attr("cx",240).attr("cy",38).attr("r", 7).attr("id", "bubble7").style("fill", "#f23d26")
-svgLegend.append("circle").attr("cx",260).attr("cy",38).attr("r", 7).attr("id", "bubble8").style("fill", "#d91620")
-svgLegend.append("circle").attr("cx",280).attr("cy",38).attr("r", 7).attr("id", "bubble9").style("fill", "#b40325")
-svgLegend.append("circle").attr("cx",300).attr("cy",38).attr("r", 7).attr("id", "bubble10").style("fill", "#800026")
-svgLegend.append("text").attr("x", 320).attr("y", 38).text("100%").style("font-size", "15px").attr("alignment-baseline","middle")
+svgLegend.append("text").attr("x", 195).attr("y", 60).text("0%").style("font-size", "15px").attr("alignment-baseline","middle")
+svgLegend.append("circle").attr("cx",200).attr("cy",90).attr("r", 7.5).attr("id", "bubble1").style("fill", "#ffffcc");
+svgLegend.append("circle").attr("cx",200).attr("cy",110).attr("r",7.5).attr("id", "bubble2").style("fill", "#ffefa5")
+svgLegend.append("circle").attr("cx",200).attr("cy",130).attr("r",7.5).attr("id", "bubble3").style("fill", "#fedc7f")
+svgLegend.append("circle").attr("cx",200).attr("cy",150).attr("r", 7.5).attr("id", "bubble4").style("fill", "#febf5b")
+svgLegend.append("circle").attr("cx",200).attr("cy",170).attr("r", 7.5).attr("id", "bubble5").style("fill", "#fd9d43")
+svgLegend.append("circle").attr("cx",200).attr("cy",190).attr("r", 7.5).attr("id", "bubble6").style("fill", "#fc7034")
+svgLegend.append("circle").attr("cx",200).attr("cy",210).attr("r", 7.5).attr("id", "bubble7").style("fill", "#f23d26")
+svgLegend.append("circle").attr("cx",200).attr("cy",230).attr("r", 7.5).attr("id", "bubble8").style("fill", "#d91620")
+svgLegend.append("circle").attr("cx",200).attr("cy",250).attr("r", 7.5).attr("id", "bubble9").style("fill", "#b40325")
+svgLegend.append("circle").attr("cx",200).attr("cy",270).attr("r", 7.5).attr("id", "bubble10").style("fill", "#800026")
+svgLegend.append("text").attr("x", 180).attr("y", 305).text("100%").style("font-size", "15px").attr("alignment-baseline","middle")
 svgLegend.append('text')
    .style('font-family', 'Linearicons-Free')
    .attr('font-size', '20px' )
    .text('\ue87d')
-   .attr('x',380)
-   .attr('y',44)
+   .attr('x',190)
+   .attr('y',350)
    .attr("id", "infoIcon")
    .attr("fill","black");
 
@@ -141,8 +141,8 @@ function showPopupPercentages(d){
     popUpPercentages.innerHTML="<= 100 <br />>= 90";
   }
   //var iconPos = bubble1.getBoundingClientRect();
-  popUpPercentages.style.left = (iconPos.left-25) + "px";
-  popUpPercentages.style.top = (window.scrollY + iconPos.top+27) + "px";
+  popUpPercentages.style.left = (iconPos.left+30) + "px";
+  popUpPercentages.style.top = (window.scrollY + iconPos.top-26) + "px";
   popUpPercentages.style.display = "block";
 }
 
