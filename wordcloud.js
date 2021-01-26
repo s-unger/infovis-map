@@ -27,12 +27,12 @@ function draw_wordcloud(weekandyear_text) {
 
       // set the dimensions and margins of the graph
       var marginWords = {top: 0, right: 0, bottom: 0, left: 0},
-          widthWords = 550 - marginWords.left - marginWords.right,
-          heightWords = 300 - marginWords.top - marginWords.bottom;
+          widthWords = 750 - marginWords.left - marginWords.right, // 550
+          heightWords = 200 - marginWords.top - marginWords.bottom; // 300
 
       // append the svg object to the body of the page
       var svg2 = d3.select("#tagcloud").append("svg")
-          .attr("viewBox", `0 0 550 300`)
+          .attr("viewBox", `0 0 750 200`) // 550 300 
         .append("g")
           .attr("transform",
           "translate(" + marginWords.left + "," + marginWords.top + ")");
