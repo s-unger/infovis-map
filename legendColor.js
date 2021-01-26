@@ -84,7 +84,7 @@ function hidePopupLegend() {
 
 function showPopupPercentages(d){
   var circleId= d.srcElement.id;
-  console.log("HOVER BUBBLE");
+  //console.log("HOVER BUBBLE");
   
   //console.log(d);
   //console.log(circleId);
