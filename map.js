@@ -75,10 +75,10 @@ var svg = d3.select(".tempcenter")
     .attr("viewBox", "0 0 500 620")
     .attr("align","center");
 
-svg.append("rect")
+/*svg.append("rect")
     .attr("class", "background")
     .attr("width", widthMap)
-    .attr("height", heightMap);
+    .attr("height", heightMap);*/
 
 var g = svg.append("g")
   .append("g")
