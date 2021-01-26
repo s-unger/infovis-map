@@ -90,7 +90,7 @@ getTrendValueAverage();
 getTrendValue();
 
 d3.select("#myCheckbox").on("change",update);
-d3.json("statesGermany.json", function(collection) {
+d3.json("data/mapData/statesGermany.json", function(collection) {
 
   var bounds = d3.geo.bounds(collection),
       bottomLeft = bounds[0],
@@ -500,69 +500,69 @@ if (value>89){
 
 }
 function getTrendValueAverage(){
-    var wordData= "corona.csv";
+    var wordData= "data/mapData/corona.csv";
 
     if (map_currentWord==="klopapier"){
-        wordData= "klopapier.csv";
+        wordData= "data/mapData/klopapier.csv";
     }
     if (map_currentWord==="corona"){
        
-        wordData= "corona.csv";
+        wordData= "data/mapData/corona.csv";
     }
     if (map_currentWord==="bill gates"){
-        wordData= "billGates.csv";
+        wordData= "data/mapData/billGates.csv";
     }
     if (map_currentWord==="netflix"){
        
-        wordData= "netflix.csv";
+        wordData= "data/mapData/netflix.csv";
     }
     if (map_currentWord==="maske"){
-        var wordData= "maske.csv";
+        var wordData= "data/mapData/maske.csv";
     }
     if (map_currentWord==="merkel"){
-        var wordData= "merkel.csv";
+        var wordData= "data/mapData/merkel.csv";
     }
     if (map_currentWord==="oktoberfest"){
-        var wordData= "oktoberfest.csv";
+        var wordData= "data/mapData/oktoberfest.csv";
     }
     if (map_currentWord==="baumarkt"){
-        var wordData= "baumarkt.csv";
+        var wordData= "data/mapData/baumarkt.csv";
     }
     if (map_currentWord==="zoom"){
-        var wordData= "zoom.csv";
+        var wordData= "data/mapData/zoom.csv";
     }
     if (map_currentWord==="söder"){
-        var wordData= "söder.csv";
+        var wordData= "data/mapData/söder.csv";
     }
     if (map_currentWord==="drosten"){
-        var wordData= "drosten.csv";
+        var wordData= "data/mapData/drosten.csv";
     }
     if (map_currentWord==="desinfektionsmittel"){
-        var wordData= "desinfektionsmittel.csv";
+        var wordData= "data/mapData/desinfektionsmittel.csv";
     }
     if (map_currentWord==="alkohol"){
-        var wordData= "alkohol.csv";
+        var wordData= "data/mapData/alkohol.csv";
     }
     if (map_currentWord==="BER"){
-        var wordData= "BER.csv";
+        var wordData= "data/mapData/BER.csv";
     }
     if (map_currentWord==="attila hildmann"){
-        var wordData= "attilaHildmann.csv";
+        var wordData= "data/mapData/attilaHildmann.csv";
     }
     if (map_currentWord==="querdenken"){
-        var wordData= "querdenken.csv";
+        var wordData= "data/mapData/querdenken.csv";
     }
     if (map_currentWord==="bananenbrot"){
-        var wordData= "bananenbrot.csv";
+        var wordData= "data/mapData/bananenbrot.csv";
     }
     if (map_currentWord==="kneipentour"){
-        var wordData= "kneipentour.csv";
+        var wordData= "data/mapData/kneipentour.csv";
     }
     if (map_currentWord==="homeworkout"){
-        var wordData= "homeworkout.csv";
+        var wordData= "data/mapData/homeworkout.csv";
     }
     if (map_currentWord==="onlinesemester"){
-        var wordData= "onlinesemester.csv";
+        var wordData= "data/mapData/onlinesemester.csv";
     }
 
 d3.csv(wordData, function(data) {
@@ -577,72 +577,72 @@ trendListAverage= data;
 };
 
 function getTrendValue(){
-    var wordData= "allBLcorona.csv";
+    var wordData= "data/mapData/allBLcorona.csv";
 
-    if (map_currentWord==="klopapier"){
+    if (map_currentWord==="data/mapData/klopapier"){
     
-        var wordData= "allBLKlopapier.csv";
+        var wordData= "data/mapData/allBLKlopapier.csv";
        
     }
     if (map_currentWord==="corona"){
-        var wordData= "allBLcorona.csv";
+        var wordData= "data/mapData/allBLcorona.csv";
        
 
     }
     if (map_currentWord==="bill gates"){
         
-        var wordData= "allBLBillGates.csv";
+        var wordData= "data/mapData/allBLBillGates.csv";
     }
     if (map_currentWord==="netflix"){
-        var wordData= "allBLnetflix.csv";
+        var wordData= "data/mapData/allBLnetflix.csv";
     }
     if (map_currentWord==="maske"){
-        var wordData= "allBLmaske.csv";
+        var wordData= "data/mapData/allBLmaske.csv";
     }
     if (map_currentWord==="merkel"){
-        var wordData= "allBLmerkel.csv";
+        var wordData= "data/mapData/allBLmerkel.csv";
     }
     if (map_currentWord==="oktoberfest"){
-        var wordData= "allBLoktoberfest.csv";
+        var wordData= "data/mapData/allBLoktoberfest.csv";
     }
     if (map_currentWord==="baumarkt"){
-        var wordData= "allBLbaumarkt.csv";
+        var wordData= "data/mapData/allBLbaumarkt.csv";
     }
     if (map_currentWord==="zoom"){
-        var wordData= "allBLzoom.csv";
+        var wordData= "data/mapData/allBLzoom.csv";
     }
     if (map_currentWord==="söder"){
-        var wordData= "allBLsöder.csv";
+        var wordData= "data/mapData/allBLsöder.csv";
     }
     if (map_currentWord==="drosten"){
-        var wordData= "allBLdrosten.csv";
+        var wordData= "data/mapData/allBLdrosten.csv";
     }
     if (map_currentWord==="desinfektionsmittel"){
-        var wordData= "allBLdesinfektionsmittel.csv";
+        var wordData= "data/mapData/allBLdesinfektionsmittel.csv";
     }
     if (map_currentWord==="alkohol"){
-        var wordData= "allBLalkohol.csv";
+        var wordData= "data/mapData/allBLalkohol.csv";
     }
     if (map_currentWord==="BER"){
-        var wordData= "allBLBER.csv";
+        var wordData= "data/mapData/allBLBER.csv";
     }
     if (map_currentWord==="attila hildmann"){
-        var wordData= "allBLattilaHildmann.csv";
+        var wordData= "data/mapData/allBLattilaHildmann.csv";
     }
     if (map_currentWord==="querdenken"){
-        var wordData= "allBLquerdenken.csv";
+        var wordData= "data/mapData/allBLquerdenken.csv";
     }
     if (map_currentWord==="bananenbrot"){
-        var wordData= "allBLbananenbrot.csv";
+        var wordData= "data/mapData/allBLbananenbrot.csv";
     }
     if (map_currentWord==="kneipentour"){
-        var wordData= "allBLkneipentour.csv";
+        var wordData= "data/mapData/allBLkneipentour.csv";
     }
     if (map_currentWord==="homeworkout"){
-        var wordData= "allBLhomeworkout.csv";
+        var wordData= "data/mapData/allBLhomeworkout.csv";
     }
     if (map_currentWord==="onlinesemester"){
-        var wordData= "allBLonlinesemester.csv";
+        var wordData= "data/mapData/allBLonlinesemester.csv";
     }
     
 
