@@ -68,7 +68,8 @@
     saarland_trendValue=0;
     mypopup = document.getElementById("popupWindows");
     currentHoveredState=null;
-    var zoomIn = false;
+    zoomIn = false;
+    currentClicked_virus=null;
     
 
 var svg = d3.select(".tempcenter")
@@ -126,7 +127,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('height', 100)
   .attr("x", "260")
   .attr('y', '430')
-  .on("click", clickPath)
+  .on("click", clickBayern)
   .on("mouseover", popUpBayern)
   .on("mouseout", hidePopupWindow);
   baden_virus = svg.append('image')
@@ -137,7 +138,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '450')
   .on("mouseover", popUpBaden)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickBaden);
   nrw_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -146,7 +147,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '240')
   .on("mouseover", popUpNRW)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickNRW);
   hessen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -155,7 +156,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '300')
   .on("mouseover", popUpHessen)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickHessen);
   niedersachsen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -164,7 +165,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '150')
   .on("mouseover", popUpNiedersachsen)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickNiedersachsen);
   schleswigholst_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -173,7 +174,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '30')
   .on("mouseover", popUpSchleswig)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickSchleswig);
   mecklvorp_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -182,7 +183,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '70')
   .on("mouseover", popUpMecklenburg)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickMecklenburg);
   saarland_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -191,7 +192,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '390')
   .on("mouseover", popUpSaarland)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickSaarland);
   rheinlandpfalz_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -200,7 +201,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '340')
   .on("mouseover", popUpRheinland)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickRheinland);
   sachsen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -209,7 +210,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '270')
   .on("mouseover", popUpSachsen)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickSachsen);
   thueringen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -218,7 +219,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '290')
   .on("mouseover", popUpThüringen)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickThüringen);
   hamburg_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -228,7 +229,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr("id", "virusHamburg")
   .on("mouseover", popUpHamburg)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickHamburg);
   bremen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -237,7 +238,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '120')
   .on("mouseover", popUpBremen)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickBremen);
   berlin_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -246,7 +247,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '160')
   .on("mouseover", popUpBerlin)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickBerlin);
   brandenburg_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -255,7 +256,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '190')
   .on("mouseover", popUpBrandenburg)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickBrandenburg);
   sachsenanhalt_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
@@ -264,7 +265,7 @@ d3.json("statesGermany.json", function(collection) {
   .attr('y', '190')
   .on("mouseover", popUpSachsenA)
   .on("mouseout", hidePopupWindow)
-  .on("click", clickPath);
+  .on("click", clickSachsenA);
   scale_to_zero();
   
   
@@ -769,7 +770,7 @@ document.onmousemove = function(event)
 
 function popUpWindowPositioning(d){ 
     mypopup.style.left = cursor_x-1050;
-    mypopup.style.top = cursor_y-280;
+    mypopup.style.top = cursor_y-270;
     mypopup.style.display = "block";  
 }
 
@@ -1021,9 +1022,149 @@ function executeAsynchronously(functions, timeout) {
     mecklenburg_trendValue=0;
     thüringen_trendValue=0;
     saarland_trendValue=0;
-   }         
+   }        
+   
+   function clickBayern(d) {
+       if (!zoomIn){
+        virusZoomInRightState(1);   
+       }else{
+           clickPath(currentClicked_virus);
+       }
+       
+   }
+   function clickBaden(d) {
+    if (!zoomIn){
+        virusZoomInRightState(0);   
+       }else{
+           clickPath(currentClicked_virus);
+       }
+ }
+ function clickBerlin(d) {
+    if (!zoomIn){
+        virusZoomInRightState(2);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickBrandenburg(d) {
+    if (!zoomIn){
+        virusZoomInRightState(3);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickBremen(d) {
+    if (!zoomIn){
+        virusZoomInRightState(4);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickHamburg(d) {
+    if (!zoomIn){
+        virusZoomInRightState(5);   
+       }else{
+           clickPath(currentClicked_virus);
+       }   
+ }
+ function clickHessen(d) {
+    if (!zoomIn){
+        virusZoomInRightState(6);   
+       }else{
+           clickPath(currentClicked_virus);
+       }   
+ }
+ function clickMecklenburg(d) {
+    if (!zoomIn){
+        virusZoomInRightState(7);   
+       }else{
+           clickPath(currentClicked_virus);
+       }  
+ }
+ function clickSaarland(d) {
+    if (!zoomIn){
+        virusZoomInRightState(11);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickSachsen(d) {
+    if (!zoomIn){
+        virusZoomInRightState(13);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickSachsenA(d) {
+    if (!zoomIn){
+        virusZoomInRightState(12);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickSchleswig(d) {
+    if (!zoomIn){
+        virusZoomInRightState(14);   
+       }else{
+           clickPath(currentClicked_virus);
+       }
+ }
+ function clickNRW(d) {
+    if (!zoomIn){
+        virusZoomInRightState(9);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickRheinland(d) {
+    if (!zoomIn){
+        virusZoomInRightState(10);   
+       }else{
+           clickPath(currentClicked_virus);
+       }
+ }
+ function clickThüringen(d) {
+    if (!zoomIn){
+        virusZoomInRightState(15);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickNiedersachsen(d) {
+    if (!zoomIn){
+        virusZoomInRightState(8);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+
+
+   function virusZoomInRightState(index){
+    g.selectAll('path').each(function (d, i) { 
+        if (i==index){
+            currentClicked_virus=d;
+            clickPath(d);
+            }
+        });
+   }
+
 
 function clickPath(d) {
+   console.log("clickPath");
+    console.log(d);
+    g.selectAll('path').each(function (d, i) { 
+        if (i==0){
+
+            var testba=d3.select(this);
+            console.log("TEstBA");
+            console.log(d);
+            }
+
+    });
+    
+    //var testb=  d3.select("#hessen");
+   // console.log(testb);
+   
   var x = widthMap/2,
       y = heightMap/2,
       k = 1,
