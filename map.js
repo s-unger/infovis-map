@@ -375,8 +375,7 @@ function colorBL() {
     trendListAverage.forEach(function (arrayItem) {
     var valueBL = arrayItem.Value;
     var nameBL = arrayItem.Kategorie;
-    console.log("NAMEBL===");
-    console.log(nameBL);
+    
     if (nameBL=="Baden-Württemberg"){
         
         baden_trendValue=valueBL;
@@ -514,7 +513,7 @@ function getTrendValueAverage(){
         wordData= "billGates.csv";
     }
     if (map_currentWord==="netflix"){
-        console.log("Bill Gates ausgewählt");
+       
         wordData= "netflix.csv";
     }
     if (map_currentWord==="maske"){
@@ -572,9 +571,6 @@ data.forEach(function(d) {
 d['Value'] = +d['Value'];
 });
 trendListAverage= data;
-console.log("average");	
-console.log(trendListAverage);
-console.log(trendListAverage[0]);
 
 });
 
@@ -691,7 +687,7 @@ function adaptColor(week){
     }else{
         
         week=week+51;
-        console.log("2020");
+       
         
     }
 trendList.forEach(function (d, i) {
@@ -749,7 +745,7 @@ function updateMapTime(text_week) {
 
 function updateGoogleTrend(currentWord) {
     map_currentWord= currentWord;
-    console.log("update GOOGLETREND");
+    
     getTrendValue();
     getTrendValueAverage();
     checkboxLabel.innerHTML = 'Durchschnittswert über den gesamten Zeitraum für Keyword "'+ currentWord+ '":';
@@ -782,7 +778,7 @@ function popUpWindowPositioning(d){
     hidePopupWindowStroke();
   }
   function hidePopupWindowStroke() {
-      console.log(currentHoveredState);
+  
     currentHoveredState.attr("stroke-width","1.25");
     
   }
@@ -793,7 +789,7 @@ function showPopUpWindow(d) {
 
     if (!zoomIn){
 
-    console.log(zoomIn);
+    
 
     var name= d.properties.name;
     
@@ -1150,21 +1146,8 @@ function executeAsynchronously(functions, timeout) {
 
 
 function clickPath(d) {
-   console.log("clickPath");
-    console.log(d);
-    g.selectAll('path').each(function (d, i) { 
-        if (i==0){
-
-            var testba=d3.select(this);
-            console.log("TEstBA");
-            console.log(d);
-            }
-
-    });
-    
-    //var testb=  d3.select("#hessen");
-   // console.log(testb);
    
+    
   var x = widthMap/2,
       y = heightMap/2,
       k = 1,
