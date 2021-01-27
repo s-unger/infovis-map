@@ -78,7 +78,7 @@ function draw_wordcloud(weekandyear_text) {
         .style("font-size", function(d) { return d.size; })
         .style("fill", "#000000")
         .attr("text-anchor", "middle")
-        .style("font-family", "Impact")
+        .style("font-family", "'Times New Roman', Times, serif")
         .attr("transform", function(d) {
           return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
         })
