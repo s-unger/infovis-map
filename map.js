@@ -450,51 +450,61 @@ function getcolor(value) {
 if (value<10){
    
 return "#ffffcc";
+//return "#ffffff";
 }
 if (value>9 && value<20){
    
     return "#ffefa5";
+    //return "#ffffe5";
     }
 
 if (value<30 && value>19){
     
     return "#fedc7f";
+    //return "#f7fcb9";
     
 }
 if (value<40 && value>29){
     
     return "#febf5b";
+    //return "#d9f0a3";
     
 }
 if (value<50 && value>39){
     
     return "#fd9d43";
+   //return "#addd8e";
     
     
 }
 if (value<60&& value>49){
    
     return "#fc7034";
+    //return "#78c679";
     
 }
 if (value<70&& value>59){
     
     return "#f23d26";
+    //return "#41ab5d";
     
 }
 if (value<80&& value>69){
    
     return "#d91620";
+    //return  "#238443";
     
 }
 if (value<90&& value>79){
    
     return "#b40325";
+    //return "#006837";
 
 }
 if (value>89){
     
     return "#800026";
+    //return "#004529";
     
 }
 
