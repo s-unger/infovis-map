@@ -1,19 +1,14 @@
 var germanyData = [];
+/* This function converts the manually prefiltered json german corona data into a data object that is used 
+    in later processing. */
 function importGermanData(){
    //d3.json("https://opendata.ecdc.europa.eu/covid19/subnationalcaseweekly/json/", function(data){
     d3.json("coronaData.json", function(data){
-     //console.log("Importing...");
      data.forEach(element => {
       if(element.country == "Germany"){
-        //console.log("Importing = "+element.region_name);
         germanyData.push(element);
       }
-      else{
-        //console.log("Item not found...");
-      }
      });
-     //console.log("German data:" +germanyData);
-
   });
 }
 
@@ -22,13 +17,13 @@ importGermanData();
 var handle, slider, currentDate, startDate, endDate, x, formatDate;
 var currentValue = 0;
 
-createSlider("2020")
+createSlider("2020");
+
+/* This function creates the slider, specifying the displayed dates and setting the slider to the corresponding HTML element. */
 
 function createSlider(year) {
   document.getElementById("slider").innerHTML = "";
-  //var formatDateIntoMonthOfYear = d3.timeFormat("%B %Y");
   formatDate = d3.timeFormat("CW %W/%Y");
-  //var parseDate = d3.timeParse("%m/%d/%y");
   if(year == "") {
     startDate = new Date("2019-01-01");
     endDate = new Date("2020-12-31");
@@ -43,9 +38,6 @@ function createSlider(year) {
     currentDate = new Date("2020-01-01");
   }
 
-  /*startDate = new Date("2019-01-01");
-  endDate = new Date("2020-10-30");
-  currentDate = new Date("2019-01-01");*/
 
   var marginSlider = {top:30, right:50, bottom:30, left:50}, // 50 50 0 50
       widthSlider = 560 - marginSlider.left - marginSlider.right,
@@ -56,14 +48,11 @@ function createSlider(year) {
       .attr("width", widthSlider + marginSlider.left + marginSlider.right)
       .attr("height", heightSlider + marginSlider.top + marginSlider.bottom); // heightSlider + marginSlider.top + marginSlider.bottom
 
-  //var headlineWeek = document.getElementById("current-week");
 
   ////////// slider //////////
 
-  //var moving = false;
+  /* Specifying the slider appearance and displayed texts. */
   var targetValue = widthSlider;
-
-  //var bavarianCasesSVG = d3.select("#virusSVG");
 
   x = d3.scaleTime()
       .domain([startDate, endDate])
@@ -116,7 +105,11 @@ function createSlider(year) {
 }
 
 
-////////// plot //////////
+////////// update //////////
+
+/* this function is called on slider drag- meaning when the position changes.
+    This is the central update function of the application, within which all components like the map,
+    graphs, articles and wordcloud are updated.*/
 
 function updateslider(h) {
   // update position and text of label according to slider scale
@@ -126,36 +119,13 @@ function updateslider(h) {
     .text(formatDate(h));
 
     currentDate = formatDate(h);
-    document.getElementById("current-week").innerHTML = "Current week: "+currentDate;
-/*
-    resizeVirus(currentDate, "Bayern", "virusSVGBayern");
-    resizeVirus(currentDate, "Baden-Wurttemberg", "virusSVGBaden");
-    resizeVirus(currentDate, "Nordrhein-Westfalen", "virusSVGNrw");
-    resizeVirus(currentDate, "Hessen", "virusSVGHessen");
-    resizeVirus(currentDate, "Niedersachsen", "virusSVGNiedersachsen");
-    resizeVirus(currentDate, "Schleswig-Holstein", "virusSVGSchleswigHolst");
-    resizeVirus(currentDate, "Mecklenburg-Vorpommern", "virusSVGMecklVorp");
-    resizeVirus(currentDate, "Saarland", "virusSVGSaarland");
-    resizeVirus(currentDate, "Rheinland-Pfalz", "virusSVGRheinlandPfalz");
-    resizeVirus(currentDate, "Thuringen", "virusSVGThueringen");
-    resizeVirus(currentDate, "Sachsen", "virusSVGSachsen");
-    resizeVirus(currentDate, "Hamburg", "virusSVGHamburg");
-    resizeVirus(currentDate, "Bremen", "virusSVGBremen");
-    resizeVirus(currentDate, "Berlin", "virusSVGBerlin");
-    resizeVirus(currentDate, "Brandenburg", "virusSVGBrandenburg");
-    resizeVirus(currentDate, "Sachsen-Anhalt", "virusSVGSachsenAnhalt");*/
-
     updateArticleTime(currentDate);
     updateMapTime(currentDate);
     draw_wordcloud(currentDate);
-    update_virusicons(currentDate);
+    if (focused == null) {
+      update_virusicons(currentDate);
+    }
     replace_graph(keyword_1, keyword_2, true, h, selectedYear)
-
-  // filter data set and redraw plot
-/*  var newData = dataset.filter(function(d) {
-    return d.date < h;
-  });*/
-
 
 }
 
@@ -163,36 +133,3 @@ function getCurrentWeek(){
   return currentDate;
 }
 
-function getCasesOfWeek(currentDate, region, id){
-  germanyData.forEach(element => {
-    if(currentDate != null){
-      var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
-      if(newDateFormat.includes("2019")){
-        return 0;
-      }
-      else if((element.region_name == region) && (element.year_week == newDateFormat)){
-
-        if((element.rate_14_day_per_100k != null) && (element.rate_14_day_per_100k >0)){
-          //console.log("Found cases: "+element.rate_14_day_per_100k);
-          return element.rate_14_day_per_100k/300;
-        }
-        //return element.rate_14_day_per_100k;
-      }
-      else{
-        //console.log("-------------couldnt find a match for "+region)
-      }
-    }
-    else{
-      //console.log("-------------currentdate is null")
-    }
-  });
-}
-
-function convertImageToCanvas(image) {
-	var canvas = document.createElement("canvas");
-	canvas.width = image.width;
-	canvas.height = image.height;
-	canvas.getContext("2d").drawImage(image, 0, 0);
-
-	return canvas;
-}

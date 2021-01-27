@@ -15,6 +15,23 @@
  var berlin_virus;
  var brandenburg_virus;
  var sachsenanhalt_virus;
+
+ var bayern_virus_value = 0;
+ var baden_virus_value = 0;
+ var nrw_virus_value = 0;
+ var hessen_virus_value = 0
+ var niedersachsen_virus_value = 0;
+ var schleswigholst_virus_value = 0;
+ var mecklvorp_virus_value = 0;
+ var saarland_virus_value = 0;
+ var rheinlandpfalz_virus_value = 0;
+ var sachsen_virus_value = 0;
+ var thueringen_virus_value = 0;
+ var hamburg_virus_value = 0;
+ var bremen_virus_value = 0;
+ var berlin_virus_value = 0;
+ var brandenburg_virus_value = 0;
+ var sachsenanhalt_virus_value = 0;
  
  
  var widthMap = 500,
@@ -27,6 +44,32 @@
     map_calendarweek=0;
     map_year=0;
     map_currentWord="corona";
+    checkboxLabel= document.getElementById("checkboxLabel");
+    berlinTest=null;
+    x_map=0;
+    y_map=0;
+    popUpDescription= document.getElementById("popupWindows");
+    popUpHeadline= document.getElementById("popupHeadlineBL");
+    bayern_trendValue=0;
+    baden_trendValue=0;
+    brandenburg_trendValue=0;
+    berlin_trendValue=0;
+    bremen_trendValue=0;
+    hamburg_trendValue=0;
+    hessen_trendValue=0;
+    nrw_trendValue=0;
+    niedersachsen_trendValue=0;
+    sachen_trendValue=0;
+    sachsenA_trendValue=0;
+    rheinland_trendValue=0;
+    schleswig_trendValue=0;
+    mecklenburg_trendValue=0;
+    thüringen_trendValue=0;
+    saarland_trendValue=0;
+    mypopup = document.getElementById("popupWindows");
+    currentHoveredState=null;
+    zoomIn = false;
+    currentClicked_virus=null;
     
 
 var svg = d3.select(".tempcenter")
@@ -34,10 +77,10 @@ var svg = d3.select(".tempcenter")
     .attr("viewBox", "0 0 500 620")
     .attr("align","center");
 
-svg.append("rect")
+/*svg.append("rect")
     .attr("class", "background")
     .attr("width", widthMap)
-    .attr("height", heightMap);
+    .attr("height", heightMap);*/
 
 var g = svg.append("g")
   .append("g")
@@ -47,7 +90,7 @@ getTrendValueAverage();
 getTrendValue();
 
 d3.select("#myCheckbox").on("change",update);
-d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2_bundeslaender/1_sehr_hoch.geo.json", function(collection) {
+d3.json("data/mapData/statesGermany.json", function(collection) {
 
   var bounds = d3.geo.bounds(collection),
       bottomLeft = bounds[0],
@@ -83,104 +126,148 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "260")
-  .attr('y', '430');
+  .attr('y', '430')
+  .on("click", clickBayern)
+  .on("mouseover", popUpBayern)
+  .on("mouseout", hidePopupWindow);
   baden_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "130")
-  .attr('y', '450');
+  .attr('y', '450')
+  .on("mouseover", popUpBaden)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickBaden);
   nrw_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "50")
-  .attr('y', '240');
+  .attr('y', '240')
+  .on("mouseover", popUpNRW)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickNRW);
   hessen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "130")
-  .attr('y', '300');
+  .attr('y', '300')
+  .on("mouseover", popUpHessen)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickHessen);
   niedersachsen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "160")
-  .attr('y', '150');
+  .attr('y', '150')
+  .on("mouseover", popUpNiedersachsen)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickNiedersachsen);
   schleswigholst_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "170")
-  .attr('y', '30');
+  .attr('y', '30')
+  .on("mouseover", popUpSchleswig)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickSchleswig);
   mecklvorp_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "280")
-  .attr('y', '70');
+  .attr('y', '70')
+  .on("mouseover", popUpMecklenburg)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickMecklenburg);
   saarland_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "30")
-  .attr('y', '390');
+  .attr('y', '390')
+  .on("mouseover", popUpSaarland)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickSaarland);
   rheinlandpfalz_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "60")
-  .attr('y', '340');
+  .attr('y', '340')
+  .on("mouseover", popUpRheinland)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickRheinland);
   sachsen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "340")
-  .attr('y', '270');
+  .attr('y', '270')
+  .on("mouseover", popUpSachsen)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickSachsen);
   thueringen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "230")
-  .attr('y', '290');
+  .attr('y', '290')
+  .on("mouseover", popUpThüringen)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickThüringen);
   hamburg_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "180")
-  .attr('y', '85');
+  .attr('y', '85')
+  .attr("id", "virusHamburg")
+  .on("mouseover", popUpHamburg)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickHamburg);
   bremen_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "130")
-  .attr('y', '120');
+  .attr('y', '120')
+  .on("mouseover", popUpBremen)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickBremen);
   berlin_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "330")
-  .attr('y', '160');
+  .attr('y', '160')
+  .on("mouseover", popUpBerlin)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickBerlin);
   brandenburg_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "360")
-  .attr('y', '190');
+  .attr('y', '190')
+  .on("mouseover", popUpBrandenburg)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickBrandenburg);
   sachsenanhalt_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "260")
-  .attr('y', '190');
+  .attr('y', '190')
+  .on("mouseover", popUpSachsenA)
+  .on("mouseout", hidePopupWindow)
+  .on("click", clickSachsenA);
   scale_to_zero();
   
-
- /* g.append("path")
-      .datum(graticule)
-     .attr("class", "graticuleLine")
-      .attr("d", geoPath);*/
   
   g.selectAll("path.feature")
     .data(collection.features)
@@ -201,6 +288,8 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
         if (i==2){
         
         d3.select(this).attr("id", "berlin");
+        
+        
         
         }
         if (i==3){
@@ -257,20 +346,22 @@ d3.json("https://raw.githubusercontent.com/isellsoap/deutschlandGeoJSON/master/2
         d3.select(this).attr("id", "thüringen");
         }
         
+        
         })
     .attr("class", "feature")
     .attr("d", geoPath)
-    .on("click", clickPath);
+    //.on("click", clickPath);
+    .on("click", clickPath)
+    .on("mouseover", showPopUpWindow)
+    .on("mouseout", hidePopupWindow);
 
-    //adaptColor(12);
+    
     update();
 
+    
   
 });
 
-
-//d3.select("#myCheckbox").on("change",update);
-//update();
     
 function update(){
     if(d3.select("#myCheckbox").property("checked")){
@@ -284,138 +375,194 @@ function colorBL() {
     trendListAverage.forEach(function (arrayItem) {
     var valueBL = arrayItem.Value;
     var nameBL = arrayItem.Kategorie;
+    
     if (nameBL=="Baden-Württemberg"){
-        console.log(valueBL);
+        
+        baden_trendValue=valueBL;
         g.select("#baden").style("fill", getcolor(valueBL));
     }
     if (nameBL=="Bayern"){
-        console.log(valueBL);
+        
+        bayern_trendValue=valueBL;
         g.select("#bayern").style("fill", getcolor(valueBL));
     }
     if (nameBL=="Berlin"){
-        console.log(valueBL);
+        berlin_trendValue=valueBL;
         g.select("#berlin").style("fill", getcolor(valueBL));
     }   
     if (nameBL=="Sachsen"){
-        console.log(valueBL);
+        sachsenA_trendValue=valueBL;
         g.select("#sachsen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Nordrhein-Westfalen"){
-        console.log(valueBL);
+        nrw_trendValue=valueBL;
         g.select("#nrw").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Thüringen"){
-        console.log(valueBL);
+        thüringen_trendValue=valueBL;
         g.select("#thüringen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Bremen"){
-        console.log(valueBL);
+        bremen_trendValue=valueBL;
         g.select("#bremen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Sachsen-Anhalt"){
-        console.log(valueBL);
+        sachsenA_trendValue=valueBL;
         g.select("#sachsen-anhalt").style("fill", getcolor(valueBL));
     } 
     if (nameBL=="Rheinland-Pfalz"){
-        console.log(valueBL);
+        rheinland_trendValue=valueBL;
         g.select("#rheinland").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Schleswig-Holstein"){
-        console.log(valueBL);
+        schleswig_trendValue=valueBL;
         g.select("#schleswig").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Niedersachsen"){
-        console.log(valueBL);
+        niedersachsen_trendValue=valueBL;
         g.select("#niedersachsen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Hessen"){
-        console.log(valueBL);
+        hessen_trendValue=valueBL;
         g.select("#hessen").style("fill", getcolor(valueBL));
     }  
     if (nameBL=="Hamburg"){
-        console.log(valueBL);
+        hamburg_trendValue=valueBL;
         g.select("#hamburg").style("fill", getcolor(valueBL));
     } 
     if (nameBL=="Saarland"){
-        console.log(valueBL);
+       saarland_trendValue=valueBL;
         g.select("#saarland").style("fill", getcolor(valueBL));
     } 
     if (nameBL=="Mecklenburg-Vorpommern"){
-        console.log(valueBL);
+        mecklenburg_trendValue=valueBL;
         g.select("#mecklenburg").style("fill", getcolor(valueBL));
     }
     if (nameBL=="Brandenburg"){
-        console.log(valueBL);
+        brandenburg_trendValue=valueBL;
         g.select("#brandenburg").style("fill", getcolor(valueBL));
     }   
     });
  
 }
 function getcolor(value) {
-//console.log(value);
+
 if (value<10){
-    //console.log("1");
-return "rgb(28, 234, 227)";
+   
+return "#ffffcc";
 }
+if (value>9 && value<20){
+   
+    return "#ffefa5";
+    }
 
 if (value<30 && value>19){
-    console.log("2");
-    return "rgb(105, 210, 152)";
+    
+    return "#fedc7f";
     
 }
 if (value<40 && value>29){
-    console.log("3");
-    return "rgb(170, 189, 89)";
+    
+    return "#febf5b";
     
 }
 if (value<50 && value>39){
-    console.log("4");
-    return "rgb(203, 178, 57)";
-    //return "rgb(255, 0, 255)";
+    
+    return "#fd9d43";
+    
     
 }
 if (value<60&& value>49){
-    console.log("5");
-    return "rgb(236, 168, 25)";
-    //return "rgb(255, 0, 255)";
+   
+    return "#fc7034";
     
 }
 if (value<70&& value>59){
-    console.log("6");
-    return "rgb(249, 123, 11)";
+    
+    return "#f23d26";
     
 }
 if (value<80&& value>69){
-    console.log("7");
-    return "rgb(251, 90, 8)";
+   
+    return "#d91620";
     
 }
 if (value<90&& value>79){
-    console.log("8");
-    return "rgb(252, 57, 5)";
+   
+    return "#b40325";
 
 }
 if (value>89){
-    console.log("9");
-    return "rgb(255, 0, 0)";
+    
+    return "#800026";
     
 }
 
 }
 function getTrendValueAverage(){
-    var wordData= "klopapier.csv";
+    var wordData= "data/mapData/corona.csv";
 
     if (map_currentWord==="klopapier"){
-        console.log("Klopapier ausgewählt");
-        wordData= "klopapier.csv";
+        wordData= "data/mapData/klopapier.csv";
     }
     if (map_currentWord==="corona"){
-        console.log("Average: Corona ausgewählt");
-        wordData= "corona.csv";
+       
+        wordData= "data/mapData/corona.csv";
     }
     if (map_currentWord==="bill gates"){
-        console.log("Bill Gates ausgewählt");
-        wordData= "billGates.csv";
+        wordData= "data/mapData/billGates.csv";
+    }
+    if (map_currentWord==="netflix"){
+       
+        wordData= "data/mapData/netflix.csv";
+    }
+    if (map_currentWord==="maske"){
+        var wordData= "data/mapData/maske.csv";
+    }
+    if (map_currentWord==="merkel"){
+        var wordData= "data/mapData/merkel.csv";
+    }
+    if (map_currentWord==="oktoberfest"){
+        var wordData= "data/mapData/oktoberfest.csv";
+    }
+    if (map_currentWord==="baumarkt"){
+        var wordData= "data/mapData/baumarkt.csv";
+    }
+    if (map_currentWord==="zoom"){
+        var wordData= "data/mapData/zoom.csv";
+    }
+    if (map_currentWord==="söder"){
+        var wordData= "data/mapData/söder.csv";
+    }
+    if (map_currentWord==="drosten"){
+        var wordData= "data/mapData/drosten.csv";
+    }
+    if (map_currentWord==="desinfektionsmittel"){
+        var wordData= "data/mapData/desinfektionsmittel.csv";
+    }
+    if (map_currentWord==="alkohol"){
+        var wordData= "data/mapData/alkohol.csv";
+    }
+    if (map_currentWord==="BER"){
+        var wordData= "data/mapData/BER.csv";
+    }
+    if (map_currentWord==="attila hildmann"){
+        var wordData= "data/mapData/attilaHildmann.csv";
+    }
+    if (map_currentWord==="querdenken"){
+        var wordData= "data/mapData/querdenken.csv";
+    }
+    if (map_currentWord==="bananenbrot"){
+        var wordData= "data/mapData/bananenbrot.csv";
+    }
+    if (map_currentWord==="kneipentour"){
+        var wordData= "data/mapData/kneipentour.csv";
+    }
+    if (map_currentWord==="homeworkout"){
+        var wordData= "data/mapData/homeworkout.csv";
+    }
+    if (map_currentWord==="onlinesemester"){
+        var wordData= "data/mapData/onlinesemester.csv";
     }
 
 d3.csv(wordData, function(data) {
@@ -424,33 +571,81 @@ data.forEach(function(d) {
 d['Value'] = +d['Value'];
 });
 trendListAverage= data;
-console.log("average");	
-console.log(trendListAverage);
-console.log(trendListAverage[0]);
 
 });
 
 };
 
 function getTrendValue(){
-    var wordData= "allBLKlopapier.csv";
+    var wordData= "data/mapData/allBLcorona.csv";
 
-    if (map_currentWord==="klopapier"){
-        console.log("Klopapier ausgewählt");
-        var wordData= "allBLKlopapier.csv";
+    if (map_currentWord==="data/mapData/klopapier"){
+    
+        var wordData= "data/mapData/allBLKlopapier.csv";
+       
     }
     if (map_currentWord==="corona"){
-        var wordData= "allBLcorona.csv";
-        console.log("Bl Corona liste");
+        var wordData= "data/mapData/allBLcorona.csv";
+       
 
     }
     if (map_currentWord==="bill gates"){
-        console.log("Bill Gates ausgewählt");
-        var wordData= "billGates.csv";
+        
+        var wordData= "data/mapData/allBLBillGates.csv";
     }
+    if (map_currentWord==="netflix"){
+        var wordData= "data/mapData/allBLnetflix.csv";
+    }
+    if (map_currentWord==="maske"){
+        var wordData= "data/mapData/allBLmaske.csv";
+    }
+    if (map_currentWord==="merkel"){
+        var wordData= "data/mapData/allBLmerkel.csv";
+    }
+    if (map_currentWord==="oktoberfest"){
+        var wordData= "data/mapData/allBLoktoberfest.csv";
+    }
+    if (map_currentWord==="baumarkt"){
+        var wordData= "data/mapData/allBLbaumarkt.csv";
+    }
+    if (map_currentWord==="zoom"){
+        var wordData= "data/mapData/allBLzoom.csv";
+    }
+    if (map_currentWord==="söder"){
+        var wordData= "data/mapData/allBLsöder.csv";
+    }
+    if (map_currentWord==="drosten"){
+        var wordData= "data/mapData/allBLdrosten.csv";
+    }
+    if (map_currentWord==="desinfektionsmittel"){
+        var wordData= "data/mapData/allBLdesinfektionsmittel.csv";
+    }
+    if (map_currentWord==="alkohol"){
+        var wordData= "data/mapData/allBLalkohol.csv";
+    }
+    if (map_currentWord==="BER"){
+        var wordData= "data/mapData/allBLBER.csv";
+    }
+    if (map_currentWord==="attila hildmann"){
+        var wordData= "data/mapData/allBLattilaHildmann.csv";
+    }
+    if (map_currentWord==="querdenken"){
+        var wordData= "data/mapData/allBLquerdenken.csv";
+    }
+    if (map_currentWord==="bananenbrot"){
+        var wordData= "data/mapData/allBLbananenbrot.csv";
+    }
+    if (map_currentWord==="kneipentour"){
+        var wordData= "data/mapData/allBLkneipentour.csv";
+    }
+    if (map_currentWord==="homeworkout"){
+        var wordData= "data/mapData/allBLhomeworkout.csv";
+    }
+    if (map_currentWord==="onlinesemester"){
+        var wordData= "data/mapData/allBLonlinesemester.csv";
+    }
+    
 
-
-    //var wordData= "allBLKlopapier.csv";
 
     d3.csv(wordData, function(data) {
 
@@ -475,79 +670,484 @@ function getTrendValue(){
     trendList= data;
     
     
-    //console.log(trendList);
-    //console.log(trendList[0]);
-    //(1);
-    //console.log("not average");	
     
     });
-    //update();
 
 };
 function adaptColor(week){
-    //console.log(week);
-    //console.log(currentDate);
-    //console.log(trendList);
-    if (map_year==2019){
-        //console.log("2019");
+
+    if (week==0){
+        colorWeek0();
+
     }else{
-        //console.log("2020");
-        week=week+52;
+    
+    if (map_year==2019){
+       week=week-1;
+       
+    }else{
+        
+        week=week+51;
+       
+        
     }
 trendList.forEach(function (d, i) {
+
     if (i==week){
-    //colorBL2(d);
+    
     g.select("#bayern").style("fill", getcolor(d.Bayern));
+    bayern_trendValue= d.Bayern;
+   
     g.select("#berlin").style("fill", getcolor(d.Berlin));
+    berlin_trendValue=d.Berlin;
     g.select("#bremen").style("fill", getcolor(d.Bremen));
+    bremen_trendValue=d.Bremen;
     g.select("#brandenburg").style("fill", getcolor(d.Brandenburg));
+    brandenburg_trendValue=d.Brandenburg;
     g.select("#hamburg").style("fill", getcolor(d.Hamburg));
+    hamburg_trendValue=d.Hamburg;
     g.select("#hessen").style("fill", getcolor(d.Hessen));
+    hessen_trendValue=d.Hessen;
     g.select("#mecklenburg").style("fill", getcolor(d.Mecklenburg));
+    mecklenburg_trendValue=d.Mecklenburg;
     g.select("#niedersachsen").style("fill", getcolor(d.Niedersachsen));
+    niedersachsen_trendValue=d.Niedersachsen;
     g.select("#nrw").style("fill", getcolor(d.Nordrhein));
+    nrw_trendValue=d.Nordrhein;
     g.select("#rheinland").style("fill", getcolor(d.Rheinland));
+    rheinland_trendValue=d.Rheinland;
     g.select("#saarland").style("fill", getcolor(d.Saarland));
+    saarland_trendValue=d.Saarland;
     g.select("#sachsen").style("fill", getcolor(d.Sachsen));
+    sachen_trendValue=d.Sachsen;
     g.select("#schleswig").style("fill", getcolor(d.Schleswig));
+    schleswig_trendValue=d.Schleswig;
     g.select("#thüringen").style("fill", getcolor(d.Thüringen));
+    thüringen_trendValue=d.Thüringen;
     g.select("#baden").style("fill", getcolor(d.Baden));
+    baden_trendValue=d.Baden;
     g.select("#sachsen-anhalt").style("fill", getcolor(d.SachsenA));
+    sachsenA_trendValue=d.SachsenA;
     }
 
-});
+});}
 }
 
 function updateMapTime(text_week) {
     map_calendarweek = parseInt(text_week.slice(3, 5));
     map_year = parseInt(text_week.slice(6, 10));
-    adaptColor(map_calendarweek);
+    if(map_calendarweek<14){
+        scale_to_zero();
+        resetVirusValues();
+    }
+    update();
     
 }
 
 function updateGoogleTrend(currentWord) {
     map_currentWord= currentWord;
-    console.log("update GOOGLETREND");
+    
     getTrendValue();
     getTrendValueAverage();
+    checkboxLabel.innerHTML = 'Durchschnittswert über den gesamten Zeitraum für Keyword "'+ currentWord+ '":';
     setTimeout(function() {  
         update();
     }, 1000);
-    
-    //executeAsynchronously(
-    //    [getTrendValue(), getTrendValueAverage(), update()], 10);
-
 
 }
+
+
+var cursor_x = -1;
+var cursor_y = -1;
+document.onmousemove = function(event)
+{
+ cursor_x=event.pageX;
+ cursor_y=event.pageY;
+}
+
+function popUpWindowPositioning(d){ 
+    mypopup.style.left = cursor_x-1050;
+    mypopup.style.top = cursor_y-270;
+    mypopup.style.display = "block";  
+}
+
+
+ 
+  function hidePopupWindow() {
+    mypopup.style.display = "none";
+
+    hidePopupWindowStroke();
+  }
+  function hidePopupWindowStroke() {
+  
+    currentHoveredState.attr("stroke-width","1.25");
+    
+  }
+  
+  
+
+function showPopUpWindow(d) {
+
+    if (!zoomIn){
+
+    
+
+    var name= d.properties.name;
+    
+
+    if (name=="Baden-Württemberg"){
+        popUpBaden(d);
+    }
+    if (name=="Bayern"){
+        popUpBayern(d);
+    }
+    if (name=="Berlin"){
+        popUpBerlin(d);
+    }
+    if (name=="Bremen"){
+        popUpBremen(d);
+    }
+    if (name=="Hamburg"){
+        popUpHamburg(d);
+    }
+    if (name=="Hessen"){
+        popUpHessen(d);
+    }
+    if (name=="Niedersachsen"){
+        popUpNiedersachsen(d);
+    }
+    if (name=="Sachsen"){
+        popUpSachsen(d);
+    }
+    if (name=="Sachsen-Anhalt"){
+        popUpSachsenA(d);
+    }
+    if (name=="Saarland"){
+        popUpSaarland(d);
+    }
+    if (name=="Schleswig-Holstein"){
+        popUpSchleswig(d);
+    }
+    if (name=="Mecklenburg-Vorpommern"){
+        popUpMecklenburg(d);
+    }
+    if (name=="Thüringen"){
+       popUpThüringen(d);
+    }
+    if (name=="Nordrhein-Westfalen"){
+        popUpNRW(d);
+    }
+    if (name=="Brandenburg"){
+        popUpBrandenburg(d);
+    }
+    if (name=="Rheinland-Pfalz"){
+       popUpRheinland(d);
+    }
+    }
+  }
+  
+
+function popUpHamburg(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#hamburg");
+    d3.select("#hamburg").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Hamburg</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ hamburg_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+hamburg_virus_value;   
+    popUpWindowPositioning(d);    
+}}
+function popUpBremen(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#bremen");
+    d3.select("#bremen").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Bremen</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ bremen_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+bremen_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+function popUpBerlin(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#berlin");
+    d3.select("#berlin").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Berlin</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ berlin_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+berlin_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+function popUpBayern(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#bayern");
+    d3.select("#bayern").attr("stroke-width","3");
+    popUpDescription.innerHTML =  "<span style=color:#fc7034;font-weight:bold;>Bayern</span> <br />"+ "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ bayern_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+bayern_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+function popUpBaden(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#baden");
+    d3.select("#baden").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Baden_Württemberg</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ baden_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+baden_virus_value;    
+    popUpWindowPositioning(d); 
+   
+}}
+function popUpBrandenburg(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#brandenburg");
+    d3.select("#brandenburg").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Brandenburg</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ brandenburg_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+brandenburg_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+function popUpSachsen(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#sachsen");
+    d3.select("#sachsen").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Sachsen</span> <br />" + "Wert in KW " +map_calendarweek + 
+    " für "+ '"'+ map_currentWord +'"'+ ": "+ sachen_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+sachsen_virus_value;  
+    popUpWindowPositioning(d);    
+}}
+function popUpSachsenA(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#sachsen-anhalt");
+    d3.select("#sachsen-anhalt").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Sachsen-Anhalt</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ sachsenA_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+sachsenanhalt_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+function popUpNiedersachsen(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#niedersachsen");
+    d3.select("#niedersachsen").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Niedersachsen</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ niedersachsen_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+niedersachsen_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+
+function popUpRheinland(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#rheinland");
+    d3.select("#rheinland").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Rheinland-Pfalz</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ rheinland_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+rheinlandpfalz_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+function popUpNRW(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#nrw");
+    d3.select("#nrw").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Nordrhein-Westfalen</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ nrw_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+nrw_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+function popUpSaarland(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#saarland");
+    d3.select("#saarland").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Saarland</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ saarland_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+saarland_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+function popUpThüringen(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#thüringen");
+    d3.select("#thüringen").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Thüringen</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ thüringen_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+thueringen_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+function popUpMecklenburg(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#mecklenburg");
+    d3.select("#mecklenburg").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Mecklenburg-Vorpommern</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ mecklenburg_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+mecklvorp_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+function popUpSchleswig(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#schleswig");
+    d3.select("#schleswig").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Schleswig-Holstein</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ schleswig_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+schleswigholst_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+function popUpHessen(d){ 
+    if (!zoomIn){
+    currentHoveredState=d3.select("#hessen");
+    d3.select("#hessen").attr("stroke-width","3");
+    popUpDescription.innerHTML = "<span style=color:#fc7034;font-weight:bold;>Hessen</span> <br />" + "Wert in KW " + map_calendarweek + 
+    " für "+ '"'+ map_currentWord + '"'+ ": "+ hessen_trendValue+"<br /> Corona 14-Tages-Inzidenz: "+hessen_virus_value;  
+    popUpWindowPositioning(d);     
+}}
+
+
+
 function executeAsynchronously(functions, timeout) {
     for(var i = 0; i < functions.length; i++) {
       setTimeout(functions[i], timeout);
     }
   }
 
-            
+   function colorWeek0(){
+    g.select("#berlin").style("fill", getcolor(0));
+    g.select("#bremen").style("fill", getcolor(0));
+    g.select("#brandenburg").style("fill", getcolor(0));
+    g.select("#hamburg").style("fill", getcolor(0));
+    g.select("#hessen").style("fill", getcolor(0));
+    g.select("#mecklenburg").style("fill", getcolor(0));
+    g.select("#niedersachsen").style("fill", getcolor(0));
+    g.select("#nrw").style("fill", getcolor(0));
+    g.select("#rheinland").style("fill", getcolor(0));
+    g.select("#saarland").style("fill", getcolor(0));
+    g.select("#sachsen").style("fill", getcolor(0));
+    g.select("#schleswig").style("fill", getcolor(0));
+    g.select("#thüringen").style("fill", getcolor(0));
+    g.select("#baden").style("fill", getcolor(0));
+    g.select("#sachsen-anhalt").style("fill", getcolor(0));
+    g.select("#bayern").style("fill", getcolor(0));
+    bayern_trendValue=0;
+    baden_trendValue=0;
+    brandenburg_trendValue=0;
+    berlin_trendValue=0;
+    bremen_trendValue=0;
+    hamburg_trendValue=0;
+    hessen_trendValue=0;
+    nrw_trendValue=0;
+    niedersachsen_trendValue=0;
+    sachen_trendValue=0;
+    sachsenA_trendValue=0;
+    rheinland_trendValue=0;
+    schleswig_trendValue=0;
+    mecklenburg_trendValue=0;
+    thüringen_trendValue=0;
+    saarland_trendValue=0;
+   }        
+   
+   function clickBayern(d) {
+       if (!zoomIn){
+        virusZoomInRightState(1);   
+       }else{
+           clickPath(currentClicked_virus);
+       }
+       
+   }
+   function clickBaden(d) {
+    if (!zoomIn){
+        virusZoomInRightState(0);   
+       }else{
+           clickPath(currentClicked_virus);
+       }
+ }
+ function clickBerlin(d) {
+    if (!zoomIn){
+        virusZoomInRightState(2);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickBrandenburg(d) {
+    if (!zoomIn){
+        virusZoomInRightState(3);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickBremen(d) {
+    if (!zoomIn){
+        virusZoomInRightState(4);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickHamburg(d) {
+    if (!zoomIn){
+        virusZoomInRightState(5);   
+       }else{
+           clickPath(currentClicked_virus);
+       }   
+ }
+ function clickHessen(d) {
+    if (!zoomIn){
+        virusZoomInRightState(6);   
+       }else{
+           clickPath(currentClicked_virus);
+       }   
+ }
+ function clickMecklenburg(d) {
+    if (!zoomIn){
+        virusZoomInRightState(7);   
+       }else{
+           clickPath(currentClicked_virus);
+       }  
+ }
+ function clickSaarland(d) {
+    if (!zoomIn){
+        virusZoomInRightState(11);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickSachsen(d) {
+    if (!zoomIn){
+        virusZoomInRightState(13);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickSachsenA(d) {
+    if (!zoomIn){
+        virusZoomInRightState(12);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickSchleswig(d) {
+    if (!zoomIn){
+        virusZoomInRightState(14);   
+       }else{
+           clickPath(currentClicked_virus);
+       }
+ }
+ function clickNRW(d) {
+    if (!zoomIn){
+        virusZoomInRightState(9);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickRheinland(d) {
+    if (!zoomIn){
+        virusZoomInRightState(10);   
+       }else{
+           clickPath(currentClicked_virus);
+       }
+ }
+ function clickThüringen(d) {
+    if (!zoomIn){
+        virusZoomInRightState(15);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+ function clickNiedersachsen(d) {
+    if (!zoomIn){
+        virusZoomInRightState(8);   
+       }else{
+           clickPath(currentClicked_virus);
+       }    
+ }
+
+
+   function virusZoomInRightState(index){
+    g.selectAll('path').each(function (d, i) { 
+        if (i==index){
+            currentClicked_virus=d;
+            clickPath(d);
+            }
+        });
+   }
+
 
 function clickPath(d) {
+   
+    
   var x = widthMap/2,
       y = heightMap/2,
       k = 1,
@@ -555,6 +1155,7 @@ function clickPath(d) {
 
   g.selectAll("text")
     .remove();
+  zoomIn = false;
   if ((focused === null) || !(focused === d)) {
     var centroid = geoPath.centroid(d),
         x = +centroid[0],
@@ -572,6 +1173,10 @@ function clickPath(d) {
       .style("fill","black")
       .style("font-family","Times New Roman")
       .on("click", clickText);
+    // virus icons to zero
+    scale_to_zero();
+    resetVirusValues();
+    zoomIn = true;
   } else {
     focused = null;
   };
@@ -583,6 +1188,10 @@ function clickPath(d) {
       .duration(1000)
       .attr("transform", "translate("+ (widthMap/2) +","+ (heightMap/2) +")scale("+ k +")translate("+ (-x) +","+ (-y) +")")
       .style("stroke-width", 1.75/k +"px");
+  // update virus icons after zoom out 
+  if (!zoomIn) {
+    setTimeout(() => {update_virusicons(currentDate)}, 1000);
+  }
 }
 
 
@@ -598,6 +1207,8 @@ function clickText(d) {
       .style("stroke-width", 1.00+"px");
 }
 
+/*scales a specific icon to a given value by scaling it and adjusting its center*/
+
 function scaleIcon(icon, value) {
   var icon_bbox = icon.node().getBBox();
   var icon_x = icon_bbox.x;
@@ -605,6 +1216,8 @@ function scaleIcon(icon, value) {
   var icon_scaling_factor = value;
   icon.attr('transform', 'translate('+(1 - icon_scaling_factor) * (icon_x+50)+', '+(1 - icon_scaling_factor) * (icon_y+50)+') scale('+icon_scaling_factor+')');
 }
+
+/* updates all virus-icons according to a given week */
 
 function update_virusicons(week_text) {
    setVirusIconScaleByCases(week_text, "Bayern", bayern_virus);
@@ -624,35 +1237,86 @@ function update_virusicons(week_text) {
    setVirusIconScaleByCases(week_text, "Brandenburg", brandenburg_virus);
    setVirusIconScaleByCases(week_text, "Sachsen-Anhalt", sachsenanhalt_virus);
 }
+
+/* This function is called per region to resize the virus icon according to the currentdate selected by the slider.
+    The currentdate is reformatted to fit the format in the data. Then it is searched for an element that matches the given region
+    and date and if existing, the 14-day-case rate is retrieved and used to scale the virus-icon of that region as well
+    as to update the regions value for the pop-up.*/
+
 function  setVirusIconScaleByCases(currentDate, region, icon){
   germanyData.forEach(element => {
   if(currentDate != null){
+    //reformat date of slider to match format in data
     var newDateFormat = currentDate.toString().substring(6,10)+"-"+currentDate.toString().charAt(1)+currentDate.toString().substring(3,5);
-    if(newDateFormat.includes("2019")){
-      scale_to_zero();
-    }
-    else if((element.region_name == region) && (element.year_week == newDateFormat)){
+    
+    if((element.region_name == region) && (element.year_week == newDateFormat)){
 
-      if((element.rate_14_day_per_100k != null) && (element.rate_14_day_per_100k >0)){
-        //console.log("Found cases: "+element.rate_14_day_per_100k/300);
-        scaleIcon(icon, Math.sqrt((element.rate_14_day_per_100k/Math.PI))/10);
-      } else {
+        if((element.rate_14_day_per_100k !== undefined) && (element.rate_14_day_per_100k >0)){
+            //update value for popup
+            updateVirusValue(region, element.rate_14_day_per_100k);
+            //scale icon to make surface area fit the case value
+            scaleIcon(icon, Math.sqrt((element.rate_14_day_per_100k/Math.PI))/10);
+        } else {
+            scaleIcon(icon, 0);
+        }
+    }
+    else if((element.region_name == region) && (element.year_week == undefined)){
         scaleIcon(icon, 0);
+    } 
+    else if(newDateFormat.includes("2019")){
+        scale_to_zero();
       }
-      //return element.rate_14_day_per_100k;
-    }
-    else{
-      //console.log("-------------couldnt find a match for "+region)
-    }
-  }
-  else{
-    //console.log("-------------currentdate is null")
-    return 0;
   }
 });
 }
 
+/* updates the virus values per region that are displayed in the popup according to a given value that is rounded to two decimals */
 
+function updateVirusValue(region, value){
+    switch(region){
+        case "Bayern": bayern_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Baden-Wurttemberg": baden_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Nordrhein-Westfalen": nrw_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Hessen": hessen_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Niedersachsen": niedersachsen_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Schleswig-Holstein": schleswigholst_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Mecklenburg-Vorpommern": mecklvorp_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Saarland": saarland_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Rheinland-Pfalz": rheinlandpfalz_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Thuringen": thueringen_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Sachsen": sachsen_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Hamburg": hamburg_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Bremen": bremen_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Berlin": berlin_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Brandenburg": brandenburg_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+        case "Sachsen-Anhalt": sachsenanhalt_virus_value = Math.round((value + Number.EPSILON) * 100) / 100; break;
+
+    }
+}
+
+/* resets all virus values that are displayed in the pop-up to zero */
+
+function resetVirusValues(){
+  
+    bayern_virus_value = 0;
+    baden_virus_value = 0;
+    nrw_virus_value = 0;
+    hessen_virus_value = 0;
+    niedersachsen_virus_value = 0;
+    schleswigholst_virus_value = 0;
+    mecklvorp_virus_value = 0;
+    saarland_virus_value = 0;
+    rheinlandpfalz_virus_value = 0;
+    thueringen_virus_value = 0;
+    sachsen_virus_value = 0;
+    hamburg_virus_value = 0;
+    berlin_virus_value = 0;
+    brandenburg_virus_value = 0;
+    sachsenanhalt_virus_value = 0;
+
+}
+
+/* scales all virus icons to zero */
 
 function scale_to_zero() {
   scaleIcon(bayern_virus, 0);

@@ -5,32 +5,29 @@
         <link rel="icon" href="./img/favicon.png?v=2" type="image/x-icon">
         <link rel="shortcut icon" href="./img/favicon.png?v=2" type="image/x-icon">
         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.1/css/bootstrap-slider.min.css">
+        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
         <!--link rel="stylesheet" href="slider.css"-->
-        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://d3js.org/d3.v3.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.1/bootstrap-slider.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script src="https://d3js.org/d3.v4.js"></script>
-        <!--script src="slider.js"></script-->
+        <script src="https://d3js.org/d3.v4.min.js" crossorigin="anonymous"></script>
+        <script src="https://d3js.org/d3.v4.js" crossorigin="anonymous"></script>
+
+       
     <script src="dropdownclass.js"></script>
     </head>
-    <body">
+    <body>
     <div id="newspaper">
     <div id="header">
-    <h1>
-    
-    </h1>
-    <div><h1><p style = "font-family:'Times New Roman', Times, serif; font-size: larger;">InfoVis News</p></h1></div>
-    <h1>
-        
-    </h1>
-    <div><p  style = "font-family:'Times New Roman', Times, serif">Zeitungsmeldungen aus 2019 und aus einem verrückten Jahr</p></div>
+    <h1>InfoVis News</h1>
+    <p>Zeitungsmeldungen aus 2019 und aus einem verrückten Jahr (2020)</p>
     </div><!--Header Ende-->
 
     <div id="interactive">
@@ -97,7 +94,15 @@
         </div>
     </div><!--Interactive Ende-->
     <div id="content-wrapper">
-    <div id="left">    
+    <div id="left">
+    <svg id="infoGraph" height=25 width=25></svg> 
+    Google-Trend Daten:</br>
+    <div id="graphDescription">
+        Der Graph basiert auf genormte Daten von Google-Trend. Auf einer Skala von 0 bis 100 wird dargestellt, 
+        wie häufig im Vergleich ein bestimmter Begriff gegoogelt wurde.</br>Es können zwei Begriffe jeweils miteinander verglichen werden.
+    </div><script src="graphIcon.js"></script> 
+    <span style = "color:midnightblue"><label id="selected1">corona</label></span>
+    <span style = "color:maroon"><label id="selected2"></label></span>
     <div id="graph">
         <script src="graph.js"></script>
     </div>
@@ -116,8 +121,8 @@
     </div>
     <script src="articles.js"></script>
 
-    <h1 id="current-week"> Current week: </h1>
-    <h2 id="coronacount"> #Corona Cases: </h2>
+    <!--<h1 id="current-week"> Current week: </h1>
+    <h2 id="coronacount"> #Corona Cases: </h2>-->
     
     <div id = "coronavirus">
     </div>
@@ -126,15 +131,50 @@
     
     <div id="right">
     <div id="map">
+      <div id="map_top_checkbox">
+        <input type="checkbox" id="myCheckbox"> <label id="checkboxLabel">Durchschnittswert über den gesamten Zeitraum für Keyword "Corona":</label></div>
         <div class="tempcenter">
-            <input type="checkbox" id="myCheckbox"> Zeige Durschnittswert pro Bundesland für diesen Trend
-            <script src="map.js"></script>    
+            <div id="popupWindows">
+                <h3 id="popupHeadlineBL">
+                    Beispiel
+                </h3>
+                <p >Interesse im zeitlichen Verlauf</p>
+               </div>
+            <script src="map.js"></script>   
+           
          </div>
-    </div>
+    
     <div id="funnytexts">
-    <p>Die Leute in Baden-Wüttenberg finden Klopapier am coolsten.</p>
-    <p>Mecklenburg-Vorpommern will nichts davon wissen</p>
+        
+        
+       
+        <svg id="my_dataviz" height=400 width=250></svg>
+        <div id="popupLegend">
+			<h3 id="colorLetters">
+                <span style='color: #800026'>F</span>
+                <span style='color: #800026'>a</span>
+                <span style='color: #b40325'>r</span>
+                <span style='color: #b40325'>b</span>
+                <span style='color: #d91620'>l</span>
+                <span style='color: #f23d26'>e</span>
+                <span style='color: #f23d26'>g</span>
+                <span style='color: #fc7034'>e</span>
+                <span style='color: #fc7034'>n</span>
+                <span style='color: #fd9d43'>d</span>
+                <span style='color: #fd9d43'>e</span>
+            </h3>
+			<p>Interesse im zeitlichen Verlauf</p>
+			<p id="legendDescription">Die Werte geben das Suchinteresse relativ zum höchsten Punkt im Diagramm für die jeweiligen Bundesländer im festgelegten Zeitraum an. Der Wert 100 steht für die höchste Beliebtheit dieses Suchbegriffs. Der Wert 50 bedeutet, dass der Begriff halb so beliebt ist und der Wert 0 bedeutet, dass für diesen Begriff nicht genügend Daten vorlagen.</p>
+        </div>
+        <div id="popupPercentages">
+			
+			<p id="percentageBubbleText"><10</p>
+		 </div>
+        <script src="legendColor.js"></script>
+        
+    
     </div>
+</div>
     <div id="tagcloud"></div>
     <script src="wordcloud.js"></script>
     </div><!--right Ende-->

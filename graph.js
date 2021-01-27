@@ -1,11 +1,11 @@
-var selectedYear = "2020" // 2019 oder 2020 oder ""
-
-// bug: netflix + maske
-
+// preselect 2020
+var selectedYear = "2020" 
 replace_graph("corona", "keines", true, null, selectedYear);
 
+// when slider moves or keyword changes, replace graph with new data
 function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
 
+  // select data path and first date depending on chosen year
   var yearPath = ""
   var firstDate = new Date()
   if(year == "") {
@@ -19,10 +19,12 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
     firstDate = new Date("2020-01-01")
   }
 
+  // set default date for focus line 
   if(keyDate == null) {
     keyDate = firstDate
   }
 
+  // calculate ratio to compare two keywords
   ratio = 1.0
   secondKeyChosen = (keyword2 != "keines")
   var path = "data/keywords/"+yearPath
@@ -42,25 +44,27 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
         ratio = parseFloat(keywords[0])/parseFloat(keywords[1])
       }
     )
-    //ratio = parseFloat(keywords[0])/parseFloat(keywords[1])
   }
+
+  // reset graph to zero before filling it with new data
   document.getElementById("graph").innerHTML = "";
+
   // set the dimensions and margins of the graph
-  var margin = {top: 30, right: 40, bottom: 60, left: 30}, // top: 10
+  var margin = {top: 30, right: 40, bottom: 60, left: 30}, 
       width = 600 - margin.left - margin.right,
       height = 300 - margin.top - margin.bottom;
 
   // append the svg object to the body of the page
   var svg = d3.select("#graph")
     .append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
+      .attr("viewBox", `0 0 600 300`)
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  //Read the data
+  // read the data
   d3.csv(path+keyword1+".csv",
     function(d){
+      // preprocess data
       if(year != "") {
         if (d.date.slice(0,4) == year) {
           num = "0"
@@ -86,9 +90,8 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
       }
     },
     function(data) {
-    // Add X axis --> it is a date format
-      var x = d3.scaleTime() //scaleTime
-        //.domain([1,100])
+    // add X axis
+      var x = d3.scaleTime() 
         .domain(d3.extent(data, function(d) {return d.date;  }))
         .range([ 0, width ]);
       if (year != "") { 
@@ -106,9 +109,8 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
           .call(d3.axisBottom(x))
       }
 
-      // Add Y axis
+      // add Y axis
       var y = d3.scaleLinear()
-        //.domain([0, 100])
         .domain([0, d3.max(data, function(d) { return +d.value;  })])
         .range([ height, 0 ]);
       if(!secondKeyChosen || (secondKeyChosen && Math.round(ratio*1000) >= 1000)) {
@@ -116,7 +118,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
         .call(d3.axisLeft(y));
       }
 
-      // Add first line
+      // add first graph line
       svg.append("path")
         .datum(data)
         .attr("fill", "none")
@@ -126,7 +128,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
         .x(function(d) { return x(d.date) })
         .y(function(d) { if(ratio < 1.0) {return y(d.value*ratio)} else { return y(d.value) } }))
 
-
+      // add selected date to focus line
       var focusTextDate = svg
         .append('g')
         .append('text')
@@ -135,10 +137,10 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
           .attr("alignment-baseline", "middle")
           .attr("y", -10)
 
-       // This allows to find the closest X index of the mouse:
+       // find the closest X index of the mouse
        var bisect = d3.bisector(function(d) { return x(d.date); }).left;
 
-       // Create the circle that travels along the curve of chart
+       // add focus line
        var focus = svg
          .append('g')
          .append('line')
@@ -148,7 +150,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
            .attr('r', 8.5)
            .style("opacity", 0)
  
-       // Create the text that travels along the curve of chart
+       // add text regarding first graph line on focus line
        var focusText = svg
          .append('g')
          .append('text')
@@ -157,10 +159,11 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
            .attr("alignment-baseline", "left")
            .attr("fill", "midnightblue")
       
-      // Add second line
+      // add second graph line, read data
       if (secondKeyChosen) {
         d3.csv(path+keyword2+".csv",
         function(d){
+          // preprocess data 
           if(year != "") {
             if (d.date.slice(0,4) == year) {
               num = "0"
@@ -194,9 +197,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
                 .call(d3.axisLeft(y));
             }
 
-            // This allows to find the closest X index of the mouse:
-            //var bisect2 = d3.bisector(function(d) { return x(d.date); }).left;
-
+            // add text regarding first graph line on focus line
             var focusText1 = svg
               .append('g')
               .append('text')
@@ -205,7 +206,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
                 .attr("alignment-baseline", "left")
                 .attr("fill", "midnightblue")
 
-            // Create the circle that travels along the curve of chart
+            // add focus line
             var focus2 = svg
               .append('g')
               .append('line')
@@ -215,7 +216,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
                 .attr('r', 8.5)
                 .style("opacity", 0)
 
-            // Create the text that travels along the curve of chart
+            // add text regarding second graph line on focus line
             var focusText2 = svg
               .append('g')
               .append('text')
@@ -224,7 +225,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
                 .attr("alignment-baseline", "left")
                 .attr("fill", "maroon")
 
-            // Add first line
+            // add second graph line
             svg.append("path")
               .datum(data2)
               .attr("fill", "none")
@@ -234,9 +235,8 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
                 .x(function(d) { return x(d.date) })
                 .y(function(d) { return y(d.value) })
               )
-            
 
-            // Create a rect on top of the svg area: this rectangle recovers mouse position
+            // create a rect on top of the svg area to cover mouse position
             svg
               .append('rect')
               .style("fill", "none")
@@ -247,12 +247,12 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
               .on('mousemove', mousemove2)
               .on('mouseout', mouseout2);  
               
-              if(showFocusLine) {
-                mouseover2()
-                showFocus2()
-              }
+            if(showFocusLine) {
+              mouseover2()
+              showFocus2()
+            }
 
-            // What happens when the mouse move -> show the annotations at the right positions.
+            // show focus line and text
             function mouseover2() {
               focus2.style("opacity", 0.5)
               focusTextDate.style("opacity", 0.8)
@@ -263,7 +263,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
             }
 
             function mousemove2() {
-              // recover coordinate we need
+              // recover coordinate 
               var x0 = x.invert(d3.mouse(this)[0]);
               var i = bisect(data2, x(x0), 1);
               selectedData2 = data2[i]
@@ -275,6 +275,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
                 if(secondKeyChosen && ratio > 1.0) {
                   yVal1 = selectedData1.value
                   yVal2 = selectedData2.value
+                  // focus text should not be display to high
                   if (yVal1 > 90) {
                     adjustHeight1 = yVal1 - 90
                   }
@@ -311,9 +312,9 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
                     .html(selectedData1.date.toLocaleDateString('de-DE'))
                       .attr("x", x(selectedData1.date))
                   focusText1
-                    .html(Math.round(selectedData1.value) + "%") // /ratio
+                    .html(Math.round(selectedData1.value) + "%") 
                       .attr("x", x(selectedData1.date)-40)
-                      .attr("y", y(selectedData1.value) + adjustHeight1) // .attr("y", y(selectedData1.value/ratio)+15)
+                      .attr("y", y(selectedData1.value) + adjustHeight1) 
                   focusText2
                   .html(selectedData2.value + "%")
                     .attr("x", x(selectedData2.date)+10)
@@ -321,16 +322,14 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
                 }
               }
             }
+
+            // reset focus line position
             function mouseout2() {
-              /*focus2.style("opacity", 0)
-              focusTextDate.style("opacity", 0)
-              focusText1.style("opacity", 0)
-              focusText2.style("opacity", 0)*/
               showFocus2()
             }
 
             function showFocus2() {
-              // recover coordinate we need
+              // recover coordinate
               var x0 = keyDate;
               var i = bisect(data2, x(x0), 1);
               selectedData2 = data2[i]
@@ -378,9 +377,9 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
                     .html(selectedData1.date.toLocaleDateString('de-DE'))
                       .attr("x", x(selectedData1.date))
                   focusText1
-                    .html(Math.round(selectedData1.value) + "%") // /ratio
+                    .html(Math.round(selectedData1.value) + "%")
                       .attr("x", x(selectedData1.date)-40)
-                      .attr("y", y(selectedData1.value) + adjustHeight1) // .attr("y", y(selectedData1.value/ratio)+15)
+                      .attr("y", y(selectedData1.value) + adjustHeight1) 
                   focusText2
                   .html(selectedData2.value + "%")
                     .attr("x", x(selectedData2.date)+10)
@@ -397,19 +396,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
         }
       }
 
-      // Add first line
-      /*svg.append("path")
-        .datum(data)
-        .attr("fill", "none")
-        .attr("stroke", "steelblue")
-        .attr("stroke-width", 1.5)
-        .attr("d", d3.line()
-        .x(function(d) { return x(d.date) })
-        .y(function(d) { if(ratio < 1.0) {return y(d.value*ratio)} else { return y(d.value) } }))*/
-
-      
-
-      // Create a rect on top of the svg area: this rectangle recovers mouse position
+      // rect on top of the svg area to cover mouse position
       svg
         .append('rect')
         .style("fill", "none")
@@ -420,7 +407,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
         .on('mousemove', mousemove)
         .on('mouseout', mouseout);
 
-      // What happens when the mouse move -> show the annotations at the right positions.
+      // show focus text when mouse in graph
       function mouseover() {
         focus.style("opacity", 0.5)
         focusTextDate.style("opacity", 0.7)
@@ -428,7 +415,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
       }
 
       function mousemove() {
-        // recover coordinate we need
+        // recover coordinate
         var x0 = x.invert(d3.mouse(this)[0]);
         var i = bisect(data, x(x0), 1);
         selectedData = data[i]
@@ -467,15 +454,13 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
           }
         }
       }
+      // reset focus line position
       function mouseout() {
-        /*focus.style("opacity", 0)
-        focusTextDate.style("opacity", 0)
-        focusText.style("opacity", 0)*/
         showFocus()
       }
 
       function showFocus() {
-        // recover coordinate we need
+        // recover coordinate 
         var x0 = keyDate;
         var i = bisect(data, x(x0), 1);
         selectedData = data[i]
