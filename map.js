@@ -243,7 +243,7 @@ d3.json("data/mapData/statesGermany.json", function(collection) {
   .on("click", clickThüringen);
   hamburg_virus = svg.append('image')
   .attr('xlink:href', 'coronavirus-centered.svg')
-  .attr("id", "hamburgVirus")
+  //.attr("id", "hamburgVirus")
   .attr('width', 100)
   .attr('height', 100)
   .attr("x", "180")
@@ -896,7 +896,7 @@ function showPopUpWindow(d) {
 
 function popUpHamburg(d){ 
     document.getElementById("hamburg").style.cursor = "pointer";
-    document.getElementById("hamburgVirus").style.cursor = "pointer";
+    document.getElementById("virusHamburg").style.cursor = "pointer";
     if (!zoomIn){
     currentHoveredState=d3.select("#hamburg");
     d3.select("#hamburg").attr("stroke-width","3");
