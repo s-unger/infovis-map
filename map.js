@@ -45,6 +45,7 @@
     map_year=0;
     map_currentWord="corona";
     checkboxLabel= document.getElementById("checkboxLabel");
+    //description_legend_map= document.getElementById("popupLegend");
     berlinTest=null;
     x_map=0;
     y_map=0;
@@ -795,6 +796,7 @@ function updateGoogleTrend(currentWord) {
     getTrendValue();
     getTrendValueAverage();
     checkboxLabel.innerHTML = 'Durchschnittswert über den gesamten Zeitraum für Keyword "'+ currentWord+ '":';
+    changelegendDescription(currentWord);
     setTimeout(function() {  
         update();
     }, 1000);

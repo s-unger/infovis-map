@@ -82,6 +82,11 @@ function hidePopupLegend() {
   popupLegend.style.display = "none";
 }
 
+function changelegendDescription(currentSelectedWordMap){
+  legendDescription.innerHTML = 'Die Werte geben das Suchinteresse in Google für das ausgwählte Keyword1 "'+ currentSelectedWordMap+ '" an. Dabei wird das Suchinteresse für jedes Bundesland relativ zum höchsten Punkt im Diagramm im festgelegten Zeitraum angegeben. Der Wert 100 steht für die höchste Beliebtheit dieses Suchbegriffs. Der Wert 50 bedeutet, dass der Begriff halb so beliebt ist und der Wert 0 bedeutet, dass für diesen Begriff nicht genügend Daten vorlagen.';
+  
+}
+
 function showPopupPercentages(d){
   var circleId= d.srcElement.id;
   //console.log("HOVER BUBBLE");
