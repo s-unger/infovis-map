@@ -13,6 +13,7 @@ Hosted on this site: https://s-unger.github.io/infovis-map/
   * synchronises with time-slider
   * synchronises with first keyword from dropdown
   * states are coloured differently depending on the popularity of the search term in that state
+  * a colour legend shows via a hover function what the different colours represent
   * zoom on state is possible
   * average value per state within the chosen time period can be toggled
   * size of virus-icon on each state symbolise corona-cases in that state 
