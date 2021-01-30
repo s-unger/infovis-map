@@ -4,7 +4,7 @@ graphInfoIcon.append('text')
   .style('font-family', 'Linearicons-Free')
   .attr('font-size', '20px' )
   .text('\ue87d')
-  .attr('x',0)
+  .attr('x',4)
   .attr('y',20)
   .attr("id", "graphIcon")
   .attr("fill","black");
