@@ -306,6 +306,9 @@ float: left;
   background-color: white;
   border-radius: 6px;
   position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
   display: none;
 }
 

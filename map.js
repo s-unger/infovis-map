@@ -812,9 +812,9 @@ document.onmousemove = function(event)
  cursor_y=event.pageY;
 }
 
-function popUpWindowPositioning(d){ 
-    mypopup.style.left = cursor_x-1050;
-    mypopup.style.top = cursor_y-270;
+function popUpWindowPositioning(d){
+    mypopup.style.left = cursor_x+"px";
+    mypopup.style.top = cursor_y+"px";
     mypopup.style.display = "block";  
 }
 
