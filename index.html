@@ -1,11 +1,11 @@
-<DOCTYPE html>
+<!DOCTYPE html>
     <html>
     <head>
         <title>InfoVis News</title>
         <link rel="icon" href="./img/favicon.png?v=2" type="image/x-icon">
         <link rel="shortcut icon" href="./img/favicon.png?v=2" type="image/x-icon">
         <meta charset="utf-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+         <meta name="viewport" content="width=700, initial-scale=0.5"> 
         <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.1.1/css/bootstrap-slider.min.css">
@@ -23,7 +23,7 @@
        
     <script src="dropdownclass.js"></script>
     </head>
-    <body>
+    <body>    
     <div id="newspaper">
     <div id="header">
     <h1>InfoVis News</h1>
@@ -96,10 +96,10 @@
     <div id="content-wrapper">
     <div id="left">
     <svg id="infoGraph" height=25 width=25></svg> 
-    Google-Trend Daten:</br>
+    Google-Trend Daten:<br>
     <div id="graphDescription">
         Der Graph basiert auf genormte Daten von Google-Trend. Auf einer Skala von 0 bis 100 wird dargestellt, 
-        wie häufig im Vergleich ein bestimmter Begriff gegoogelt wurde.</br>Es können zwei Begriffe jeweils miteinander verglichen werden.
+        wie häufig im Vergleich ein bestimmter Begriff gegoogelt wurde.<br>Es können zwei Begriffe jeweils miteinander verglichen werden.
     </div><script src="graphIcon.js"></script> 
     <span style = "color:midnightblue"><label id="selected1">corona</label></span>
     <span style = "color:maroon"><label id="selected2"></label></span>
@@ -108,17 +108,11 @@
     </div>
         <!--<img src="img/graph-placeholder.png" />-->
 
-    <div id="articleview">
-    <h2>Deutsche hamstern Klopapier</h2>
-    <p>25.04.2020 - Süddeutsche Zeitung - Klopapier, Corona</p>
-    <p>Lorem Ipsum Dolor Sit Quantum amat</p>
-    <h2>Regierung beschließt Lockdown</h2>
-    <p>23.04.2020 - Süddeutsche Zeitung - Corona</p>
-    <p>Lorem Ipsum Dolor Sit Quantum amat</p>
-    <h2>Noch eine interessante Schlagzeile</h2>
-    <p>26.04.2020 - Neue Züricher Zeitung - Begriff</p>
-    <p>Lorem Ipsum Dolor Sit Quantum amat</p>
+    <i class="arrow up"></i>
+    <div id="scrollhider">
+    <div id="articleview"></div>
     </div>
+    <i class="arrow down"></i>
     <script src="articles.js"></script>
 
     <!--<h1 id="current-week"> Current week: </h1>
@@ -131,24 +125,23 @@
     
     <div id="right">
     <div id="map">
-      <div id="map_top_checkbox">
-        <input type="checkbox" id="myCheckbox"> <label id="checkboxLabel">Durchschnittswert über den gesamten Zeitraum für Keyword "Corona":</label></div>
-        <div class="tempcenter">
-            <div id="popupWindows">
+    <div id="popupWindows">
                 <h3 id="popupHeadlineBL">
                     Beispiel
                 </h3>
                 <p >Interesse im zeitlichen Verlauf</p>
                </div>
+      <div id="map_top_checkbox">
+        <input type="checkbox" id="myCheckbox"> <label id="checkboxLabel">Durchschnittswert über den gesamten Zeitraum für Keyword "Corona":</label></div>
+        <div class="tempcenter">
             <script src="map.js"></script>   
            
          </div>
     
-    <div id="funnytexts">
         
         
        
-        <svg id="my_dataviz" height=400 width=250></svg>
+        <svg id="my_dataviz" height=400 width=50></svg>
         <div id="popupLegend">
 			<h3 id="colorLetters">
                 <span style='color: #800026'>F</span>
@@ -164,17 +157,17 @@
                 <span style='color: #fd9d43'>e</span>
             </h3>
 			<p>Interesse im zeitlichen Verlauf</p>
-			<p id="legendDescription">Die Werte geben das Suchinteresse relativ zum höchsten Punkt im Diagramm für die jeweiligen Bundesländer im festgelegten Zeitraum an. Der Wert 100 steht für die höchste Beliebtheit dieses Suchbegriffs. Der Wert 50 bedeutet, dass der Begriff halb so beliebt ist und der Wert 0 bedeutet, dass für diesen Begriff nicht genügend Daten vorlagen.</p>
+			<p id="legendDescription">Die Werte geben das Suchinteresse in Google für das ausgwählte Keyword1 "Corona" an. Dabei wird das Suchinteresse für jedes Bundesland relativ zum höchsten Punkt im Diagramm im festgelegten Zeitraum angegeben. Der Wert 100 steht für die höchste Beliebtheit dieses Suchbegriffs. Der Wert 50 bedeutet, dass der Begriff halb so beliebt ist und der Wert 0 bedeutet, dass für diesen Begriff nicht genügend Daten vorlagen.</p>
         </div>
         <div id="popupPercentages">
 			
-			<p id="percentageBubbleText"><10</p>
+			<p id="percentageBubbleText">	&#060;10</p>
 		 </div>
         <script src="legendColor.js"></script>
         
     
     </div>
-</div>
+
     <div id="tagcloud"></div>
     <script src="wordcloud.js"></script>
     </div><!--right Ende-->

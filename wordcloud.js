@@ -12,11 +12,14 @@ function draw_wordcloud(weekandyear_text) {
     calendarweek = parseInt(weekandyear_text.slice(3, 5));
     year = parseInt(weekandyear_text.slice(6, 10));
     if (year == 2020) {
-      calendarweek = calendarweek+51;
+      calendarweek = calendarweek+52;
+      if (calendarweek == 104) {
+        calendarweek = 103;
+      }
     }
     if (calendarweek != wordcloud_last_calendar_week) {
       wordcloud_last_calendar_week = calendarweek;
-      document.getElementById("tagcloud").innerHTML = "<p></br>Meistgesucht in dieser Woche</p>";
+      document.getElementById("tagcloud").innerHTML = "<h3>Meistgesucht in dieser Woche</h3>";
       
       // List of words
       var myWords = [{word: "alkohol", size: wordcloud_files[0][calendarweek].value}, {word: "attila hildmann", size: wordcloud_files[1][calendarweek].value}, {word: "bananenbrot", size: wordcloud_files[2][calendarweek].value}, {word: "baumarkt", size: wordcloud_files[3][calendarweek].value}, {word: "BER", size: wordcloud_files[4][calendarweek].value}, {word: "bill gates", size: wordcloud_files[5][calendarweek].value}, {word: "corona", size: wordcloud_files[5][calendarweek].value}, {word: "desinfektionsmittel", size: wordcloud_files[5][calendarweek].value}, {word: "drosten", size: wordcloud_files[5][calendarweek].value}, {word: "homeworkout", size: wordcloud_files[5][calendarweek].value}, {word: "klopapier", size: wordcloud_files[5][calendarweek].value}, {word: "kneipentour", size: wordcloud_files[5][calendarweek].value}, {word: "maske", size: wordcloud_files[5][calendarweek].value}, {word: "merkel", size: wordcloud_files[5][calendarweek].value}, {word: "netflix", size: wordcloud_files[5][calendarweek].value}, {word: "oktoberfest", size: wordcloud_files[5][calendarweek].value}, {word: "onlinesemester", size: wordcloud_files[5][calendarweek].value}, {word: "querdenken", size: wordcloud_files[5][calendarweek].value}, {word: "söder", size: wordcloud_files[5][calendarweek].value}, {word: "zoom", size: wordcloud_files[5][calendarweek].value}]
@@ -75,7 +78,7 @@ function draw_wordcloud(weekandyear_text) {
         .on("mouseout", function(d) {       
           d3.select(this).style("cursor", "default");
         })
-        .style("font-size", function(d) { return d.size; })
+        .attr("font-size", function(d) { return d.size; })
         .style("fill", "#000000")
         .attr("text-anchor", "middle")
         .style("font-family", "'Times New Roman', Times, serif")
