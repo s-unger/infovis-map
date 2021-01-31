@@ -18,8 +18,8 @@ svgLegend.append('text')
    .style('font-family', 'Linearicons-Free')
    .attr('font-size', '20px' )
    .text('\ue87d')
-   .attr('x',15)
-   .attr('y',270)
+   .attr('x',10)
+   .attr('y',275)
    .attr("id", "infoIcon")
    .attr("fill","black");
 
