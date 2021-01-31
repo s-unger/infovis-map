@@ -12,7 +12,10 @@ function draw_wordcloud(weekandyear_text) {
     calendarweek = parseInt(weekandyear_text.slice(3, 5));
     year = parseInt(weekandyear_text.slice(6, 10));
     if (year == 2020) {
-      calendarweek = calendarweek+51;
+      calendarweek = calendarweek+52;
+      if (calendarweek == 104) {
+        calendarweek = 103;
+      }
     }
     if (calendarweek != wordcloud_last_calendar_week) {
       wordcloud_last_calendar_week = calendarweek;
