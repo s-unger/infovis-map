@@ -108,18 +108,16 @@ max-width: 600px;
 
 }
 
-#map  .tempcenter {
+.tempcenter {
 display: inline-block;
 text-align: center;
 position: relative;
-top: 0;
-left: 140;
 width: 80%;
 max-width: 320px;
-margin-left: auto;
-margin-right: auto;
 text-align: center;
 z-index: 1;
+float: left;
+margin-left: 20%;
 }
 
 #map_top_checkbox {
@@ -147,6 +145,7 @@ font-family:'Times New Roman', Times, serif;
 display: inline-block;
 vertical-align:top;
 text-align: center;
+background-color: green;
 }
 
 #tagcloud {
