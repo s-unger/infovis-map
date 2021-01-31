@@ -72,9 +72,13 @@ bubble10.addEventListener("mouseout", hidePopupPercentages);
 function showPopupLegend() {
   svgLegend.select("#infoIcon").style("fill", "red");
   var iconPos = infoIcon.getBoundingClientRect();
-  popupLegend.style.left = (iconPos.left -420) + "px";
-  popupLegend.style.top = (window.scrollY + iconPos.top - 20) + "px";
   popupLegend.style.display = "block";
+  leftPoint = iconPos.left
+  if (iconPos.left < (popupLegend.getBoundingClientRect().width + 180)) { // fix for mobile phone zoom
+    leftPoint = (popupLegend.getBoundingClientRect().width + 180);
+  }
+  popupLegend.style.left = (leftPoint - popupLegend.getBoundingClientRect().width - 20) + "px"; //subtract 420 
+  popupLegend.style.top = (window.scrollY + iconPos.top - 20) + "px";
 }
 
 function hidePopupLegend() {
