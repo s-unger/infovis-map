@@ -1,24 +1,25 @@
 var svgLegend = d3.select("#my_dataviz")
+  .attr("viewBox", "0 0 40 250");
 
 
-svgLegend.append("text").attr("x", 15).attr("y", 60).text("0%").style("font-size", "15px").attr("alignment-baseline","middle")
-svgLegend.append("circle").attr("cx",20).attr("cy",90).attr("r", 7.5).attr("id", "bubble1").style("fill", "#ffffcc");
-svgLegend.append("circle").attr("cx",20).attr("cy",110).attr("r",7.5).attr("id", "bubble2").style("fill", "#ffefa5")
-svgLegend.append("circle").attr("cx",20).attr("cy",130).attr("r",7.5).attr("id", "bubble3").style("fill", "#fedc7f")
-svgLegend.append("circle").attr("cx",20).attr("cy",150).attr("r", 7.5).attr("id", "bubble4").style("fill", "#febf5b")
-svgLegend.append("circle").attr("cx",20).attr("cy",170).attr("r", 7.5).attr("id", "bubble5").style("fill", "#fd9d43")
-svgLegend.append("circle").attr("cx",20).attr("cy",190).attr("r", 7.5).attr("id", "bubble6").style("fill", "#fc7034")
-svgLegend.append("circle").attr("cx",20).attr("cy",210).attr("r", 7.5).attr("id", "bubble7").style("fill", "#f23d26")
-svgLegend.append("circle").attr("cx",20).attr("cy",230).attr("r", 7.5).attr("id", "bubble8").style("fill", "#d91620")
-svgLegend.append("circle").attr("cx",20).attr("cy",250).attr("r", 7.5).attr("id", "bubble9").style("fill", "#b40325")
-svgLegend.append("circle").attr("cx",20).attr("cy",270).attr("r", 7.5).attr("id", "bubble10").style("fill", "#800026")
-svgLegend.append("text").attr("x", 0).attr("y", 305).text("100%").style("font-size", "15px").attr("alignment-baseline","middle")
+svgLegend.append("text").attr("x", 15).attr("y", 0).text("0%").style("font-size", "15px").attr("alignment-baseline","middle")
+svgLegend.append("circle").attr("cx",20).attr("cy",30).attr("r", 7.5).attr("id", "bubble1").style("fill", "#ffffcc");
+svgLegend.append("circle").attr("cx",20).attr("cy",50).attr("r",7.5).attr("id", "bubble2").style("fill", "#ffefa5")
+svgLegend.append("circle").attr("cx",20).attr("cy",70).attr("r",7.5).attr("id", "bubble3").style("fill", "#fedc7f")
+svgLegend.append("circle").attr("cx",20).attr("cy",90).attr("r", 7.5).attr("id", "bubble4").style("fill", "#febf5b")
+svgLegend.append("circle").attr("cx",20).attr("cy",110).attr("r", 7.5).attr("id", "bubble5").style("fill", "#fd9d43")
+svgLegend.append("circle").attr("cx",20).attr("cy",130).attr("r", 7.5).attr("id", "bubble6").style("fill", "#fc7034")
+svgLegend.append("circle").attr("cx",20).attr("cy",150).attr("r", 7.5).attr("id", "bubble7").style("fill", "#f23d26")
+svgLegend.append("circle").attr("cx",20).attr("cy",170).attr("r", 7.5).attr("id", "bubble8").style("fill", "#d91620")
+svgLegend.append("circle").attr("cx",20).attr("cy",190).attr("r", 7.5).attr("id", "bubble9").style("fill", "#b40325")
+svgLegend.append("circle").attr("cx",20).attr("cy",210).attr("r", 7.5).attr("id", "bubble10").style("fill", "#800026")
+svgLegend.append("text").attr("x", 0).attr("y", 240).text("100%").style("font-size", "15px").attr("alignment-baseline","middle")
 svgLegend.append('text')
    .style('font-family', 'Linearicons-Free')
    .attr('font-size', '20px' )
    .text('\ue87d')
-   .attr('x',180)
-   .attr('y',350)
+   .attr('x',15)
+   .attr('y',270)
    .attr("id", "infoIcon")
    .attr("fill","black");
 

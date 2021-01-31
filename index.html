@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
     <html>
     <head>
         <title>InfoVis News</title>
@@ -96,10 +96,10 @@
     <div id="content-wrapper">
     <div id="left">
     <svg id="infoGraph" height=25 width=25></svg> 
-    Google-Trend Daten:</br>
+    Google-Trend Daten:<br>
     <div id="graphDescription">
         Der Graph basiert auf genormte Daten von Google-Trend. Auf einer Skala von 0 bis 100 wird dargestellt, 
-        wie häufig im Vergleich ein bestimmter Begriff gegoogelt wurde.</br>Es können zwei Begriffe jeweils miteinander verglichen werden.
+        wie häufig im Vergleich ein bestimmter Begriff gegoogelt wurde.<br>Es können zwei Begriffe jeweils miteinander verglichen werden.
     </div><script src="graphIcon.js"></script> 
     <span style = "color:midnightblue"><label id="selected1">corona</label></span>
     <span style = "color:maroon"><label id="selected2"></label></span>
@@ -142,7 +142,7 @@
         
        
         <svg id="my_dataviz" height=400 width=50></svg>
-        <div id="popupLegend" class="temcenter">
+        <div id="popupLegend">
 			<h3 id="colorLetters">
                 <span style='color: #800026'>F</span>
                 <span style='color: #800026'>a</span>
@@ -161,14 +161,13 @@
         </div>
         <div id="popupPercentages">
 			
-			<p id="percentageBubbleText"><10</p>
+			<p id="percentageBubbleText">	&#060;10</p>
 		 </div>
         <script src="legendColor.js"></script>
         
     
     </div>
-    
-    
+
     <div id="tagcloud"></div>
     <script src="wordcloud.js"></script>
     </div><!--right Ende-->
