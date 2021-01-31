@@ -78,7 +78,7 @@ function draw_wordcloud(weekandyear_text) {
         .on("mouseout", function(d) {       
           d3.select(this).style("cursor", "default");
         })
-        .style("font-size", function(d) { return d.size; })
+        .attr("font-size", function(d) { return d.size; })
         .style("fill", "#000000")
         .attr("text-anchor", "middle")
         .style("font-family", "'Times New Roman', Times, serif")
