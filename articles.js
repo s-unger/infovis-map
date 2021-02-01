@@ -1,7 +1,7 @@
 //This is for initialisation:
 updateArticleKeyword("corona");
 // this is my virtual articleview-object, containing the current state of article-view:
-var articleview_calendarweek = 0;
+var articleview_calendarweek = 1;
 var articleview_year = 2019;
 var articleview_keyword = "corona";
 var articleview_content;
@@ -87,7 +87,7 @@ function echoArticles() {
   }
   //UX-Verbesserung bei fehlenden Artikeln:
   if (articleview_display == "") {
-    articleview_display = "<h2>In Kalenderwoche "+articleview_calendarweek+" des Jahres "+articleview_year+" gab es keine Artikel zum Thema "+articleview_keyword;
+    articleview_display = "<h2>In Kalenderwoche "+(articleview_calendarweek-1)+" des Jahres "+articleview_year+" gab es keine Artikel zum Thema "+articleview_keyword;
     if (articleview_keyword_2 != "") {
       articleview_display = articleview_display+" und "+articleview_keyword_2;
     }
