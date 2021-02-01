@@ -781,6 +781,7 @@ trendList.forEach(function (d, i) {
 
 function updateMapTime(text_week) {
     map_calendarweek = parseInt(text_week.slice(3, 5));
+    map_calendarweek = map_calendarweek+1; 
     map_year = parseInt(text_week.slice(6, 10));
     if(map_calendarweek<14){
         scale_to_zero();

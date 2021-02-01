@@ -10,6 +10,7 @@ var articleview_content_2 = [];
 
 function updateArticleTime(text_week) {
   articleview_calendarweek = parseInt(text_week.slice(3, 5));
+  articleview_calendarweek = articleview_calendarweek+1;
   articleview_year = parseInt(text_week.slice(6, 10));
   echoArticles();
 }
