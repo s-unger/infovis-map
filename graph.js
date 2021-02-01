@@ -122,7 +122,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
       svg.append("path")
         .datum(data)
         .attr("fill", "none")
-        .attr("stroke", "maroon")
+        .attr("stroke", "indianred")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
         .x(function(d) { return x(d.date) })
@@ -157,7 +157,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
            .style("opacity", 0)
            .attr("text-anchor", "left")
            .attr("alignment-baseline", "left")
-           .attr("fill", "maroon")
+           .attr("fill", "indianred")
       
       // add second graph line, read data
       if (secondKeyChosen) {
@@ -204,7 +204,7 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
                 .style("opacity", 0)
                 .attr("text-anchor", "right")
                 .attr("alignment-baseline", "left")
-                .attr("fill", "maroon")
+                .attr("fill", "indianred")
 
             // add focus line
             var focus2 = svg
@@ -223,13 +223,13 @@ function replace_graph(keyword1, keyword2, showFocusLine, keyDate, year) {
                 .style("opacity", 0)
                 .attr("text-anchor", "left")
                 .attr("alignment-baseline", "left")
-                .attr("fill", "midnightblue")
+                .attr("fill", "steelblue")
 
             // add second graph line
             svg.append("path")
               .datum(data2)
               .attr("fill", "none")
-              .attr("stroke", "midnightblue")
+              .attr("stroke", "steelblue")
               .attr("stroke-width", 1.5)
               .attr("d", d3.line()
                 .x(function(d) { return x(d.date) })
