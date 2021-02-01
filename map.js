@@ -626,7 +626,7 @@ trendListAverage= data;
 function getTrendValue(){
     var wordData= "data/mapData/allBLcorona.csv";
 
-    if (map_currentWord==="data/mapData/klopapier"){
+    if (map_currentWord==="klopapier"){
     
         var wordData= "data/mapData/allBLKlopapier.csv";
        
