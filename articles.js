@@ -87,7 +87,8 @@ function echoArticles() {
   }
   //UX-Verbesserung bei fehlenden Artikeln:
   if (articleview_display == "") {
-    articleview_display = "<h2>In Kalenderwoche "+(articleview_calendarweek-1)+" des Jahres "+articleview_year+" gab es keine Artikel zum Thema "+articleview_keyword;
+    var display_week = articleview_calendarweek;
+    articleview_display = "<h2>In Kalenderwoche "+(display_week)+" des Jahres "+articleview_year+" gab es keine Artikel zum Thema "+articleview_keyword;
     if (articleview_keyword_2 != "") {
       articleview_display = articleview_display+" und "+articleview_keyword_2;
     }

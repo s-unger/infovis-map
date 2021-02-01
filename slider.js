@@ -96,11 +96,17 @@ function createSlider(year) {
   handle = slider.insert("circle", ".track-overlay")
       .attr("class", "handle")
       .attr("r", 9);
+      
+  var calenderweekString = formatDate(startDate);
+  var articleview_calendarweek = parseInt(calenderweekString.slice(3, 5));
+  articleview_calendarweek = articleview_calendarweek+1;
+  var articleview_year = parseInt(calenderweekString.slice(6, 10));
+  var echoString = "CW "+ articleview_calendarweek + "/"+articleview_year;
 
   label = slider.append("text")
       .attr("class", "label")
       .attr("text-anchor", "middle")
-      .text(formatDate(startDate))
+      .text(echoString)
       .attr("transform", "translate(0," + (-25) + ")");
 }
 
@@ -112,11 +118,16 @@ function createSlider(year) {
     graphs, articles and wordcloud are updated.*/
 
 function updateslider(h) {
+  var calenderweekString = formatDate(h);
+  var articleview_calendarweek = parseInt(calenderweekString.slice(3, 5));
+  articleview_calendarweek = articleview_calendarweek+1;
+  var articleview_year = parseInt(calenderweekString.slice(6, 10));
+  echoString = "CW "+ articleview_calendarweek + "/"+articleview_year;
   // update position and text of label according to slider scale
   handle.attr("cx", x(h));
   label
     .attr("x", x(h))
-    .text(formatDate(h));
+    .text(echoString);
 
     currentDate = formatDate(h);
     updateArticleTime(currentDate);
