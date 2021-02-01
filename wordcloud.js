@@ -26,6 +26,9 @@ function draw_wordcloud(weekandyear_text) {
       
       for (var i = 0; i<20; i++) {
         myWords[i].size = 10+(myWords[i].size*0.7); //Kompressionsfaktor, es geht nur darum, dass die Peaks der Wörter hier sichtbar sind, nicht um akurate Darstellung.
+        if (i == 6) {
+          myWords[i] = 0;
+        }
       }
 
       // set the dimensions and margins of the graph

@@ -33,13 +33,13 @@
     <div id="interactive">
         <div id="dropdown">
             <my-dropdown value="ws1920" id="mydropdown">
-                Jahr:
+                <b>Jahr:</b>
                 <select id="year" onchange="update()">
                     <option value="2019">2019</option>
                     <option value="2020">2020</option>
                     <option value="">19 / 20</option>
                 </select>
-                <span style = "color:midnightblue">&nbsp;&nbsp;&nbsp;&nbsp;Keyword 1:
+                <span style = "color:indianred">&nbsp;&nbsp;&nbsp;&nbsp;<b>Keyword 1:</b>
                 <select id="keyword1" onchange="update()">
                     <option value="corona">corona</option>
                     <option value="netflix">netflix</option>
@@ -62,7 +62,7 @@
                     <option value="homeworkout">homeworkout</option>
                     <option value="onlinesemester">onlinesemester</option>
                 </select></span>
-                <span style = "color:maroon">&nbsp;&nbsp;&nbsp;&nbsp;Keyword 2:
+                <span style = "color:steelblue">&nbsp;&nbsp;&nbsp;&nbsp;<b>Keyword 2:</b>
                 <select id="keyword2" onchange="update()">
                     <option value="keines">keines</option>
                     <option value="corona">corona</option>
@@ -101,8 +101,8 @@
         Der Graph basiert auf genormte Daten von Google-Trend. Auf einer Skala von 0 bis 100 wird dargestellt, 
         wie häufig im Vergleich ein bestimmter Begriff gegoogelt wurde.<br>Es können zwei Begriffe jeweils miteinander verglichen werden.
     </div><script src="graphIcon.js"></script> 
-    <span style = "color:midnightblue"><label id="selected1">corona</label></span>
-    <span style = "color:maroon"><label id="selected2"></label></span>
+    <span style = "color:indianred"><label id="selected1">corona</label></span>
+    <span style = "color:steelblue"><label id="selected2"></label></span>
     <div id="graph">
         <script src="graph.js"></script>
     </div>
