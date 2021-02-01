@@ -1,7 +1,7 @@
 # infovis-map
 University project for creating an information visualisation about corona and news articles.
-The goal of this project is to hit a more lighthearted note involving the often frightening visualisations of the Covid19 developments. We want to show other interesting and entertaining data from the years 2019 and 2020 and invite to analyse their development in the context of the virus outbreak.
-We have made a preselection of funny keywords from google trends and explore with a movable time-slider where and when in Germany these terms have been searched for. Additionally we provide a selection of news articles relating to that keyword in the given timeframe, that can be directly accessed via links. At the same time, virus-icons on the German map visualise the current Corona situation by this point which can also be hidden.
+The goal of this project is to hit a more lighthearted note involving the often frightening visualisations of the Covid19 developments. We want to show other interesting and entertaining data from the years 2019 and 2020 and invite to analyse their development in the context of the virus outbreak and make fascinating discoveries.
+We have made a preselection of funny keywords from google trends and explore with a movable time-slider where and when in Germany these terms have been searched for. Additionally we provide a selection of news articles relating to that keywords in the given timeframe, that can be directly accessed via links. At the same time, virus-icons on the German map visualise the current Corona situation by this point per region.
 
 Hosted on this site: https://s-unger.github.io/infovis-map/
 
